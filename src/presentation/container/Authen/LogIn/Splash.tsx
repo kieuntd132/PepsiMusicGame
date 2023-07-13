@@ -5,7 +5,7 @@ import { CENTER_BUTTON, HEADLINE_2, LEFT_BUTTON, RIGHT_BUTTON, TALEN } from '../
 import { Colors } from '../../../resource/value/Colors'
 import { MainStackScreenProps } from '../../../navigation/stack/Navigation'
 
-const LogInSplash : React.FC<MainStackScreenProps<'LogInSplash'>>= ({navigation,route}) => {
+const Splash: React.FC<MainStackScreenProps<'Splash'>>= ({navigation,route}) => {
 
     const onClick = () => {
         navigation.navigate('LogIn');
@@ -25,7 +25,7 @@ const LogInSplash : React.FC<MainStackScreenProps<'LogInSplash'>>= ({navigation,
                                 <Text style = {styles.textButton}>THỂ LỆ</Text>
                             </ImageBackground>
                         </TouchableOpacity>
-                        <TouchableOpacity style = {styles.btn}>
+                        <TouchableOpacity style = {styles.btn} onPress={onClick}>
                             <Image source={CENTER_BUTTON} style = {styles.imageButton}/>
                         </TouchableOpacity>
                         <TouchableOpacity style = {styles.btn}>
@@ -40,7 +40,7 @@ const LogInSplash : React.FC<MainStackScreenProps<'LogInSplash'>>= ({navigation,
     )
 }
 
-export default LogInSplash
+export default Splash
 
 const styles = StyleSheet.create({
     container: {

@@ -13,7 +13,7 @@ type LoginOTPProps = {
 };
 
 export type MainStackParamList = {
-    LogInSplash: SplashProps | undefined;
+    Splash: SplashProps | undefined;
     LogIn: LoginProps | undefined;
     LogInOTP: LoginOTPProps | undefined;
 };

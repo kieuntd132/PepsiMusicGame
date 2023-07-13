@@ -10,30 +10,30 @@ import { LOGO_PEPSI } from '../../../../../assets'
 import TextTitle from '../../../component/text/TextTitle'
 
 const LogInOTP = () => {
-  const logIn = () => { }
+    const logIn = () => {}
 
-  const headerCenter = () => {
-    return (
-      <View >
-        <Image source={LOGO_PEPSI} style={styles.image} />
-      </View>
-    );
-  }
+    const headerCenter = () => {
+      return (
+        <View >
+          <Image source={LOGO_PEPSI} style = {styles.image}/>
+        </View>
+      );
+    }
 
   return (
     <ScrollView>
       <Background>
         <View style={styles.container} >
           <Header
-            containerStyle={styles.header}
-            centerHeader={headerCenter()}/>
+            centerHeader={headerCenter()} 
+            containerStyle = {styles.header}/>
           <Form>
-            <OTPField />
+            <OTPField/>
           </Form>
-          <Button
-            containerStyle={styles.buttonLogIn}
+          <Button 
+            containerStyle = {styles.buttonLogIn}
             title='Đăng nhập'
-            onPress={logIn} />
+            onPress={logIn}/>
         </View>
       </Background>
     </ScrollView>
@@ -43,22 +43,22 @@ const LogInOTP = () => {
 export default LogInOTP
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: Dimensions.get('screen').width,
-    height: Dimensions.get('screen').height,
-    alignItems: 'center',
-  },
-  header: {
-    marginVertical: '8.3%',
-  },
-  image: {
-    resizeMode: 'contain',
-    height: 48
-  },
-  buttonLogIn: {
-    width: '90%',
-    height: '5.4%',
-    marginTop: '10%',
-  },
+      container: {
+        flex: 1,
+        width: Dimensions.get('screen').width,
+        height: Dimensions.get('screen').height,
+        alignItems: 'center',
+      },
+      header: {
+        marginVertical: '8.3%',
+      },
+      image: {
+        resizeMode: 'contain',
+        height: 48
+      },
+      buttonLogIn: {
+        width: '90%',
+        height: '5.4%',
+        marginTop: '10%',
+      },
 })
