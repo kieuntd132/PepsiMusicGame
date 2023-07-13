@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
         height: '30%',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: Dimensions.get('window').height*0.1,
+        marginTop: Dimensions.get('window').height*0.07,
     },
     main: {
         marginTop: - Dimensions.get('window').height*0.35,
