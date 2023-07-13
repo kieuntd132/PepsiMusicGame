@@ -3,11 +3,9 @@ import React from 'react'
 import Background from '../../../component/background/Background'
 import Header from '../../../component/header/Header'
 import Form from '../../../component/form/Form'
-import { LogInField, OTPField } from '../../../component/input/TextField'
+import { OTPField } from '../../../component/input/TextField'
 import Button from '../../../component/button/Button'
-import { Colors } from '../../../resource/value/Colors'
 import { LOGO_PEPSI } from '../../../../../assets'
-import TextTitle from '../../../component/text/TextTitle'
 
 const LogInOTP = () => {
     const logIn = () => {}

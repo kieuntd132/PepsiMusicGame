@@ -8,9 +8,4 @@ export const HEADLINE_2 = require('./HEADLINE_2.png');
 export const LEFT_BUTTON = require('./LeftButton.png');
 export const RIGHT_BUTTON = require('./RightButton.png');
 export const CENTER_BUTTON = require('./CenterButton.png');
-// export const ICON_EMAIL = require('./icon-email.png');
-// export const ICON_EYE = require('./icon-eye.png');
-// export const ICON_FACEBOOK = require('./icon-facebook.png');
-// export const ICON_GOOGLE = require('./icon-google.png');
-// export const ICON_LOCK = require('./icon-lock.png');
-// export const ICON_TWITTER = require('./icon-twitter.png');
+
