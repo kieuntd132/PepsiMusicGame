@@ -11,11 +11,14 @@ type LoginProps = {
 type LoginOTPProps = {
     id: number;
 };
-
+type SplashScreenProps = {
+    id: number;
+};
 export type MainStackParamList = {
     LogInSplash: SplashProps | undefined;
     LogIn: LoginProps | undefined;
     LogInOTP: LoginOTPProps | undefined;
+    SplashScreen: SplashScreenProps | undefined;
 };
 
 export type MainStackNavigation = StackNavigationProp<MainStackParamList>;
