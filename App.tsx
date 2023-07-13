@@ -6,7 +6,7 @@ import LogInSplash from './src/presentation/container/Authentication/LogIn/LogIn
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
 import { MainStackParamList } from './src/presentation/navigation/Navigation'
-import SplashScreen from './src/presentation/container/Authen/Splash/SplashScreen'
+import SplashScreen from './src/presentation/container/Authentication/Splash/SplashScreen'
 const Stack = createStackNavigator<MainStackParamList>();
 
 
