@@ -1,8 +1,7 @@
-import { StyleSheet, Image, Text, View, TextInputProps, TextStyle, TextProps, StyleProp} from 'react-native'
+import { StyleSheet, Image, Text, View, TextStyle, TextProps, StyleProp} from 'react-native'
 import React from 'react'
-import { LogInField, RegisterField } from '../input/TextField'
 import { Colors } from '../../resource/value/Colors';
-import { LOGO_PEPSI, TEXT_PEPSI_MUSIC } from '../../../../assets';
+import {TEXT_PEPSI_MUSIC } from '../../../../assets';
 
 export interface FormProps extends TextProps {
     textStyle_1? : StyleProp<TextStyle>,

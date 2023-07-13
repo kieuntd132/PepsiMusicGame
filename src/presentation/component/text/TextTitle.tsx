@@ -1,4 +1,4 @@
-import { StyleProp, StyleSheet, Text, TextProps, TextStyle, View } from 'react-native'
+import { StyleProp, StyleSheet, Text, TextProps, TextStyle } from 'react-native'
 import React from 'react'
 import { Colors } from '../../resource/value/Colors';
 

@@ -1,4 +1,4 @@
-import { Image, ImageSourcePropType, StyleProp, StyleSheet, Text, TextProps, TouchableOpacity, View, ViewStyle } from 'react-native'
+import { Image, ImageSourcePropType, StyleProp, StyleSheet, TextProps, TouchableOpacity, View, ViewStyle } from 'react-native'
 import React from 'react'
 
 export interface HeaderProps extends TextProps {

@@ -1,4 +1,4 @@
-import { Image, ImageBackground, ImageSourcePropType, StyleProp, StyleSheet, Text, TextProps, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native'
+import { Image, ImageSourcePropType, StyleProp, StyleSheet, TextProps, TextStyle, TouchableOpacity, ViewStyle } from 'react-native'
 import React from 'react'
 import { Colors } from '../../resource/value/Colors'
 import TextTitle from '../text/TextTitle';

@@ -1,4 +1,4 @@
-import { Image, ImageBackground, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { ImageBackground, StatusBar, StyleSheet} from 'react-native'
 import React from 'react'
 import { BACKGROUND } from '../../../../assets';
 
