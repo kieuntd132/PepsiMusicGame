@@ -7,7 +7,7 @@ import Header from '../../../component/header/Header'
 import {LOGO_PEPSI } from '../../../../../assets'
 import { LogInField } from '../../../component/input/TextField'
 import Form from '../../../component/form/Form'
-import { MainStackScreenProps } from '../../../navigation/stack/Navigation'
+import { MainStackScreenProps } from '../../../navigation/Navigation'
 
 
 const LogIn: React.FC<MainStackScreenProps<'LogIn'>>= ({navigation,route}) => {

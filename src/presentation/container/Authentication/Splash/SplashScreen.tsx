@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'; 
 import { StyleSheet, Text, View, Image, Dimensions, ImageBackground } from 'react-native'
-import { RouteProp } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { MainStackScreenProps } from '../../../navigation/stack/Navigation'
+import { MainStackScreenProps } from '../../../navigation/Navigation'
 import Background from '../../../component/background/Background'
-import { HEADLINE_2, TALEN } from '../../../../../assets'
+import { HEADLINE_2, TALENT } from '../../../../../assets'
 
 const SplashScreen: React.FC<MainStackScreenProps<'SplashScreen'>>= ({navigation,route}) => {
   useEffect(() => {
@@ -24,7 +22,7 @@ const SplashScreen: React.FC<MainStackScreenProps<'SplashScreen'>>= ({navigation
                     <Image source={HEADLINE_2} style={styles.image} />
                 </View>
                 <View style={styles.main}>
-                    <ImageBackground source={TALEN} style={styles.imageTalen}>
+                    <ImageBackground source={TALENT} style={styles.imageTalen}>
                         <View>
                             <View>
                                 <Text style={styles.text}>BUNG NGAY GIỌNG CHẤT</Text>

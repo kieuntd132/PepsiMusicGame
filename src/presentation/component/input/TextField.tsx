@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TextInputProps, TextInput, Touchable, TouchableOpacity } from 'react-native'
 import React from 'react'
-import LogIn from '../../container/Authen/LogIn/LogIn'
+import LogIn from '../../container/Authentication/LogIn/LogIn'
 import Button from '../button/Button'
 import { Colors } from '../../resource/value/Colors';
 

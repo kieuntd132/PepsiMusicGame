@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View, Image, Dimensions, TouchableOpacity, ImageBackground } from 'react-native'
 import React from 'react'
 import Background from '../../../component/background/Background'
-import { CENTER_BUTTON, HEADLINE_2, LEFT_BUTTON, RIGHT_BUTTON, TALEN } from '../../../../../assets'
+import { CENTER_BUTTON, HEADLINE_2, LEFT_BUTTON, RIGHT_BUTTON, TALENT } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
-import { MainStackScreenProps } from '../../../navigation/stack/Navigation'
+import { MainStackScreenProps } from '../../../navigation/Navigation'
 
 const LogInSplash: React.FC<MainStackScreenProps<'LogInSplash'>> = ({ navigation, route }) => {
 
@@ -18,7 +18,7 @@ const LogInSplash: React.FC<MainStackScreenProps<'LogInSplash'>> = ({ navigation
                     <Image source={HEADLINE_2} style={styles.image} />
                 </View>
                 <View style={styles.main}>
-                    <Image source={TALEN} style={styles.imageTalen} />
+                    <Image source={TALENT} style={styles.imageTalen} />
                     <View style={styles.boxButton}>
                         <TouchableOpacity style={styles.btn}>
                             <ImageBackground source={LEFT_BUTTON} style={styles.imageButton}>

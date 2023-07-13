@@ -1,11 +1,11 @@
 import React from 'react'
-import LogIn from './src/presentation/container/Authen/LogIn/LogIn'
+import LogIn from './src/presentation/container/Authentication/LogIn/LogIn'
 import { StyleSheet } from 'react-native'
-import LogInOTP from './src/presentation/container/Authen/LogIn/LogInOTP'
-import LogInSplash from './src/presentation/container/Authen/LogIn/LogInSplash'
+import LogInOTP from './src/presentation/container/Authentication/LogIn/LogInOTP'
+import LogInSplash from './src/presentation/container/Authentication/LogIn/LogInSplash'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
-import { MainStackParamList } from './src/presentation/navigation/stack/Navigation'
+import { MainStackParamList } from './src/presentation/navigation/Navigation'
 import SplashScreen from './src/presentation/container/Authen/Splash/SplashScreen'
 const Stack = createStackNavigator<MainStackParamList>();
 
