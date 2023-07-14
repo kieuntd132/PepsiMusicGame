@@ -20,6 +20,13 @@ export interface OTPFieldProps {
   inputProps_4?: TextInputProps;
 }
 
+export interface OTPFailProps {
+  inputProps_1?: TextInputProps;
+  inputProps_2?: TextInputProps;
+  inputProps_3?: TextInputProps;
+  inputProps_4?: TextInputProps;
+}
+
 export const LogInField: React.FC<LogInFieldProps> = (props) => {
   const { inputProps } = props;
   return (
@@ -57,6 +64,26 @@ export const OTPField: React.FC<OTPFieldProps> = (props) => {
         <TextInput {...inputProps_2} style={styles.textInputOTP} />
       </View>
       <Text style={[styles.des, {marginBottom: '0%'}]}>Bạn chưa nhận được mã?</Text>
+      <TouchableOpacity>
+        <Text style = {styles.textbtn}>Gửi lại mã</Text>
+      </TouchableOpacity>
+    </View>
+  )
+}
+
+export const OTPFail: React.FC<OTPFailProps> = (props) => {
+  const { inputProps_1, inputProps_2, inputProps_3, inputProps_4 } = props;
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title_1}>Nhập OTP</Text>
+      <Text style={styles.desFail}>Mã OTP bạn vừa nhập không chính xác.Vui lòng nhập lại.</Text>
+      <View style = {styles.boxOTP}>
+        <TextInput {...inputProps_1} style={styles.textInputOTP} />
+        <TextInput {...inputProps_2} style={styles.textInputOTP} />
+        <TextInput {...inputProps_1} style={styles.textInputOTP} />
+        <TextInput {...inputProps_2} style={styles.textInputOTP} />
+      </View>
+      <Text style={[styles.desFail, {marginBottom: '0%'}]}>Bạn chưa nhận được mã?</Text>
       <TouchableOpacity>
         <Text style = {styles.textbtn}>Gửi lại mã</Text>
       </TouchableOpacity>
@@ -105,8 +132,18 @@ const styles = StyleSheet.create({
   des: {
     color: Colors.WHITE,
     fontSize: 14,
-    lineHeight: 36,
+    fontWeight: '400',
+    lineHeight: 21,
     marginBottom: '5%',
+  },
+  desFail: {
+    color: Colors.WHITE,
+    fontSize: 14,
+    lineHeight: 21,
+    marginBottom: '5%',
+    textAlign: 'center',
+    fontWeight: '400',
+    width: '76%',
   },
   boxOTP: {
     width: '100%',

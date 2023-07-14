@@ -10,6 +10,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
 import { MainStackParamList } from './src/presentation/navigation/Navigation'
 import SplashScreen from './src/presentation/container/Authentication/Splash/SplashScreen'
+
 const Stack = createStackNavigator<MainStackParamList>();
 
 
@@ -28,8 +29,10 @@ const App = () => {
         <Stack.Screen name='RegisterOTP' component={RegisterOTP} />
         <Stack.Screen name='Register' component={Register} />
         <Stack.Screen name='LogInOTP' component={LogInOTP} />
+       
       </Stack.Navigator>
     </NavigationContainer>
+    
   )
 }
 

@@ -23,6 +23,8 @@ type RegisterProps = {
 type RegisterOTPProps = {
     id: number;
 };
+
+
 export type MainStackParamList = {
     LogInSplash: SplashProps | undefined;
     LogIn: LoginProps | undefined;
@@ -31,6 +33,7 @@ export type MainStackParamList = {
     RegisterOTP: RegisterOTPProps | undefined;
     LogInOTP: LoginOTPProps | undefined;
     SplashScreen: SplashScreenProps | undefined;
+   
 };
 
 export type MainStackNavigation = StackNavigationProp<MainStackParamList>;

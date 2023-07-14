@@ -3,14 +3,14 @@ import React from 'react'
 import Background from '../../../component/background/Background'
 import Header from '../../../component/header/Header'
 import Form from '../../../component/form/Form'
-import { OTPField } from '../../../component/input/TextField'
+import { OTPFail, OTPField } from '../../../component/input/TextField'
 import Button from '../../../component/button/Button'
 import { LOGO_PEPSI } from '../../../../../assets'
 import { MainStackScreenProps } from '../../../navigation/Navigation'
 
 const LogInOTP : React.FC<MainStackScreenProps<'LogInOTP'>>= ({navigation,route}) => {
     const LogInSplash = () => {
-      navigation.navigate('LogIn');
+      navigation.navigate('LogInSplash');
     }
 
     const headerCenter = () => {
@@ -29,6 +29,7 @@ const LogInOTP : React.FC<MainStackScreenProps<'LogInOTP'>>= ({navigation,route}
             centerHeader={headerCenter()} 
             containerStyle = {styles.header}/>
           <Form>
+            {/* <OTPFail/> */}
             <OTPField/>
           </Form>
           <Button 

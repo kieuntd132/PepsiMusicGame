@@ -3,7 +3,7 @@ import React from 'react'
 import Background from '../../../component/background/Background'
 import Header from '../../../component/header/Header'
 import Form from '../../../component/form/Form'
-import { OTPField } from '../../../component/input/TextField'
+import {OTPField} from '../../../component/input/TextField'
 import Button from '../../../component/button/Button'
 import { LOGO_PEPSI } from '../../../../../assets'
 import { MainStackScreenProps } from '../../../navigation/Navigation'
@@ -13,8 +13,8 @@ const RegisterOTP: React.FC<MainStackScreenProps<'RegisterOTP'>>= ({navigation,r
   const [edt, setedt] = React.useState<string>('');
   console.log(edt)
 
-  const LogIn = () => {
-    navigation.navigate('LogIn');
+  const RegisterOTP = () => {
+    navigation.navigate('LogInSplash');
   }
   
   const headerCenter = () => {
@@ -37,7 +37,7 @@ const RegisterOTP: React.FC<MainStackScreenProps<'RegisterOTP'>>= ({navigation,r
           <Button 
             containerStyle = {styles.buttonLogIn}
             title='Xác nhận'
-            onPress={LogIn}/>
+            onPress={RegisterOTP}/>
         </View>
       </Background>
     </ScrollView>
