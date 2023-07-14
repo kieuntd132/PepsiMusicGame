@@ -1,4 +1,5 @@
 export const BACKGROUND = require('./Pepsi_Boy_RGB_bg_1.png');
+export const BACKGROUND_TOOLBAR = require('./Pepsi_Boy_RGB_bg_3.png');
 export const ICON_HOME = require('./Icon_Home.png');
 export const LOGO_PEPSI = require('./Logo-Pepsi.png');
 export const TEXT_PEPSI_MUSIC = require('./Pepsi_Music.png');
@@ -12,4 +13,14 @@ export const ICON_MICROPHONE = require('./Icon_microphone.png');
 export const ICON_PEPSI = require('./Icon_pepsi.png');
 export const LEFT_BUTTON_HOME = require('./LeftButton_Home.png');
 export const RIGHT_BUTTON_HOME = require('./RightButton_Home.png');
+export const POINTER = require('./Icon_pointer.png');
+export const CROSS = require('./Img_cross.png');
+export const GIFT = require('./Img_gift.png');
+export const HD1 = require('./Img_HuongDan1.png');
+export const HD2 = require('./Img_HuongDan2.png');
+export const LOA = require('./Img_Loa.png');
+export const HD2_NP = require('./Img_HuongDan2_NP.png');
+export const RANK = require('./Img_Rank.png');
+export const BACK = require('./Icon_Back.png');
+export const RECORD = require('./Img_Record.png');
 
