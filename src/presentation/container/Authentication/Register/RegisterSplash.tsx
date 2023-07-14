@@ -10,16 +10,17 @@ import Form from '../../../component/form/Form'
 import { MainStackScreenProps } from '../../../navigation/Navigation'
 
 
-const LogIn: React.FC<MainStackScreenProps<'LogIn'>>= ({navigation,route}) => {
+
+const RegisterSplash: React.FC<MainStackScreenProps<'RegisterSplash'>>= ({navigation,route}) => {
 
   const [edt, setedt] = React.useState<string>('');
   console.log(edt)
 
-  const logIn = () => {
-    navigation.navigate('LogInOTP');
+  const Register = () => {
+    navigation.navigate('Register');
   }
-  const RegisterSplash = () => {
-    navigation.navigate('RegisterSplash');
+  const RegisterOTP = () => {
+    navigation.navigate('RegisterOTP');
   }
   const headerCenter = () => {
     return (
@@ -41,8 +42,8 @@ const LogIn: React.FC<MainStackScreenProps<'LogIn'>>= ({navigation,route}) => {
           </Form>
           <Button 
             containerStyle = {styles.buttonLogIn}
-            title='Đăng nhập'
-            onPress={logIn}/>
+            title='Lấy mã OTP'
+            onPress={RegisterOTP}/>
           <View style = {styles.viewOr}>
             <View style = {styles.line}/>
             <Text style = {styles.textOr}>hoặc</Text>
@@ -51,7 +52,7 @@ const LogIn: React.FC<MainStackScreenProps<'LogIn'>>= ({navigation,route}) => {
           <Button 
             containerStyle = {styles.buttonRegister}
             title='Đăng ký'
-            onPress={RegisterSplash}
+            onPress={Register}
             titleStyle = {styles.title}/>
         </View>
       </Background>
@@ -59,7 +60,7 @@ const LogIn: React.FC<MainStackScreenProps<'LogIn'>>= ({navigation,route}) => {
   )
 }
 
-export default LogIn
+export default RegisterSplash
 
 const styles = StyleSheet.create({
   container: {

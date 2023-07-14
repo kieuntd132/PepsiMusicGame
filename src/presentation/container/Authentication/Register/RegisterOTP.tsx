@@ -8,19 +8,22 @@ import Button from '../../../component/button/Button'
 import { LOGO_PEPSI } from '../../../../../assets'
 import { MainStackScreenProps } from '../../../navigation/Navigation'
 
-const LogInOTP : React.FC<MainStackScreenProps<'LogInOTP'>>= ({navigation,route}) => {
-    const LogInSplash = () => {
-      navigation.navigate('LogIn');
-    }
+const RegisterOTP: React.FC<MainStackScreenProps<'RegisterOTP'>>= ({navigation,route}) => {
 
-    const headerCenter = () => {
-      return (
-        <View >
-          <Image source={LOGO_PEPSI} style = {styles.image}/>
-        </View>
-      );
-    }
+  const [edt, setedt] = React.useState<string>('');
+  console.log(edt)
 
+  const LogIn = () => {
+    navigation.navigate('LogIn');
+  }
+  
+  const headerCenter = () => {
+    return (
+      <View >
+        <Image source={LOGO_PEPSI} style = {styles.image}/>
+      </View>
+    );
+  }
   return (
     <ScrollView>
       <Background>
@@ -34,14 +37,14 @@ const LogInOTP : React.FC<MainStackScreenProps<'LogInOTP'>>= ({navigation,route}
           <Button 
             containerStyle = {styles.buttonLogIn}
             title='Xác nhận'
-            onPress={LogInSplash}/>
+            onPress={LogIn}/>
         </View>
       </Background>
     </ScrollView>
   )
 }
 
-export default LogInOTP
+export default RegisterOTP
 
 const styles = StyleSheet.create({
       container: {

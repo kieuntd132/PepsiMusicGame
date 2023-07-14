@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, Dimensions, ImageBackground } from 'reac
 import { MainStackScreenProps } from '../../../navigation/Navigation'
 import Background from '../../../component/background/Background'
 import { HEADLINE_2, TALENT } from '../../../../../assets'
-
+import { Colors } from '../../../resource/value/Colors';
 const SplashScreen: React.FC<MainStackScreenProps<'SplashScreen'>>= ({navigation,route}) => {
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -73,7 +73,7 @@ imageTalen: {
 },
 text: {
     textAlign: 'center',
-    color: '#06F',
+    color: Colors.BLUE_TEXT,
     textShadowColor: 'rgba(0, 0, 0, 0.25)',
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 0,
@@ -86,14 +86,14 @@ text: {
 },
 bg: {
 
-    backgroundColor: '#fff',
+    backgroundColor: Colors.WHITE,
     width: Dimensions.get('window').width * 0.67,
     alignItems: 'center',
     marginHorizontal: '16%',
 },
 text1: {
     textAlign: 'center',
-    color: '#06F',
+    color: Colors.BLUE_TEXT,
     textShadowColor: 'rgba(0, 0, 0, 0.25)',
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 0,
@@ -106,7 +106,7 @@ text1: {
 },
 text2:{
     textAlign: 'center',
-    color: '#fff',
+    color: Colors.WHITE,
     textShadowColor: 'rgba(0, 0, 0, 0.25)',
     textShadowOffset: { width: 0, height: 4.973383903503418 },
     textShadowRadius: 0,
@@ -118,7 +118,7 @@ text2:{
 },
 text3:{
     textAlign: 'center',
-    color: '#fff',
+    color: Colors.WHITE,
     textShadowColor: 'rgba(0, 0, 0, 0.25)',
     textShadowOffset: { width: 0, height: 5 },
     textShadowRadius: 0,

@@ -14,9 +14,21 @@ type LoginOTPProps = {
 type SplashScreenProps = {
     id: number;
 };
+type SplashScreenRegisterProps = {
+    id: number;
+};
+type RegisterProps = {
+    id: number;
+};
+type RegisterOTPProps = {
+    id: number;
+};
 export type MainStackParamList = {
     LogInSplash: SplashProps | undefined;
     LogIn: LoginProps | undefined;
+    RegisterSplash: SplashScreenRegisterProps | undefined 
+    Register: RegisterProps | undefined 
+    RegisterOTP: RegisterOTPProps | undefined;
     LogInOTP: LoginOTPProps | undefined;
     SplashScreen: SplashScreenProps | undefined;
 };

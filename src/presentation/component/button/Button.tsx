@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = (props) => {
   const eventLeft = () => {
     if (icon) {
       return (
-          <Image source={icon} style={styles.icon} />
+        <Image source={icon} style={styles.icon} />
       );
     }
     return null;
@@ -26,11 +26,10 @@ const Button: React.FC<ButtonProps> = (props) => {
   return (
     <TouchableOpacity style={[styles.button, containerStyle]} onPress={onPress}>
       {eventLeft()}
-      <TextTitle titleStyle = {titleStyle} title= {title}/>
+      <TextTitle titleStyle={titleStyle} title={title} />
     </TouchableOpacity>
   )
 }
-
 export default Button
 
 const styles = StyleSheet.create({

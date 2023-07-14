@@ -5,22 +5,24 @@ import Background from '../../../component/background/Background'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header'
 import {LOGO_PEPSI } from '../../../../../assets'
-import { LogInField } from '../../../component/input/TextField'
+import {RegisterField } from '../../../component/input/TextField'
 import Form from '../../../component/form/Form'
 import { MainStackScreenProps } from '../../../navigation/Navigation'
 
 
-const LogIn: React.FC<MainStackScreenProps<'LogIn'>>= ({navigation,route}) => {
+
+const Register: React.FC<MainStackScreenProps<'Register'>>= ({navigation,route}) => {
 
   const [edt, setedt] = React.useState<string>('');
   console.log(edt)
 
-  const logIn = () => {
-    navigation.navigate('LogInOTP');
+  const LogIn = () => {
+    navigation.navigate('LogIn');
   }
-  const RegisterSplash = () => {
-    navigation.navigate('RegisterSplash');
+  const RegisterOTP = () => {
+    navigation.navigate('RegisterOTP');
   }
+
   const headerCenter = () => {
     return (
       <View >
@@ -37,12 +39,12 @@ const LogIn: React.FC<MainStackScreenProps<'LogIn'>>= ({navigation,route}) => {
             centerHeader={headerCenter()} 
             containerStyle = {styles.header}/>
           <Form>
-            <LogInField />
+            <RegisterField />
           </Form>
           <Button 
             containerStyle = {styles.buttonLogIn}
-            title='Đăng nhập'
-            onPress={logIn}/>
+            title='Lấy mã OTP'
+            onPress={RegisterOTP}/>
           <View style = {styles.viewOr}>
             <View style = {styles.line}/>
             <Text style = {styles.textOr}>hoặc</Text>
@@ -50,8 +52,8 @@ const LogIn: React.FC<MainStackScreenProps<'LogIn'>>= ({navigation,route}) => {
           </View>
           <Button 
             containerStyle = {styles.buttonRegister}
-            title='Đăng ký'
-            onPress={RegisterSplash}
+            title='Đăng nhập'
+            onPress={LogIn}
             titleStyle = {styles.title}/>
         </View>
       </Background>
@@ -59,7 +61,7 @@ const LogIn: React.FC<MainStackScreenProps<'LogIn'>>= ({navigation,route}) => {
   )
 }
 
-export default LogIn
+export default Register
 
 const styles = StyleSheet.create({
   container: {

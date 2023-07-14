@@ -2,11 +2,11 @@ import { ImageBackground, StatusBar, StyleSheet} from 'react-native'
 import React from 'react'
 import { BACKGROUND } from '../../../../assets';
 
-export interface PrimaryBackgroundProps { 
+export interface BackgroundProps { 
     children: React.ReactNode;
 }
 
-const Background: React.FC<PrimaryBackgroundProps> = (props) => {
+const Background: React.FC<BackgroundProps> = (props) => {
     const { children } = props;
     return (
         <ImageBackground source={BACKGROUND} style={styles.container}>
