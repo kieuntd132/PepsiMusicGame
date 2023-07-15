@@ -10,7 +10,9 @@ const LogInSplash: React.FC<MainStackScreenProps<'LogInSplash'>> = ({ navigation
     const onClick = () => {
         navigation.navigate('LogIn');
     }
-
+    const Instruct = () => {
+        navigation.navigate('Instruct');
+    }
     return (
         <Background>
             <View style={styles.container}>
@@ -20,7 +22,7 @@ const LogInSplash: React.FC<MainStackScreenProps<'LogInSplash'>> = ({ navigation
                 <View style={styles.main}>
                     <Image source={TALENT} style={styles.imageTalen} />
                     <View style={styles.boxButton}>
-                        <TouchableOpacity style={styles.btn}>
+                        <TouchableOpacity onPress={Instruct} style={styles.btn}>
                             <ImageBackground source={LEFT_BUTTON} style={styles.imageButton}>
                                 <Text style={styles.textButton}>THỂ LỆ</Text>
                             </ImageBackground>

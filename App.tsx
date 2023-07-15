@@ -11,6 +11,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { MainStackParamList } from './src/presentation/navigation/Navigation'
 import SplashScreen from './src/presentation/container/Authentication/Splash/SplashScreen'
 import Rule from './src/presentation/container/Authentication/ScreenSplash/Rule'
+import Instruct from './src/presentation/container/Authentication/ScreenSplash/Instruct'
 
 const Stack = createStackNavigator<MainStackParamList>();
 
@@ -21,9 +22,12 @@ const App = () => {
     // <LogIn/>
     // <LogInOTP/>
     // <LogInSplash/>
+    <Rule/>
+    // <Instruct />
     // <NavigationContainer>
     //   <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="SplashScreen">
     //     <Stack.Screen name='SplashScreen'component={SplashScreen}/>
+    //     <Stack.Screen name='Instruct'component={Instruct}/>
     //     <Stack.Screen name='LogInSplash' component={LogInSplash} />
     //     <Stack.Screen name='LogIn' component={LogIn} />
     //     <Stack.Screen name='RegisterSplash' component={RegisterSplash} />
@@ -32,8 +36,7 @@ const App = () => {
     //     <Stack.Screen name='LogInOTP' component={LogInOTP} />
     //   </Stack.Navigator>
     // </NavigationContainer>
-    <Rule/>
-    
+
   )
 }
 

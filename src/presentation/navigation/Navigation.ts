@@ -26,9 +26,12 @@ type RegisterOTPProps = {
 type RuleProps = {
     id: number;
 };
-
+type InstructProps = {
+    id: number;
+};
 export type MainStackParamList = {
     LogInSplash: SplashProps | undefined;
+    Instruct: InstructProps | undefined;
     LogIn: LoginProps | undefined;
     RegisterSplash: SplashScreenRegisterProps | undefined 
     Register: RegisterProps | undefined 
@@ -36,7 +39,6 @@ export type MainStackParamList = {
     LogInOTP: LoginOTPProps | undefined;
     SplashScreen: SplashScreenProps | undefined;
     Rule: RuleProps | undefined;
-   
 };
 
 export type MainStackNavigation = StackNavigationProp<MainStackParamList>;

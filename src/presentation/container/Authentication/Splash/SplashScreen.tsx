@@ -8,7 +8,7 @@ const SplashScreen: React.FC<MainStackScreenProps<'SplashScreen'>>= ({navigation
   useEffect(() => {
     const timer = setTimeout(() => {
       navigation.replace('LogInSplash');
-    }, 4000);
+    }, 3000);
 
     return () => {
       clearTimeout(timer);
