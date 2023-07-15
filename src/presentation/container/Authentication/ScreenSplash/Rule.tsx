@@ -1,4 +1,4 @@
-import { StyleSheet,TouchableOpacity, Text, View, ScrollView, Dimensions, Image, ImageBackground } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, Dimensions, Image, ImageBackground } from 'react-native'
 import React from 'react'
 import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR, LOA } from '../../../../../assets'

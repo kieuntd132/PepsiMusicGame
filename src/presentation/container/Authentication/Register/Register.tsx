@@ -20,7 +20,7 @@ const Register: React.FC<MainStackScreenProps<'Register'>>= ({navigation,route})
     navigation.navigate('LogIn');
   }
   const RegisterOTP = () => {
-    navigation.navigate('RegisterSplash');
+    navigation.navigate('RegisterOTP');
   }
 
   const headerCenter = () => {

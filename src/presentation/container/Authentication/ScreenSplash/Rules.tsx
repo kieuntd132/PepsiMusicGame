@@ -199,83 +199,83 @@ const Rules: React.FC<MainStackScreenProps<'Rules'>> = ({ navigation, route }) =
                     <TouchableOpacity onPress={hanldeLogin}>
                         <Image source={BACK} style={styles.iconBack} />
                     </TouchableOpacity>
-                    <Text style={styles.thele}>Thể lệ chương trình</Text>
+                    <Text style={styles.rule}>Thể lệ chương trình</Text>
                 </ImageBackground>
-                <ScrollView style={styles.scrollV}>
-                    <View style={styles.para1}>
-                        <Text style={styles.title1}>SẢNG KHOÁI PEPSI – BUNG NHẠC CỰC CHẤT</Text>
-                        <Text style={styles.title2}>(Diễn ra từ ngày 13/05/2022 đến hết ngày 09/06/2022)</Text>
+                <ScrollView style={{flex:1}}>
+                    <View style={styles.paragraph1}>
+                        <Text style={styles.titleFirst}>SẢNG KHOÁI PEPSI – BUNG NHẠC CỰC CHẤT</Text>
+                        <Text style={styles.titleSecond}>(Diễn ra từ ngày 13/05/2022 đến hết ngày 09/06/2022)</Text>
                     </View>
-                    <View style={styles.para2}>
-                        <Text style={styles.title1}>1. Đối tượng tham gia:</Text>
-                        <Text style={styles.title3}>
+                    <View style={styles.paragraph2}>
+                        <Text style={styles.titleFirst}>1. Đối tượng tham gia:</Text>
+                        <Text style={styles.title3rd}>
                             {getHighlightedText(text, boldTexts)}
                         </Text>
                     </View>
-                    <View style={styles.para2}>
-                        <Text style={styles.title1}>2. Nội dung và thể lệ chi tiết chương trình:</Text>
-                        <Text style={styles.title2_1}>2.1 Cách thức tham gia chương trình:</Text>
+                    <View style={styles.paragraph2}>
+                        <Text style={styles.titleFirst}>2. Nội dung và thể lệ chi tiết chương trình:</Text>
+                        <Text style={styles.titleSecond_1}>2.1 Cách thức tham gia chương trình:</Text>
                         <View style={{ marginLeft: Dimensions.get('window').width * 0.06 }}>
-                            <Text style={styles.title3}>
+                            <Text style={styles.title3rd}>
                                 Người chơi tham gia chương trình bằng cách thực hiện theo các bước dưới đây:
                             </Text>
-                            <Text style={[styles.title3, { marginTop: Dimensions.get('window').height * 0.03 }]}>
+                            <Text style={[styles.title3rd, { marginTop: Dimensions.get('window').height * 0.03 }]}>
                                 {getHighlightedText2(boldText2, boldTexts2)}
                                 {getHighlightedText3(boldText3, boldTexts3)}
                             </Text>
-                            <Text style={[styles.title3, { marginTop: Dimensions.get('window').height * 0.03 }]}>
+                            <Text style={[styles.title3rd, { marginTop: Dimensions.get('window').height * 0.03 }]}>
                                 {getHighlightedText4(boldText4, boldTexts4)}
                                 {getHighlightedText5(boldText5, boldTexts5)}
                             </Text>
-                            <Text style={[styles.title3, { marginTop: Dimensions.get('window').height * 0.03 }]}>
+                            <Text style={[styles.title3rd, { marginTop: Dimensions.get('window').height * 0.03 }]}>
                                 {getHighlightedText6(boldText6, boldTexts6)}
                                 {getHighlightedText7(boldText7, boldTexts7)}
                             </Text>
-                            <Text style={[styles.title3, { marginTop: Dimensions.get('window').height * 0.03 }]}>
+                            <Text style={[styles.title3rd, { marginTop: Dimensions.get('window').height * 0.03 }]}>
                                 {getHighlightedText8(boldText8, boldTexts8)}
                                 {getHighlightedText9(boldText9, boldTexts9)}
                             </Text>
                         </View>
-                        <Text style={[styles.title2_1, { marginTop: Dimensions.get('window').height * 0.03 }]}>2.2 Những quy định về chương trình:</Text>
+                        <Text style={[styles.titleSecond_1, { marginTop: Dimensions.get('window').height * 0.03 }]}>2.2 Những quy định về chương trình:</Text>
                         <View style={{ marginLeft: Dimensions.get('window').width * 0.06 }}>
-                            <Text style={styles.title3}>- Quà tặng chỉ được trao bằng hiện vật, không có giá trị quy đổi thành tiền mặt.</Text>
-                            <Text style={styles.title3}>- Do số lượng quà tặng có giới hạn, SPVB có quyền thay đổi quà tặng (về kích thước, màu sắc, sản phẩm) nhưng đảm bảo sẽ giữ nguyên giá trị đã cam kết.</Text>
+                            <Text style={styles.title3rd}>- Quà tặng chỉ được trao bằng hiện vật, không có giá trị quy đổi thành tiền mặt.</Text>
+                            <Text style={styles.title3rd}>- Do số lượng quà tặng có giới hạn, SPVB có quyền thay đổi quà tặng (về kích thước, màu sắc, sản phẩm) nhưng đảm bảo sẽ giữ nguyên giá trị đã cam kết.</Text>
                         </View>
-                        <Text style={[styles.title2_1, { marginTop: Dimensions.get('window').height * 0.03 }]}>2.3 Số lượng quà tặng:</Text>
+                        <Text style={[styles.titleSecond_1, { marginTop: Dimensions.get('window').height * 0.03 }]}>2.3 Số lượng quà tặng:</Text>
                         <View style={{ marginLeft: Dimensions.get('window').width * 0.06 }}>
-                            <Text style={styles.title3}>Số lượng quà tặng và điểm Pepsi cần thiết để quy đổi được quy định chi tiết theo bảng dưới đây:</Text>
+                            <Text style={styles.title3rd}>Số lượng quà tặng và điểm Pepsi cần thiết để quy đổi được quy định chi tiết theo bảng dưới đây:</Text>
                         </View>
                     </View>
-                    <View style={styles.box}>
+                    <View style={styles.frame}>
                         <Image source={LOA} style={styles.imgLoa} />
                     </View>
-                    <View style={styles.para2}>
-                        <Text style={[styles.title1]}>Loa Marshall Pepsi</Text>
-                        <Text style={[styles.title2]}>
+                    <View style={styles.paragraph2}>
+                        <Text style={[styles.titleFirst]}>Loa Marshall Pepsi</Text>
+                        <Text style={[styles.titleSecond]}>
                             {getHighlightedText10(boldText10, boldTexts10)}
                         </Text>
                     </View>
-                    <View style={styles.para2}>
-                        <Text style={styles.title2_1}>2.4 Cách thức nhận quà tặng:</Text>
+                    <View style={styles.paragraph2}>
+                        <Text style={styles.titleSecond_1}>2.4 Cách thức nhận quà tặng:</Text>
                         <View style={{ marginLeft: Dimensions.get('window').width * 0.06 }}>
-                            <Text style={styles.title3}>- Người thắng cuộc mỗi tuần cần cung cấp thông tin cá nhân cho SPVB theo hướng dẫn trong vòng 7 ngày kể từ ngày đổi quà để được hướng dẫn nhận quà tặng. Việc người chơi cung cấp thông tin cá nhân cho SPVB theo mục đích này được hiểu là hành động cho phép SPVB thu thập và sử dụng thông tin cá nhân của người chơi theo mục địch đã nêu. Trong mọi trường hợp, việc người chơi gửi thông tin nhận quà sau thời gian quy định là không hợp lệ, và được xem là người chơi từ bỏ việc nhận quà.</Text>
-                            <Text style={styles.title3}>- Quà tặng sẽ được vận chuyển đến địa chỉ mà người chơi đã cung cấp trong vòng 30 ngày kể từ ngày kết thúc chương trình. Trong trường hợp bất khả kháng như thiên tai, dịch bệnh, việc vận chuyển có thể bị ảnh hưởng và thời gian trao quà sẽ kéo dài hơn so với thời hạn đã cam kết nêu trên. SPVB sẽ không chịu trách nhiệm nếu thông tin nhận quà mà người chơi cung cấp không chính xác. Người chơi có trách nhiệm ký tên trên phiếu giao hàng, biên bản bàn giao quà tặng, vận đơn bưu điện hoặc một tài liệu có tên gọi khác nhằm xác định đã nhận quà từ chương trình.</Text>
-                            <Text style={styles.title3}>- Mỗi tài khoản facebook chỉ được thắng giải duy nhất 1 lần trong toàn cuộc thi.</Text>
+                            <Text style={styles.title3rd}>- Người thắng cuộc mỗi tuần cần cung cấp thông tin cá nhân cho SPVB theo hướng dẫn trong vòng 7 ngày kể từ ngày đổi quà để được hướng dẫn nhận quà tặng. Việc người chơi cung cấp thông tin cá nhân cho SPVB theo mục đích này được hiểu là hành động cho phép SPVB thu thập và sử dụng thông tin cá nhân của người chơi theo mục địch đã nêu. Trong mọi trường hợp, việc người chơi gửi thông tin nhận quà sau thời gian quy định là không hợp lệ, và được xem là người chơi từ bỏ việc nhận quà.</Text>
+                            <Text style={styles.title3rd}>- Quà tặng sẽ được vận chuyển đến địa chỉ mà người chơi đã cung cấp trong vòng 30 ngày kể từ ngày kết thúc chương trình. Trong trường hợp bất khả kháng như thiên tai, dịch bệnh, việc vận chuyển có thể bị ảnh hưởng và thời gian trao quà sẽ kéo dài hơn so với thời hạn đã cam kết nêu trên. SPVB sẽ không chịu trách nhiệm nếu thông tin nhận quà mà người chơi cung cấp không chính xác. Người chơi có trách nhiệm ký tên trên phiếu giao hàng, biên bản bàn giao quà tặng, vận đơn bưu điện hoặc một tài liệu có tên gọi khác nhằm xác định đã nhận quà từ chương trình.</Text>
+                            <Text style={styles.title3rd}>- Mỗi tài khoản facebook chỉ được thắng giải duy nhất 1 lần trong toàn cuộc thi.</Text>
                         </View>
                     </View>
-                    <View style={styles.para2}>
-                        <Text style={styles.title1}>3. Quy định chung:</Text>
+                    <View style={styles.paragraph2}>
+                        <Text style={styles.titleFirst}>3. Quy định chung:</Text>
                         <View style={{ marginLeft: Dimensions.get('window').width * 0.06 }}>
-                            <Text style={styles.title3}>
+                            <Text style={styles.title3rd}>
                                 {getHighlightedText11(boldText11, boldTexts11)}
                             </Text>
-                            <Text style={styles.title3}>
+                            <Text style={styles.title3rd}>
                                 {getHighlightedText12(boldText12, boldTexts12)}
                             </Text>
-                            <Text style={styles.title3}>­- SPVB cam kết thực hiện đúng và hoàn toàn chịu trách nhiệm về chương trình trên theo các qui định của pháp luật hiện hành.</Text>
-                            <Text style={styles.title3}>- Theo qui định của pháp luật, SPVB có quyền chấm dứt hoặc huỷ chương trình này trong trường hợp bất khả kháng và sẽ thông báo công khai phù hợp với quy định pháp luật.</Text>
-                            <Text style={styles.title3}>- Nếu phát hiện có dấu hiệu gian lận, sử dụng công cụ, phần mềm hỗ trợ, tài khoản của người chơi sẽ bị khóa đến hết thời gian diễn ra chương trình, mọi quà tặng sẽ bị thu hồi.</Text>
-                            <Text style={styles.title3}>-­ Bằng việc sử dụng Các Dịch Vụ, đăng ký một tài khoản với chúng tôi hoặc truy cập Nền tảng, bạn xác nhận và đồng ý rằng bạn chấp nhận các phương pháp, yêu cầu, và/hoặc chính sách được mô tả trong Chính sách bảo mật này, và theo đây bạn đồng ý cho phép chúng tôi thu thập, sử dụng, tiết lộ và/hoặc xử lý dữ liệu cá nhân của bạn</Text>
+                            <Text style={styles.title3rd}>­- SPVB cam kết thực hiện đúng và hoàn toàn chịu trách nhiệm về chương trình trên theo các qui định của pháp luật hiện hành.</Text>
+                            <Text style={styles.title3rd}>- Theo qui định của pháp luật, SPVB có quyền chấm dứt hoặc huỷ chương trình này trong trường hợp bất khả kháng và sẽ thông báo công khai phù hợp với quy định pháp luật.</Text>
+                            <Text style={styles.title3rd}>- Nếu phát hiện có dấu hiệu gian lận, sử dụng công cụ, phần mềm hỗ trợ, tài khoản của người chơi sẽ bị khóa đến hết thời gian diễn ra chương trình, mọi quà tặng sẽ bị thu hồi.</Text>
+                            <Text style={styles.title3rd}>-­ Bằng việc sử dụng Các Dịch Vụ, đăng ký một tài khoản với chúng tôi hoặc truy cập Nền tảng, bạn xác nhận và đồng ý rằng bạn chấp nhận các phương pháp, yêu cầu, và/hoặc chính sách được mô tả trong Chính sách bảo mật này, và theo đây bạn đồng ý cho phép chúng tôi thu thập, sử dụng, tiết lộ và/hoặc xử lý dữ liệu cá nhân của bạn</Text>
                         </View>
                     </View>
                 </ScrollView>
@@ -301,7 +301,7 @@ const styles = StyleSheet.create({
         marginTop: Dimensions.get('window').height * 0.04,
         marginLeft: Dimensions.get('window').width * 0.03,
     },
-    thele: {
+    rule: {
         fontFamily: 'Montserrat',
         fontSize: 18,
         fontWeight: '600',
@@ -310,31 +310,28 @@ const styles = StyleSheet.create({
         marginTop: Dimensions.get('window').height * 0.04,
         marginLeft: Dimensions.get('window').width * 0.22,
     },
-    scrollV: {
-        flex: 1,
-    },
-    para1: {
+    paragraph1: {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         width: Dimensions.get('window').width * 1,
         marginTop: Dimensions.get('window').height * 0.03,
     },
-    title1: {
+    titleFirst: {
         fontFamily: 'Montserrat',
         fontSize: 14,
         fontWeight: '700',
         lineHeight: 21,
         color: Colors.WHITE,
     },
-    title2: {
+    titleSecond: {
         fontFamily: 'Montserrat',
         fontSize: 12,
         fontWeight: '400',
         lineHeight: 18,
         color: Colors.WHITE,
     },
-    para2: {
+    paragraph2: {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'flex-start',
@@ -342,14 +339,14 @@ const styles = StyleSheet.create({
         marginTop: Dimensions.get('window').height * 0.03,
         marginLeft: Dimensions.get('window').width * 0.06,
     },
-    title3: {
+    title3rd: {
         fontFamily: 'Montserrat',
         fontSize: 13,
         fontWeight: '400',
         lineHeight: 21,
         color: Colors.WHITE,
     },
-    title2_1: {
+    titleSecond_1: {
         fontFamily: 'Montserrat',
         fontSize: 13,
         fontWeight: '600',
@@ -357,7 +354,7 @@ const styles = StyleSheet.create({
         lineHeight: 21,
         color: Colors.WHITE,
     },
-    box: {
+    frame: {
         borderRadius: 20,
         marginTop: Dimensions.get('window').height * 0.03,
         backgroundColor: Colors.DARK_BLUE,
