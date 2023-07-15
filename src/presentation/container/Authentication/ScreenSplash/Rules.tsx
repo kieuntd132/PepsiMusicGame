@@ -1,188 +1,191 @@
-import { StyleSheet,TouchableOpacity, Text, View, ScrollView, Dimensions, Image, ImageBackground } from 'react-native'
+import { StyleSheet, TouchableOpacity, Text, View, ScrollView, Dimensions, Image, ImageBackground } from 'react-native'
 import React from 'react'
 import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR, LOA } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
+import { MainStackScreenProps } from '../../../navigation/Navigation'
 
 
-const Rule = () =>{
-
-    const a1 = "\"SPVB\"";
-    const a2 = "\"SẢNG KHOÁI PEPSI – BUNG NHẠC CỰC CHẤT\"";
+const Rules: React.FC<MainStackScreenProps<'Rules'>> = ({ navigation, route }) => {
+    const hanldeLogin = () => {
+        navigation.navigate("LogInSplash");
+    }
+    const bold1 = "\"SPVB\"";
+    const bold2 = "\"SẢNG KHOÁI PEPSI – BUNG NHẠC CỰC CHẤT\"";
     const text = "Chương trình dành cho người chơi là công dân nước Cộng hòa Xã hội chủ nghĩa Việt Nam, và trên 14 tuổi. Nhân viên Công ty TNHH Nước giải khát Suntory PepsiCo Việt Nam (sau đây được gọi tắt là '\"SPVB\"') và các công ty, tổ chức, nhà cung cấp, đơn vị sản xuất trò chơi '\"SẢNG KHOÁI PEPSI – BUNG NHẠC CỰC CHẤT\"', các đại lý, nhà phân phối, các công ty quảng cáo, in ấn, nhà thầu, nhà cung cấp dịch vụ của SPVB và thân nhân của các đối tượng này không được tham gia chương trình này.";
-    const boldAndUpperTexts = [a1, a2];
-    const regex = new RegExp(`(${boldAndUpperTexts.join('|')})`, 'gi');
+    const boldTexts = [bold1, bold2];
+    const regex = new RegExp(`(${boldTexts.join('|')})`, 'gi');
 
-    const getTextWithBoldAndUpper = (text: string, boldAndUpperTexts: any) => {
+    const getHighlightedText = (text: string, boldTexts: any) => {
         const parts = text.split(regex);
         return parts.map((part, index) => {
-            const isBoldAndUpper = boldAndUpperTexts.includes(part);
-            return isBoldAndUpper ? (
+            const isBold = boldTexts.includes(part);
+            return isBold ? (
                 <Text key={index} style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>{part}</Text>
             ) : (
                 <Text key={index}>{part}</Text>
             );
         });
     };
-    const text2 = "Bước 1: Người chơi truy cập vào website";
-    const boldAndUpperTexts2 = ["Bước 1"];
-    const regex2 = new RegExp(`(${boldAndUpperTexts2.join('|')})`, 'gi');
+    const boldText2 = "Bước 1: Người chơi truy cập vào website";
+    const boldTexts2 = ["Bước 1"];
+    const regex2 = new RegExp(`(${boldTexts2.join('|')})`, 'gi');
 
-    const getTextWithBoldAndUpper2 = (text2: string, boldAndUpperTexts2: any) => {
-        const parts2 = text2.split(regex2);
-        return parts2.map((part, index) => {
-            const isBoldAndUpper2 = boldAndUpperTexts2.includes(part);
-            return isBoldAndUpper2 ? (
+    const getHighlightedText2 = (text: string, boldTexts: any) => {
+        const parts = text.split(regex2);
+        return parts.map((part, index) => {
+            const isBold = boldTexts.includes(part);
+            return isBold ? (
                 <Text key={index} style={{ fontWeight: 'bold', textTransform: 'uppercase', textDecorationLine: 'underline' }}>{part}</Text>
             ) : (
                 <Text key={index}>{part}</Text>
             );
         });
     };
-    const text3 = "\nhttp://pepsimusic.pepsishop.vn/ và thu âm bài hát.";
-    const boldAndUpperTexts3 = ["http://pepsimusic.pepsishop.vn/"];
-    const regex3 = new RegExp(`(${boldAndUpperTexts3.join('|')})`, 'gi');
+    const boldText3 = "\nhttp://pepsimusic.pepsishop.vn/ và thu âm bài hát.";
+    const boldTexts3 = ["http://pepsimusic.pepsishop.vn/"];
+    const regex3 = new RegExp(`(${boldTexts3.join('|')})`, 'gi');
 
-    const getTextWithBoldAndUpper3 = (text3: string, boldAndUpperTexts3: any) => {
-        const parts3 = text3.split(regex3);
-        return parts3.map((part, index) => {
-            const isBoldAndUpper3 = boldAndUpperTexts3.includes(part);
-            return isBoldAndUpper3 ? (
+    const getHighlightedText3 = (text: string, boldTexts: any) => {
+        const parts = text.split(regex3);
+        return parts.map((part, index) => {
+            const isBold = boldTexts.includes(part);
+            return isBold ? (
                 <Text key={index} style={{ fontWeight: '500', textDecorationLine: 'underline' }}>{part}</Text>
             ) : (
                 <Text key={index}>{part}</Text>
             );
         });
     };
-    const text4 = "Bước 2: Người chơi tải video bài hát đã tạo trên website";
-    const boldAndUpperTexts4 = ["Bước 2"];
-    const regex4 = new RegExp(`(${boldAndUpperTexts4.join('|')})`, 'gi');
+    const boldText4 = "Bước 2: Người chơi tải video bài hát đã tạo trên website";
+    const boldTexts4 = ["Bước 2"];
+    const regex4 = new RegExp(`(${boldTexts4.join('|')})`, 'gi');
 
-    const getTextWithBoldAndUpper4 = (text4: string, boldAndUpperTexts4: any) => {
-        const parts4 = text4.split(regex4);
-        return parts4.map((part, index) => {
-            const isBoldAndUpper4 = boldAndUpperTexts4.includes(part);
-            return isBoldAndUpper4 ? (
+    const getHighlightedText4 = (text: string, boldTexts: any) => {
+        const parts = text.split(regex4);
+        return parts.map((part, index) => {
+            const isBold = boldTexts.includes(part);
+            return isBold ? (
                 <Text key={index} style={{ fontWeight: 'bold', textTransform: 'uppercase', textDecorationLine: 'underline' }}>{part}</Text>
             ) : (
                 <Text key={index}>{part}</Text>
             );
         });
     };
-    const text5 = "\nhttp://pepsimusic.pepsishop.vn/ và đăng video đó lên Facebook cá nhân công khai kèm\n#PepsiMusicGame #DaQuaPepsiOi\n#SangKhoaiPepsi #BungNhacCucChat";
-    const boldAndUpperTexts5 = ["http://pepsimusic.pepsishop.vn/"];
-    const regex5 = new RegExp(`(${boldAndUpperTexts5.join('|')})`, 'gi');
+    const boldText5 = "\nhttp://pepsimusic.pepsishop.vn/ và đăng video đó lên Facebook cá nhân công khai kèm\n#PepsiMusicGame #DaQuaPepsiOi\n#SangKhoaiPepsi #BungNhacCucChat";
+    const boldTexts5 = ["http://pepsimusic.pepsishop.vn/"];
+    const regex5 = new RegExp(`(${boldTexts5.join('|')})`, 'gi');
 
-    const getTextWithBoldAndUpper5 = (text5: string, boldAndUpperTexts5: any) => {
-        const parts5 = text5.split(regex5);
-        return parts5.map((part, index) => {
-            const isBoldAndUpper5 = boldAndUpperTexts5.includes(part);
-            return isBoldAndUpper5 ? (
+    const getHighlightedText5 = (text: string, boldTexts: any) => {
+        const parts = text.split(regex5);
+        return parts.map((part, index) => {
+            const isBold = boldTexts.includes(part);
+            return isBold ? (
                 <Text key={index} style={{ fontWeight: '500', textDecorationLine: 'underline' }}>{part}</Text>
             ) : (
                 <Text key={index}>{part}</Text>
             );
         });
     };
-    const text6 = "Bước 3: Mỗi tuần, căn cứ vào mức độ Tương Tác của bài post có video tạo ra trên website";
-    const boldAndUpperTexts6 = ["Bước 3"];
-    const regex6 = new RegExp(`(${boldAndUpperTexts6.join('|')})`, 'gi');
+    const boldText6 = "Bước 3: Mỗi tuần, căn cứ vào mức độ Tương Tác của bài post có video tạo ra trên website";
+    const boldTexts6 = ["Bước 3"];
+    const regex6 = new RegExp(`(${boldTexts6.join('|')})`, 'gi');
 
-    const getTextWithBoldAndUpper6 = (text6: string, boldAndUpperTexts6: any) => {
-        const parts6 = text6.split(regex6);
-        return parts6.map((part, index) => {
-            const isBoldAndUpper6 = boldAndUpperTexts6.includes(part);
-            return isBoldAndUpper6 ? (
+    const getHighlightedText6 = (text: string, boldTexts: any) => {
+        const parts = text.split(regex6);
+        return parts.map((part, index) => {
+            const isBold = boldTexts.includes(part);
+            return isBold ? (
                 <Text key={index} style={{ fontWeight: 'bold', textTransform: 'uppercase', textDecorationLine: 'underline' }}>{part}</Text>
             ) : (
                 <Text key={index}>{part}</Text>
             );
         });
     };
-    const text7 = "\nhttp://pepsimusic.pepsishop.vn/, SPVB sẽ công bố người thắng cuộc khi có nhiều lượt tương tác nhất (gồm lượt thích, bình luận và chia sẻ) vào lúc 12h00’ giờ ngày thứ 4 tuần kế tiếp trên\nhttps://www.facebook.com/Pepsivietnam trong thời gian diễn ra chương trình.";
-    const boldAndUpperTexts7 = ["http://pepsimusic.pepsishop.vn/", "https://www.facebook.com/Pepsivietnam"];
-    const regex7 = new RegExp(`(${boldAndUpperTexts7.join('|')})`, 'gi');
+    const boldText7 = "\nhttp://pepsimusic.pepsishop.vn/, SPVB sẽ công bố người thắng cuộc khi có nhiều lượt tương tác nhất (gồm lượt thích, bình luận và chia sẻ) vào lúc 12h00’ giờ ngày thứ 4 tuần kế tiếp trên\nhttps://www.facebook.com/Pepsivietnam trong thời gian diễn ra chương trình.";
+    const boldTexts7 = ["http://pepsimusic.pepsishop.vn/", "https://www.facebook.com/Pepsivietnam"];
+    const regex7 = new RegExp(`(${boldTexts7.join('|')})`, 'gi');
 
-    const getTextWithBoldAndUpper7 = (text5: string, boldAndUpperTexts5: any) => {
-        const parts5 = text5.split(regex7);
-        return parts5.map((part, index) => {
-            const isBoldAndUpper5 = boldAndUpperTexts5.includes(part);
-            return isBoldAndUpper5 ? (
+    const getHighlightedText7 = (text: string, boldTexts: any) => {
+        const parts = text.split(regex7);
+        return parts.map((part, index) => {
+            const isBold = boldTexts.includes(part);
+            return isBold ? (
                 <Text key={index} style={{ fontWeight: '500', textDecorationLine: 'underline' }}>{part}</Text>
             ) : (
                 <Text key={index}>{part}</Text>
             );
         });
     };
-    const text8 = "Bước 4: Người chơi đăng bài trên trang cá nhân xong thì bình luận lại link post đó trên bài post thể lệ Pepsi fanpage";
-    const boldAndUpperTexts8 = ["Bước 4"];
-    const regex8 = new RegExp(`(${boldAndUpperTexts8.join('|')})`, 'gi');
+    const boldText8 = "Bước 4: Người chơi đăng bài trên trang cá nhân xong thì bình luận lại link post đó trên bài post thể lệ Pepsi fanpage";
+    const boldTexts8 = ["Bước 4"];
+    const regex8 = new RegExp(`(${boldTexts8.join('|')})`, 'gi');
 
-    const getTextWithBoldAndUpper8 = (text6: string, boldAndUpperTexts6: any) => {
-        const parts6 = text6.split(regex8);
-        return parts6.map((part, index) => {
-            const isBoldAndUpper6 = boldAndUpperTexts6.includes(part);
-            return isBoldAndUpper6 ? (
+    const getHighlightedText8 = (text: string, boldTexts: any) => {
+        const parts = text.split(regex8);
+        return parts.map((part, index) => {
+            const isBold = boldTexts.includes(part);
+            return isBold ? (
                 <Text key={index} style={{ fontWeight: 'bold', textTransform: 'uppercase', textDecorationLine: 'underline' }}>{part}</Text>
             ) : (
                 <Text key={index}>{part}</Text>
             );
         });
     };
-    const text9 = " https://www.facebook.com/Pepsivietnam";
-    const boldAndUpperTexts9 = ["https://www.facebook.com/Pepsivietnam"];
-    const regex9 = new RegExp(`(${boldAndUpperTexts9.join('|')})`, 'gi');
+    const boldText9 = " https://www.facebook.com/Pepsivietnam";
+    const boldTexts9 = ["https://www.facebook.com/Pepsivietnam"];
+    const regex9 = new RegExp(`(${boldTexts9.join('|')})`, 'gi');
 
-    const getTextWithBoldAndUpper9 = (text5: string, boldAndUpperTexts5: any) => {
-        const parts5 = text5.split(regex9);
-        return parts5.map((part, index) => {
-            const isBoldAndUpper5 = boldAndUpperTexts5.includes(part);
-            return isBoldAndUpper5 ? (
+    const getHighlightedText9 = (text: string, boldTexts: any) => {
+        const parts = text.split(regex9);
+        return parts.map((part, index) => {
+            const isBold = boldTexts.includes(part);
+            return isBold ? (
                 <Text key={index} style={{ fontWeight: '500', textDecorationLine: 'underline' }}>{part}</Text>
             ) : (
                 <Text key={index}>{part}</Text>
             );
         });
     };
-    const text10 = "Số lượng: 4\nGiá trị quà tặng (+VAT): 8.000.000 đồng/ loa";
-    const boldAndUpperTexts10 = ["8.000.000 đồng/ loa"];
-    const regex10 = new RegExp(`(${boldAndUpperTexts10.join('|')})`, 'gi');
+    const boldText10 = "Số lượng: 4\nGiá trị quà tặng (+VAT): 8.000.000 đồng/ loa";
+    const boldTexts10 = ["8.000.000 đồng/ loa"];
+    const regex10 = new RegExp(`(${boldTexts10.join('|')})`, 'gi');
 
-    const getTextWithBoldAndUpper10 = (text5: string, boldAndUpperTexts5: any) => {
-        const parts5 = text5.split(regex10);
-        return parts5.map((part, index) => {
-            const isBoldAndUpper5 = boldAndUpperTexts5.includes(part);
-            return isBoldAndUpper5 ? (
+    const getHighlightedText10 = (text: string, boldTexts: any) => {
+        const parts = text.split(regex10);
+        return parts.map((part, index) => {
+            const isBold = boldTexts.includes(part);
+            return isBold ? (
                 <Text key={index} style={{ fontWeight: '500' }}>{part}</Text>
             ) : (
                 <Text key={index}>{part}</Text>
             );
         });
     };
-    const text11 = "- SPVB có quyền cập nhật và thay đổi thể lệ chương trình này để phù hợp hơn với người chơi và thông báo công khai đến người chơi. Trong trường hợp có sự thay đổi về thể lệ cũng như thời gian tổ chức, SPVB sẽ thông báo trên trang fanpage của chương trình tại https://www.facebook.com/Pepsivietnam";
-    const boldAndUpperTexts11 = ["https://www.facebook.com/Pepsivietnam"];
-    const regex11 = new RegExp(`(${boldAndUpperTexts11.join('|')})`, 'gi');
+    const boldText11 = "- SPVB có quyền cập nhật và thay đổi thể lệ chương trình này để phù hợp hơn với người chơi và thông báo công khai đến người chơi. Trong trường hợp có sự thay đổi về thể lệ cũng như thời gian tổ chức, SPVB sẽ thông báo trên trang fanpage của chương trình tại https://www.facebook.com/Pepsivietnam";
+    const boldTexts11 = ["https://www.facebook.com/Pepsivietnam"];
+    const regex11 = new RegExp(`(${boldTexts11.join('|')})`, 'gi');
 
-    const getTextWithBoldAndUpper11 = (text5: string, boldAndUpperTexts5: any) => {
-        const parts5 = text5.split(regex11);
-        return parts5.map((part, index) => {
-            const isBoldAndUpper5 = boldAndUpperTexts5.includes(part);
-            return isBoldAndUpper5 ? (
+    const getHighlightedText11 = (text: string, boldTexts: any) => {
+        const parts = text.split(regex11);
+        return parts.map((part, index) => {
+            const isBold = boldTexts.includes(part);
+            return isBold ? (
                 <Text key={index} style={{ fontWeight: '500', textDecorationLine: 'underline' }}>{part}</Text>
             ) : (
                 <Text key={index}>{part}</Text>
             );
         });
     };
-    const text12 = "- Mọi thắc mắc liên quan đến chương trình, người chơi có thể nhắn tin vào hộp thư trang fanpage của chương trình tại:\nhttps://www.facebook.com/Pepsivietnam hoặc gọi điện theo số tổng đài 19001220. SPVB chỉ chịu trách nhiệm giải quyết những khiếu nại, tranh chấp được gửi đến SPVB trong thời hạn từ lúc bắt đầu chương trình cho đến khi hoàn tất việc trao quà tặng cho người chơi quy đổi quà tặng hợp lệ theo quy định tại Điều 2.4 nêu trên. Trong mọi trường hợp, nếu có tranh chấp về việc thực chương trình (bao gồm nhưng không giới hạn việc xác định người chơi chiến thắng theo bảng xếp hạng tuần, quy đổi quà tặng hợp lệ), thì quyền quyết định cuối cùng sẽ thuộc về SPVB.";
-    const boldAndUpperTexts12 = ["https://www.facebook.com/Pepsivietnam"];
-    const regex12 = new RegExp(`(${boldAndUpperTexts12.join('|')})`, 'gi');
+    const boldText12 = "- Mọi thắc mắc liên quan đến chương trình, người chơi có thể nhắn tin vào hộp thư trang fanpage của chương trình tại:\nhttps://www.facebook.com/Pepsivietnam hoặc gọi điện theo số tổng đài 19001220. SPVB chỉ chịu trách nhiệm giải quyết những khiếu nại, tranh chấp được gửi đến SPVB trong thời hạn từ lúc bắt đầu chương trình cho đến khi hoàn tất việc trao quà tặng cho người chơi quy đổi quà tặng hợp lệ theo quy định tại Điều 2.4 nêu trên. Trong mọi trường hợp, nếu có tranh chấp về việc thực chương trình (bao gồm nhưng không giới hạn việc xác định người chơi chiến thắng theo bảng xếp hạng tuần, quy đổi quà tặng hợp lệ), thì quyền quyết định cuối cùng sẽ thuộc về SPVB.";
+    const boldTexts12 = ["https://www.facebook.com/Pepsivietnam"];
+    const regex12 = new RegExp(`(${boldTexts12.join('|')})`, 'gi');
 
-    const getTextWithBoldAndUpper12 = (text5: string, boldAndUpperTexts5: any) => {
-        const parts5 = text5.split(regex12);
-        return parts5.map((part, index) => {
-            const isBoldAndUpper5 = boldAndUpperTexts5.includes(part);
-            return isBoldAndUpper5 ? (
+    const getHighlightedText12 = (text: string, boldTexts: any) => {
+        const parts = text.split(regex12);
+        return parts.map((part, index) => {
+            const isBold = boldTexts.includes(part);
+            return isBold ? (
                 <Text key={index} style={{ fontWeight: '500', textDecorationLine: 'underline' }}>{part}</Text>
             ) : (
                 <Text key={index}>{part}</Text>
@@ -193,7 +196,9 @@ const Rule = () =>{
         <Background>
             <View style={styles.container}>
                 <ImageBackground source={BACKGROUND_TOOLBAR} style={styles.headline}>
+                    <TouchableOpacity onPress={hanldeLogin}>
                         <Image source={BACK} style={styles.iconBack} />
+                    </TouchableOpacity>
                     <Text style={styles.thele}>Thể lệ chương trình</Text>
                 </ImageBackground>
                 <ScrollView style={styles.scrollV}>
@@ -204,7 +209,7 @@ const Rule = () =>{
                     <View style={styles.para2}>
                         <Text style={styles.title1}>1. Đối tượng tham gia:</Text>
                         <Text style={styles.title3}>
-                            {getTextWithBoldAndUpper(text, boldAndUpperTexts)}
+                            {getHighlightedText(text, boldTexts)}
                         </Text>
                     </View>
                     <View style={styles.para2}>
@@ -215,20 +220,20 @@ const Rule = () =>{
                                 Người chơi tham gia chương trình bằng cách thực hiện theo các bước dưới đây:
                             </Text>
                             <Text style={[styles.title3, { marginTop: Dimensions.get('window').height * 0.03 }]}>
-                                {getTextWithBoldAndUpper2(text2, boldAndUpperTexts2)}
-                                {getTextWithBoldAndUpper3(text3, boldAndUpperTexts3)}
+                                {getHighlightedText2(boldText2, boldTexts2)}
+                                {getHighlightedText3(boldText3, boldTexts3)}
                             </Text>
                             <Text style={[styles.title3, { marginTop: Dimensions.get('window').height * 0.03 }]}>
-                                {getTextWithBoldAndUpper4(text4, boldAndUpperTexts4)}
-                                {getTextWithBoldAndUpper5(text5, boldAndUpperTexts5)}
+                                {getHighlightedText4(boldText4, boldTexts4)}
+                                {getHighlightedText5(boldText5, boldTexts5)}
                             </Text>
                             <Text style={[styles.title3, { marginTop: Dimensions.get('window').height * 0.03 }]}>
-                                {getTextWithBoldAndUpper6(text6, boldAndUpperTexts6)}
-                                {getTextWithBoldAndUpper7(text7, boldAndUpperTexts7)}
+                                {getHighlightedText6(boldText6, boldTexts6)}
+                                {getHighlightedText7(boldText7, boldTexts7)}
                             </Text>
                             <Text style={[styles.title3, { marginTop: Dimensions.get('window').height * 0.03 }]}>
-                                {getTextWithBoldAndUpper8(text8, boldAndUpperTexts8)}
-                                {getTextWithBoldAndUpper9(text9, boldAndUpperTexts9)}
+                                {getHighlightedText8(boldText8, boldTexts8)}
+                                {getHighlightedText9(boldText9, boldTexts9)}
                             </Text>
                         </View>
                         <Text style={[styles.title2_1, { marginTop: Dimensions.get('window').height * 0.03 }]}>2.2 Những quy định về chương trình:</Text>
@@ -247,7 +252,7 @@ const Rule = () =>{
                     <View style={styles.para2}>
                         <Text style={[styles.title1]}>Loa Marshall Pepsi</Text>
                         <Text style={[styles.title2]}>
-                            {getTextWithBoldAndUpper10(text10, boldAndUpperTexts10)}
+                            {getHighlightedText10(boldText10, boldTexts10)}
                         </Text>
                     </View>
                     <View style={styles.para2}>
@@ -262,10 +267,10 @@ const Rule = () =>{
                         <Text style={styles.title1}>3. Quy định chung:</Text>
                         <View style={{ marginLeft: Dimensions.get('window').width * 0.06 }}>
                             <Text style={styles.title3}>
-                                {getTextWithBoldAndUpper11(text11, boldAndUpperTexts11)}
+                                {getHighlightedText11(boldText11, boldTexts11)}
                             </Text>
                             <Text style={styles.title3}>
-                                {getTextWithBoldAndUpper12(text12, boldAndUpperTexts12)}
+                                {getHighlightedText12(boldText12, boldTexts12)}
                             </Text>
                             <Text style={styles.title3}>­- SPVB cam kết thực hiện đúng và hoàn toàn chịu trách nhiệm về chương trình trên theo các qui định của pháp luật hiện hành.</Text>
                             <Text style={styles.title3}>- Theo qui định của pháp luật, SPVB có quyền chấm dứt hoặc huỷ chương trình này trong trường hợp bất khả kháng và sẽ thông báo công khai phù hợp với quy định pháp luật.</Text>
@@ -279,7 +284,7 @@ const Rule = () =>{
     )
 }
 
-export default Rule
+export default Rules
 
 const styles = StyleSheet.create({
     container: {

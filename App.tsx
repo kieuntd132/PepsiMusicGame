@@ -12,6 +12,7 @@ import { MainStackParamList } from './src/presentation/navigation/Navigation'
 import SplashScreen from './src/presentation/container/Authentication/Splash/SplashScreen'
 import Rule from './src/presentation/container/Authentication/ScreenSplash/Rule'
 import Instruct from './src/presentation/container/Authentication/ScreenSplash/Instruct'
+import Rules from './src/presentation/container/Authentication/ScreenSplash/Rules'
 
 const Stack = createStackNavigator<MainStackParamList>();
 
@@ -22,20 +23,21 @@ const App = () => {
     // <LogIn/>
     // <LogInOTP/>
     // <LogInSplash/>
-    <Rule/>
+    // <Rule/>
     // <Instruct />
-    // <NavigationContainer>
-    //   <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="SplashScreen">
-    //     <Stack.Screen name='SplashScreen'component={SplashScreen}/>
-    //     <Stack.Screen name='Instruct'component={Instruct}/>
-    //     <Stack.Screen name='LogInSplash' component={LogInSplash} />
-    //     <Stack.Screen name='LogIn' component={LogIn} />
-    //     <Stack.Screen name='RegisterSplash' component={RegisterSplash} />
-    //     <Stack.Screen name='RegisterOTP' component={RegisterOTP} />
-    //     <Stack.Screen name='Register' component={Register} />
-    //     <Stack.Screen name='LogInOTP' component={LogInOTP} />
-    //   </Stack.Navigator>
-    // </NavigationContainer>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="SplashScreen">
+        <Stack.Screen name='SplashScreen'component={SplashScreen}/>
+        <Stack.Screen name='Instruct'component={Instruct}/>
+        <Stack.Screen name='Rules'component={Rules}/>
+        <Stack.Screen name='LogInSplash' component={LogInSplash} />
+        <Stack.Screen name='LogIn' component={LogIn} />
+        <Stack.Screen name='RegisterSplash' component={RegisterSplash} />
+        <Stack.Screen name='RegisterOTP' component={RegisterOTP} />
+        <Stack.Screen name='Register' component={Register} />
+        <Stack.Screen name='LogInOTP' component={LogInOTP} />
+      </Stack.Navigator>
+    </NavigationContainer>
 
   )
 }

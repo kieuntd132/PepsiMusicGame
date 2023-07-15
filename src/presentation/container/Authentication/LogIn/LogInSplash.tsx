@@ -13,6 +13,9 @@ const LogInSplash: React.FC<MainStackScreenProps<'LogInSplash'>> = ({ navigation
     const Instruct = () => {
         navigation.navigate('Instruct');
     }
+    const Rule = () => {
+        navigation.navigate('Rules');
+    }
     return (
         <Background>
             <View style={styles.container}>
@@ -22,7 +25,7 @@ const LogInSplash: React.FC<MainStackScreenProps<'LogInSplash'>> = ({ navigation
                 <View style={styles.main}>
                     <Image source={TALENT} style={styles.imageTalen} />
                     <View style={styles.boxButton}>
-                        <TouchableOpacity onPress={Instruct} style={styles.btn}>
+                        <TouchableOpacity onPress={Rule} style={styles.btn}>
                             <ImageBackground source={LEFT_BUTTON} style={styles.imageButton}>
                                 <Text style={styles.textButton}>THỂ LỆ</Text>
                             </ImageBackground>
@@ -30,7 +33,7 @@ const LogInSplash: React.FC<MainStackScreenProps<'LogInSplash'>> = ({ navigation
                         <TouchableOpacity style={styles.btn} onPress={onClick}>
                             <Image source={CENTER_BUTTON} style={styles.imageButton} />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.btn}>
+                        <TouchableOpacity onPress={Instruct} style={styles.btn}>
                             <ImageBackground source={RIGHT_BUTTON} style={styles.imageButton}>
                                 <Text style={styles.textButton}>HƯỚNG DẪN</Text>
                             </ImageBackground>

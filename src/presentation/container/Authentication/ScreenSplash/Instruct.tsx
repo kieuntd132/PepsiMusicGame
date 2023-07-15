@@ -12,7 +12,7 @@ const Instruct: React.FC<MainStackScreenProps<'Instruct'>> = ({ navigation, rout
     const [text, setText] = React.useState("Tiếp theo");
 
     const hanldeLogin = () => {
-        navigation.navigate("LogIn");
+        navigation.navigate("LogInSplash");
     }
 
 
