@@ -12,5 +12,9 @@ export const Colors = {
     BLUE_TEXT:'#0066FF',
     YELLOW:'#FFE512',
     DARK_BLUE:'rgba(19, 66, 125, 0.50)',
+    BLUE:'rgba(0, 92, 178, 0.50)',
+    BLUE_TITLE:'#104CE7',
+    BLUE_BG:'rgba(19, 66, 125, 0.70)',
+    WHITE_BORDER:'rgba(255, 255, 255, 0.40)',
   };
-  
+ 
