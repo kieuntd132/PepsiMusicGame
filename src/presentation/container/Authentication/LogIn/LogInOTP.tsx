@@ -9,8 +9,8 @@ import { LOGO_PEPSI } from '../../../../../assets'
 import { MainStackScreenProps } from '../../../navigation/Navigation'
 
 const LogInOTP : React.FC<MainStackScreenProps<'LogInOTP'>>= ({navigation,route}) => {
-    const LogInSplash = () => {
-      navigation.navigate('LogInSplash');
+    const BeatOutstand = () => {
+      navigation.navigate('BeatOutstand');
     }
 
     const headerCenter = () => {
@@ -35,7 +35,7 @@ const LogInOTP : React.FC<MainStackScreenProps<'LogInOTP'>>= ({navigation,route}
           <Button 
             containerStyle = {styles.buttonLogIn}
             title='Xác nhận'
-            onPress={LogInSplash}/>
+            onPress={BeatOutstand}/>
         </View>
       </Background>
     </ScrollView>

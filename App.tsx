@@ -47,6 +47,7 @@ const App = () => {
         <Stack.Screen name='RegisterOTP' component={RegisterOTP} />
         <Stack.Screen name='Register' component={Register} />
         <Stack.Screen name='LogInOTP' component={LogInOTP} />
+        <Stack.Screen name='BeatOutstand' component={BeatOutstand} />
       </Stack.Navigator>
     </NavigationContainer>
 
