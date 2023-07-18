@@ -16,5 +16,8 @@ export const Colors = {
     BLUE_TITLE:'#104CE7',
     BLUE_BG:'rgba(19, 66, 125, 0.70)',
     WHITE_BORDER:'rgba(255, 255, 255, 0.40)',
+    SHADOW:('rgba(0, 0, 0, 0.25)'),
+    BLUE_BLUE:('#004A98'),
+    BOTTOM_BAR: 'rgba(119, 174, 240, 1)',
   };
  

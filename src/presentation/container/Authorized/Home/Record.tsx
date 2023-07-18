@@ -1,21 +1,17 @@
 import { StyleSheet, Text, View, Image, Dimensions, TouchableOpacity, ImageBackground } from 'react-native'
 import React from 'react'
 import Background from '../../../component/background/Background'
-import { CENTER_BUTTON, HEADLINE_2, LEFT_BUTTON, RIGHT_BUTTON, TALENT } from '../../../../../assets'
+import { HEADLINE_2, LEFT_BUTTON_HOME, RIGHT_BUTTON_HOME, TALENT } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import { MainStackScreenProps } from '../../../navigation/StackNavigation'
+import { JumpingTransition } from 'react-native-reanimated'
 
-const LogInSplash: React.FC<MainStackScreenProps<'LogInSplash'>> = ({ navigation, route }) => {
+const Record = () => {
 
     const onClick = () => {
-        navigation.navigate('LogIn');
+        // navigation.navigate('LogIn');
     }
-    const Instruct = () => {
-        navigation.navigate('Instruct');
-    }
-    const Rule = () => {
-        navigation.navigate('Rules');
-    }
+
     return (
         <Background>
             <View style={styles.container}>
@@ -25,16 +21,14 @@ const LogInSplash: React.FC<MainStackScreenProps<'LogInSplash'>> = ({ navigation
                 <View style={styles.main}>
                     <Image source={TALENT} style={styles.imageTalen} />
                     <View style={styles.boxButton}>
-                        <TouchableOpacity onPress={Rule} style={styles.btn}>
-                            <ImageBackground source={LEFT_BUTTON} style={styles.imageButton}>
+                        <TouchableOpacity style={styles.btn}>
+                            <ImageBackground source={LEFT_BUTTON_HOME} style={styles.imageButton}>
                                 <Text style={styles.textButton}>THỂ LỆ</Text>
                             </ImageBackground>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.btn} onPress={onClick}>
-                            <Image source={CENTER_BUTTON} style={styles.imageButton} />
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={Instruct} style={styles.btn}>
-                            <ImageBackground source={RIGHT_BUTTON} style={styles.imageButton}>
+                        <View style = {{width: Dimensions.get('screen').width * 0.37}}/>
+                        <TouchableOpacity style={styles.btn}>
+                            <ImageBackground source={RIGHT_BUTTON_HOME} style={styles.imageButton}>
                                 <Text style={styles.textButton}>HƯỚNG DẪN</Text>
                             </ImageBackground>
                         </TouchableOpacity>
@@ -45,18 +39,17 @@ const LogInSplash: React.FC<MainStackScreenProps<'LogInSplash'>> = ({ navigation
     )
 }
 
-export default LogInSplash
+export default Record
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        alignItems: 'center',
+        height: Dimensions.get('screen').height * 1.08,
     },
     headline: {
         height: '30%',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: Dimensions.get('window').height * 0.05,
+        marginTop: Dimensions.get('window').height * 0.04,
     },
     main: {
         marginTop: - Dimensions.get('window').height * 0.35,
@@ -72,22 +65,24 @@ const styles = StyleSheet.create({
     },
     boxButton: {
         flexDirection: 'row',
-        width: Dimensions.get('window').width * 0.9,
-        justifyContent: 'space-between',
-        marginTop: '-130%'
+        width: Dimensions.get('window').width,
+        justifyContent: 'center',
+        marginTop: -Dimensions.get('window').height * 0.53 ,
     },
     btn: {
-        width: '33.33%',
+        width: Dimensions.get('screen').width * 0.1,
         justifyContent: 'center',
         alignItems: 'center',
     },
     imageButton: {
         resizeMode: 'contain',
-        width: Dimensions.get('window').width * 0.8 / 2.3
+        width: Dimensions.get('window').width * 0.4,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     textButton: {
         color: Colors.WHITE,
-        padding: 10,
+        padding: 15,
         fontSize: 14,
         textAlign: 'center',
         fontWeight: '700',

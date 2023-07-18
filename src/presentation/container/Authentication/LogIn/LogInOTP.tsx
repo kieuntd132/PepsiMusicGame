@@ -6,12 +6,13 @@ import Form from '../../../component/form/Form'
 import { OTPFail, OTPField } from '../../../component/input/TextField'
 import Button from '../../../component/button/Button'
 import { LOGO_PEPSI } from '../../../../../assets'
-import { MainStackScreenProps } from '../../../navigation/Navigation'
+import { MainStackScreenProps } from '../../../navigation/StackNavigation'
+import { AuthorizedNavigator } from '../../../navigation/AuthorizedNavigator'
 
 const LogInOTP : React.FC<MainStackScreenProps<'LogInOTP'>>= ({navigation,route}) => {
-    const BeatOutstand = () => {
-      navigation.navigate('BeatOutstand');
-    }
+    // const Home = () => {
+    //   navigation.navigate("AuthorizedNavigator");
+    // }
 
     const headerCenter = () => {
       return (
@@ -35,7 +36,8 @@ const LogInOTP : React.FC<MainStackScreenProps<'LogInOTP'>>= ({navigation,route}
           <Button 
             containerStyle = {styles.buttonLogIn}
             title='Xác nhận'
-            onPress={BeatOutstand}/>
+            // onPress={Home}/>
+            />
         </View>
       </Background>
     </ScrollView>

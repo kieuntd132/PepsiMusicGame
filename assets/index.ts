@@ -26,4 +26,11 @@ export const RECORD = require('./Img_Record.png');
 export const IPHONE = require('./Iphone_13ProMax.png');
 export const SAMSUNG = require('./Samsung_Galaxy_TabS7+.png');
 export const NOTIFICATION = require('./Img_Notification.png');
-
+export const ICON_BEATLIST = require('./Icon_Beatlist.png');
+export const ICON_BEATLIST_FOCUS = require('./Icon_BeatlistFocus.png');
+export const ICON_RANKING = require('./Icon_Rank.png');
+export const ICON_RANKING_FOCUS = require('./Icon_RankFocus.png');
+export const ICON_PROFILE = require('./Icon_Profile.png');
+export const ICON_PROFILE_FOCUS = require('./Icon_ProfileFocus.png');
+export const ICON_VIDEOLIST = require('./Icon_Videolist.png');
+export const ICON_VIDEOLIST_FOCUS = require('./Icon_VideolistFocus.png');

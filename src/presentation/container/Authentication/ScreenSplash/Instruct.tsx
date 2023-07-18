@@ -4,7 +4,7 @@ import Swiper from 'react-native-swiper'
 import { HD1, HD2, HD3, RECORD, RANK, GIFT } from '../../../../../assets'
 import Background from '../../../component/background/Background'
 import { Colors } from '../../../resource/value/Colors'
-import { MainStackScreenProps } from '../../../navigation/Navigation'
+import { MainStackScreenProps } from '../../../navigation/StackNavigation'
 
 
 const Instruct: React.FC<MainStackScreenProps<'Instruct'>> = ({ navigation, route }) => {

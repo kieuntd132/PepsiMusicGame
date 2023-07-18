@@ -8,16 +8,20 @@ import Register from './src/presentation/container/Authentication/Register/Regis
 import RegisterOTP from './src/presentation/container/Authentication/Register/RegisterOTP'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
-import { MainStackParamList } from './src/presentation/navigation/Navigation'
+import { MainStackParamList } from './src/presentation/navigation/StackNavigation'
 import SplashScreen from './src/presentation/container/Authentication/Splash/SplashScreen'
 import Instruct from './src/presentation/container/Authentication/ScreenSplash/Instruct'
 import Rules from './src/presentation/container/Authentication/ScreenSplash/Rules'
-import BeatOutstand from './src/presentation/container/Authentication/Home/BeatOutstand'
+import BeatOutstand from './src/presentation/container/Authorized/Home/BeatOutstand'
 import MostUsed from './src/presentation/container/Authentication/BestList/MostUsed'
 import RecordedRecently from './src/presentation/container/Authentication/BestList/RecordedRecently'
 import Propose from './src/presentation/container/Authentication/BestList/Propose'
 import Notification from './src/presentation/container/Authentication/Notification/Notification'
 import MyGift from './src/presentation/container/Authentication/Notification/MyGift'
+import Thanks from './src/presentation/container/Authorized/Remix/Thanks'
+import Record from './src/presentation/container/Authorized/Home/Record'
+import { AuthorizedNavigator } from './src/presentation/navigation/AuthorizedNavigator'
+
 
 const Stack = createStackNavigator<MainStackParamList>();
 
@@ -34,10 +38,12 @@ const App = () => {
     // <MostUsed />
     // <RecordedRecently/>
     // <Propose />
-    // <Notification/>
+    //<Notification/>
+    // <Thanks/>
     // <MyGift />
+    // <Record/>
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="SplashScreen">
+      {/* <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="SplashScreen">
         <Stack.Screen name='SplashScreen'component={SplashScreen}/>
         <Stack.Screen name='Instruct'component={Instruct}/>
         <Stack.Screen name='Rules'component={Rules}/>
@@ -48,9 +54,9 @@ const App = () => {
         <Stack.Screen name='Register' component={Register} />
         <Stack.Screen name='LogInOTP' component={LogInOTP} />
         <Stack.Screen name='BeatOutstand' component={BeatOutstand} />
-      </Stack.Navigator>
+      </Stack.Navigator> */}
+      <AuthorizedNavigator/>
     </NavigationContainer>
-
   )
 }
 

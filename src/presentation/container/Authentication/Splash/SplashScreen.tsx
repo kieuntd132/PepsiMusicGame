@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'; 
 import { StyleSheet, Text, View, Image, Dimensions, ImageBackground } from 'react-native'
-import { MainStackScreenProps } from '../../../navigation/Navigation'
+import { MainStackScreenProps } from '../../../navigation/StackNavigation'
 import Background from '../../../component/background/Background'
 import { HEADLINE_2, TALENT } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors';
@@ -40,8 +40,6 @@ const SplashScreen: React.FC<MainStackScreenProps<'SplashScreen'>>= ({navigation
                         </View>
                     </ImageBackground>
                 </View>
-
-
             </View>
         </Background>
   );
