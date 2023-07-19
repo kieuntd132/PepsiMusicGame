@@ -34,3 +34,20 @@ export const ICON_PROFILE = require('./Icon_Profile.png');
 export const ICON_PROFILE_FOCUS = require('./Icon_ProfileFocus.png');
 export const ICON_VIDEOLIST = require('./Icon_Videolist.png');
 export const ICON_VIDEOLIST_FOCUS = require('./Icon_VideolistFocus.png');
+export const BANNER = require('./Banner_1.png');
+export const BAR_TIME = require('./Bar_time.png');
+export const PREESTYLE = require('./Freestyle.png');
+export const ICON_CHECK = require('./Icon_check.png');
+export const ICON_LYRIC_HIDE = require('./Icon_lyric_hide.png');
+export const ICON_LYRIC = require('./Icon_lyric.png');
+export const ICON_PERFORM = require('./Icon_perform.png');
+export const ICON_PLAY = require('./Icon_Play.png');
+export const ICON_RECORD_BACK = require('./Icon_Record_back.png');
+export const ICON_VOLUMN = require('./Icon_volumn.png');
+export const IMG_COVER_2 = require('./Img_cover_2.png');
+export const IMG_COVER_1 = require('./Img_cover1.png');
+export const IMG_SHARE = require('./Img_share.png');
+
+
+
+
