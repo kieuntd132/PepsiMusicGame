@@ -4,9 +4,16 @@ import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR, LOA } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import { MainStackScreenProps } from '../../../navigation/StackNavigation'
-
+import Header from '../../../component/header/Header'
 
 const Rules: React.FC<MainStackScreenProps<'Rules'>> = ({ navigation, route }) => {
+    const centerHeader = () => {
+        return (
+            <View style={styles.header_1}>
+                <Text style={styles.textHeader}>Thể lệ chương trình</Text>
+            </View>
+        )
+    }
     const hanldeLogin = () => {
         navigation.navigate("LogInSplash");
     }
@@ -195,13 +202,12 @@ const Rules: React.FC<MainStackScreenProps<'Rules'>> = ({ navigation, route }) =
     return (
         <Background>
             <View style={styles.container}>
-                <ImageBackground source={BACKGROUND_TOOLBAR} style={styles.headline}>
-                    <TouchableOpacity onPress={hanldeLogin}>
-                        <Image source={BACK} style={styles.iconBack} />
-                    </TouchableOpacity>
-                    <Text style={styles.rule}>Thể lệ chương trình</Text>
-                </ImageBackground>
-                <ScrollView style={{flex:1}}>
+                <Header
+                    iconLeft={BACK}
+                    leftHeader={hanldeLogin}
+                    centerHeader={centerHeader()}
+                />
+                <ScrollView style={{ flex: 1 }}>
                     <View style={styles.paragraph1}>
                         <Text style={styles.titleFirst}>SẢNG KHOÁI PEPSI – BUNG NHẠC CỰC CHẤT</Text>
                         <Text style={styles.titleSecond}>(Diễn ra từ ngày 13/05/2022 đến hết ngày 09/06/2022)</Text>
@@ -291,24 +297,16 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
     },
-    headline: {
-        height: Dimensions.get('window').height * 0.13,
-        width: '100%',
+    header_1: {
+        marginTop: Dimensions.get('window').height * 0.04,
+        justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'row'
     },
-    iconBack: {
-        marginTop: Dimensions.get('window').height * 0.04,
-        marginLeft: Dimensions.get('window').width * 0.03,
-    },
-    rule: {
-        fontFamily: 'Montserrat',
-        fontSize: 18,
+    textHeader: {
         fontWeight: '600',
-        lineHeight: 27,
+        fontSize: 18,
         color: Colors.WHITE,
-        marginTop: Dimensions.get('window').height * 0.04,
-        marginLeft: Dimensions.get('window').width * 0.22,
+        textAlign: 'center',
     },
     paragraph1: {
         flexDirection: 'column',

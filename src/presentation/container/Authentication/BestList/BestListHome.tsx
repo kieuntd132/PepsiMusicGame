@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ScrollView, Image, FlatList, Dimensions, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, Image, FlatList, Dimensions, TouchableOpacity, ImageBackground, Pressable } from 'react-native'
 import React from 'react'
 import Background from '../../../component/background/Background'
 
@@ -93,7 +93,7 @@ const Item = ({ item }: { item: ItemList }) => (
 
 
 
-const BeatList = () => {
+const BestListHome = () => {
     const centerHeader = () => {
         return (
             <View style={styles.header_1}>
@@ -159,7 +159,7 @@ const BeatList = () => {
     )
 }
 
-export default BeatList
+export default BestListHome
 
 const styles = StyleSheet.create({
     container: {
@@ -262,6 +262,7 @@ const styles = StyleSheet.create({
 
     },
     imageMic: {
+        marginTop: -Dimensions.get('window').height * 0.02,
         marginRight: - Dimensions.get('screen').width * 0.045,
     },
     imageEye: {
@@ -286,7 +287,8 @@ const styles = StyleSheet.create({
 
     },
     group: {
-        marginTop: Dimensions.get('window').height * 0.023,
+        marginTop: Dimensions.get('window').height * 0.015,
+        height: Dimensions.get('window').height * 0.02,
         marginLeft: - Dimensions.get('window').height * 0.022,
         width: '30%',
         flexDirection: 'row',
@@ -300,11 +302,11 @@ const styles = StyleSheet.create({
         fontSize: 8,
     },
     like: {
-
         fontSize: 8,
     },
     group1: {
-        marginTop: Dimensions.get('window').height * 0.023,
+        marginTop: Dimensions.get('window').height * 0.015,
+        height: Dimensions.get('window').height * 0.02,
         marginLeft: - Dimensions.get('window').height * 0.024,
         width: '30%',
         flexDirection: 'row',

@@ -3,6 +3,7 @@ import { FlatList, Image, StyleSheet, Text, View, ImageBackground, Dimensions, T
 import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
+import Header from '../../../component/header/Header';
 
 interface Item {
     id: number;
@@ -42,13 +43,21 @@ const MyGift = () => {
         { id: 1, title: "Iphone 13 Promax", titlelitle: "Top 1 tuần - 28/11/2021", button: "Chưa nhận", image: require("../../../../../assets/Iphone_13ProMax.png") },
         { id: 2, title: "Samsung Galaxy Tab S7+", titlelitle: "Top 2 tuần - 21/11/2021", button: "Đã nhận", image: require("../../../../../assets/Samsung_Galaxy_TabS7+.png") },
     ];
+    const centerHeader = () => {
+        return (
+            <View style={styles.header_1}>
+                <Text style={styles.textHeader}>Quà tặng của tôi</Text>
+            </View>
+        )
+    }
     return (
         <Background>
             <View style={styles.container}>
-                <ImageBackground source={BACKGROUND_TOOLBAR} style={styles.headline}>
-                    <Image source={BACK} style={styles.iconBack} />
-                    <Text style={styles.rule}>Quà của tôi</Text>
-                </ImageBackground>
+                <Header
+                    iconLeft={BACK}
+                    // leftHeader={hanldeLogin}
+                    centerHeader={centerHeader()}
+                />
                 <FlatList
                     style={{ marginHorizontal: Dimensions.get('window').width * 0.02 }}
                     horizontal={true}
@@ -67,25 +76,17 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    headline: {
-        height: Dimensions.get('window').height * 0.13,
-        width: '100%',
+    header_1: {
+        marginTop: Dimensions.get('window').height * 0.04,
+        justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'row',
-    },
-    iconBack: {
-        marginTop: Dimensions.get('window').height * 0.04,
-        marginLeft: Dimensions.get('window').width * 0.03,
-    },
-    rule: {
-        fontFamily: 'Montserrat',
-        fontSize: 18,
+      },
+      textHeader: {
         fontWeight: '600',
-        lineHeight: 27,
+        fontSize: 18,
         color: Colors.WHITE,
-        marginTop: Dimensions.get('window').height * 0.04,
-        marginLeft: Dimensions.get('window').width * 0.28,
-    },
+        textAlign: 'center',
+      },
     item: {
         flexDirection: 'column',
         justifyContent: 'center',

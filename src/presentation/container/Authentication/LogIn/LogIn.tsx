@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   header: {
-    marginVertical: '8.3%',
+    marginVertical: '8%',
   },
   image: {
     resizeMode: 'contain',

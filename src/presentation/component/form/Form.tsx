@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Text, View, TextStyle, TextProps, StyleProp} from 'react-native'
+import { StyleSheet,Dimensions, Image, Text, View, TextStyle, TextProps, StyleProp} from 'react-native'
 import React from 'react'
 import { Colors } from '../../resource/value/Colors';
 import {TEXT_PEPSI_MUSIC } from '../../../../assets';
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   container: {
     width: '90%',
     height: '53%',
+    marginTop: -Dimensions.get('screen').height *0.04,
     borderWidth: 1,
     borderRadius: 16,
     borderColor: Colors.WHITE,

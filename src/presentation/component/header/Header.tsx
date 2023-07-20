@@ -1,4 +1,4 @@
-import { Image, ImageSourcePropType, StyleProp, StyleSheet, TextProps, TouchableOpacity, View, ViewStyle } from 'react-native'
+import { Image, ImageSourcePropType, Dimensions, StyleProp, StyleSheet, TextProps, TouchableOpacity, View, ViewStyle } from 'react-native'
 import React from 'react'
 
 export interface HeaderProps extends TextProps {
@@ -60,11 +60,13 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         justifyContent: 'center',
-        height: '8%',
+        height: '13%',
+        // backgroundColor:'red'
     },
     icon: {
         resizeMode: 'contain',
         height: '40%',
+        marginTop: Dimensions.get('window').height * 0.04,
     },
     button: {
         height: '70%',

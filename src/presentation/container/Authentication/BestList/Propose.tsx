@@ -3,6 +3,7 @@ import { FlatList, Image, StyleSheet, Text, View, ImageBackground, Dimensions } 
 import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
+import Header from '../../../component/header/Header';
 
 interface Item {
   id: number;
@@ -36,7 +37,7 @@ const renderItem = ({ item }: { item: Item }) => (
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.titleMini}>{item.titleMini}</Text>
         <View style={styles.gr3}>
-          <Image source={item.imageMiniMicro}/>
+          <Image source={item.imageMiniMicro} />
           <Text style={styles.titleWatch}>{item.titleWatch}</Text>
         </View>
       </View>
@@ -46,13 +47,21 @@ const renderItem = ({ item }: { item: Item }) => (
 );
 
 const Propose = () => {
+  const centerHeader = () => {
+    return (
+      <View style={styles.header_1}>
+        <Text style={styles.textHeader}>Đề xuất cho bạn</Text>
+      </View>
+    )
+  }
   return (
     <Background>
       <View style={styles.container}>
-        <ImageBackground source={BACKGROUND_TOOLBAR} style={styles.headline}>
-          <Image source={BACK} style={styles.iconBack} />
-          <Text style={styles.rule}>Đề xuất cho bạn</Text>
-        </ImageBackground>
+        <Header
+          iconLeft={BACK}
+          // leftHeader={hanldeLogin}
+          centerHeader={centerHeader()}
+        />
         <FlatList
           data={DATA}
           renderItem={renderItem}
@@ -68,24 +77,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  headline: {
-    height: Dimensions.get('window').height * 0.13,
-    width: '100%',
+  header_1: {
+    marginTop: Dimensions.get('window').height * 0.04,
+    justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row',
   },
-  iconBack: {
-    marginTop: Dimensions.get('window').height * 0.04,
-    marginLeft: Dimensions.get('window').width * 0.03,
-  },
-  rule: {
-    fontFamily: 'Montserrat',
-    fontSize: 18,
+  textHeader: {
     fontWeight: '600',
-    lineHeight: 27,
+    fontSize: 18,
     color: Colors.WHITE,
-    marginTop: Dimensions.get('window').height * 0.04,
-    marginLeft: Dimensions.get('window').width * 0.25,
+    textAlign: 'center',
   },
   item: {
     flexDirection: 'row',
@@ -93,59 +94,59 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginVertical: 8,
     marginHorizontal: 16,
-    borderWidth:1,
-    borderRadius:8,
-    borderColor:Colors.WHITE,
-    width:Dimensions.get('window').width * 0.92,
-    backgroundColor:Colors.BLUE_BG,
+    borderWidth: 1,
+    borderRadius: 8,
+    borderColor: Colors.WHITE,
+    width: Dimensions.get('window').width * 0.92,
+    backgroundColor: Colors.BLUE_BG,
   },
-  gr1:{
+  gr1: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
   },
-  gr2:{
+  gr2: {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-start',
     marginLeft: Dimensions.get('window').width * 0.04,
   },
-  gr3:{
+  gr3: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth:1,
-    borderColor:Colors.BLUE_TITLE,
-    borderRadius:4,
-    backgroundColor:Colors.BLUE_TITLE,
-    padding:Dimensions.get('window').width * 0.01,
+    borderWidth: 1,
+    borderColor: Colors.BLUE_TITLE,
+    borderRadius: 4,
+    backgroundColor: Colors.BLUE_TITLE,
+    padding: Dimensions.get('window').width * 0.01,
   },
   image: {
     marginLeft: -Dimensions.get('window').width * 0.12,
   },
   title: {
-    fontFamily:'Montserrat',
-    color:Colors.WHITE,
-    fontSize:14,
-    fontStyle:'normal',
-    fontWeight:'700',
-    lineHeight:21,
+    fontFamily: 'Montserrat',
+    color: Colors.WHITE,
+    fontSize: 14,
+    fontStyle: 'normal',
+    fontWeight: '700',
+    lineHeight: 21,
   },
   titleMini: {
-    fontFamily:'Montserrat',
-    color:Colors.WHITE,
-    fontSize:10,
-    fontStyle:'normal',
-    fontWeight:'400',
-    lineHeight:15,
+    fontFamily: 'Montserrat',
+    color: Colors.WHITE,
+    fontSize: 10,
+    fontStyle: 'normal',
+    fontWeight: '400',
+    lineHeight: 15,
   },
   titleWatch: {
-    fontFamily:'Montserrat',
-    color:Colors.WHITE,
-    fontSize:8,
-    fontStyle:'normal',
-    fontWeight:'500',
-    lineHeight:9.6,
+    fontFamily: 'Montserrat',
+    color: Colors.WHITE,
+    fontSize: 8,
+    fontStyle: 'normal',
+    fontWeight: '500',
+    lineHeight: 9.6,
   },
   imageMic: {
     marginRight: -Dimensions.get('window').width * 0.08,

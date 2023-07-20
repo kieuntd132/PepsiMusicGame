@@ -21,6 +21,15 @@ import MyGift from './src/presentation/container/Authentication/Notification/MyG
 import Thanks from './src/presentation/container/Authorized/Remix/Thanks'
 import Record from './src/presentation/container/Authorized/Home/Record'
 import { AuthorizedNavigator } from './src/presentation/navigation/AuthorizedNavigator'
+import AnimationSplash from './src/presentation/container/Authorized/Remix/AnimationSplash'
+import AnimationNext from './src/presentation/container/Authorized/Remix/AnimationNext'
+import AnimationEnd from './src/presentation/container/Authorized/Remix/AnimationEnd'
+import RecordOne from './src/presentation/container/Authorized/Remix/RecordOne'
+import RecordTwo from './src/presentation/container/Authorized/Remix/RecordTwo'
+import Remix from './src/presentation/container/Authorized/Remix/Remix'
+import BestList from './src/presentation/container/Authorized/Home/BeatList'
+import BestListHome from './src/presentation/container/Authentication/BestList/BestListHome'
+import Search from './src/presentation/container/Authorized/Remix/Search'
 
 
 const Stack = createStackNavigator<MainStackParamList>();
@@ -38,25 +47,53 @@ const App = () => {
     // <MostUsed />
     // <RecordedRecently/>
     // <Propose />
-    //<Notification/>
+    // <Notification/>
     // <Thanks/>
     // <MyGift />
     // <Record/>
-    <NavigationContainer>
-      {/* <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="SplashScreen">
-        <Stack.Screen name='SplashScreen'component={SplashScreen}/>
-        <Stack.Screen name='Instruct'component={Instruct}/>
-        <Stack.Screen name='Rules'component={Rules}/>
-        <Stack.Screen name='LogInSplash' component={LogInSplash} />
-        <Stack.Screen name='LogIn' component={LogIn} />
-        <Stack.Screen name='RegisterSplash' component={RegisterSplash} />
-        <Stack.Screen name='RegisterOTP' component={RegisterOTP} />
-        <Stack.Screen name='Register' component={Register} />
-        <Stack.Screen name='LogInOTP' component={LogInOTP} />
-        <Stack.Screen name='BeatOutstand' component={BeatOutstand} />
-      </Stack.Navigator> */}
-      <AuthorizedNavigator/>
-    </NavigationContainer>
+    // <AnimationSplash/>
+    // <AnimationNext/>
+    // <AnimationEnd />
+    // <RecordOne/>
+    // <RecordTwo/>
+    // <Remix/>
+    // <BestListHome/>
+    // <Search/>
+    // <NavigationContainer>
+    //   <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="SplashScreen">
+    //     <Stack.Screen name='SplashScreen'component={SplashScreen}/>
+    //     <Stack.Screen name='Instruct'component={Instruct}/>
+    //     <Stack.Screen name='Rules'component={Rules}/>
+    //     <Stack.Screen name='LogInSplash' component={LogInSplash} />
+    //     <Stack.Screen name='LogIn' component={LogIn} />
+    //     <Stack.Screen name='RegisterSplash' component={RegisterSplash} />
+    //     <Stack.Screen name='RegisterOTP' component={RegisterOTP} />
+    //     <Stack.Screen name='Register' component={Register} />
+    //     <Stack.Screen name='LogInOTP' component={LogInOTP} />
+    //     <Stack.Screen name='BeatOutstand' component={BeatOutstand} />
+    //   </Stack.Navigator>
+    //   {/* <AuthorizedNavigator/> */}
+    // </NavigationContainer>
+    // <NavigationContainer>
+    //   <AuthorizedNavigator />
+    // </NavigationContainer>
+
+    // <Notification/>
+    // <MyGift />
+    // <BeatOutstand/>
+    // <MostUsed />
+    // <RecordedRecently/>
+    // <Propose />
+    // <BeatOutstand/>
+    // <RecordOne/>
+    // <RecordTwo/>
+    // <Remix/>
+    // <AnimationSplash/>
+    // <AnimationNext/>
+    // <AnimationEnd />
+    // <Search/>
+    // <AnimationEnd />
+    <Thanks/>
   )
 }
 

@@ -35,19 +35,27 @@ export const ICON_PROFILE_FOCUS = require('./Icon_ProfileFocus.png');
 export const ICON_VIDEOLIST = require('./Icon_Videolist.png');
 export const ICON_VIDEOLIST_FOCUS = require('./Icon_VideolistFocus.png');
 export const BANNER = require('./Banner_1.png');
-export const BAR_TIME = require('./Bar_time.png');
+export const BAR_TIME = require('./bar_time.png');
+export const BAR_TIME_RED = require('./bar_tim_red.png');
 export const PREESTYLE = require('./Freestyle.png');
 export const ICON_CHECK = require('./Icon_check.png');
 export const ICON_LYRIC_HIDE = require('./Icon_lyric_hide.png');
 export const ICON_LYRIC = require('./Icon_lyric.png');
 export const ICON_PERFORM = require('./Icon_perform.png');
 export const ICON_PLAY = require('./Icon_Play.png');
-export const ICON_RECORD_BACK = require('./Icon_Record_back.png');
+export const ICON_RECORD_BACK = require('./Icon_Record_Back.png');
 export const ICON_VOLUMN = require('./Icon_volumn.png');
 export const IMG_COVER_2 = require('./Img_cover_2.png');
-export const IMG_COVER_1 = require('./Img_cover1.png');
+export const IMG_COVER_1 = require('./img_cover1.png');
 export const IMG_SHARE = require('./Img_share.png');
-
-
-
-
+export const PEN = require('./Pen.png');
+export const OLD_SCHOOL = require('./Old_School.png');
+export const MODERN = require('./Modern.png');
+export const ICON_EYE = require('./Icon_eye.png');
+export const ICON_MUSIC = require('./Icon_Music.png');
+export const ICON_NOTIFICATION = require('./Icon_Notification.png');
+export const ICON_TYM = require('./Icon_Tym.png');
+export const ICON_VOLUMN_HIGH = require('./Icon_Volumn_High.png');
+export const IMG_ITEM1 = require('./Img_item1.png');
+export const IMG_ITEM2 = require('./Img_item2.png');
+export const ICON_CANCEL = require('./Icon_cancel.png');

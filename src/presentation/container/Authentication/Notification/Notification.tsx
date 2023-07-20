@@ -3,7 +3,7 @@ import { FlatList, Image, StyleSheet, Text, View, ImageBackground, Dimensions } 
 import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
-
+import Header from '../../../component/header/Header';
 interface Item {
     id: number;
     title: string;
@@ -32,13 +32,21 @@ const renderItem = ({ item }: { item: Item }) => (
 );
 
 const Notification = () => {
+    const centerHeader = () => {
+        return (
+            <View style={styles.header_1}>
+                <Text style={styles.textHeader}>Thông báo</Text>
+            </View>
+        )
+    }
     return (
         <Background>
             <View style={styles.container}>
-                <ImageBackground source={BACKGROUND_TOOLBAR} style={styles.headline}>
-                    <Image source={BACK} style={styles.iconBack} />
-                    <Text style={styles.rule}>Thông báo</Text>
-                </ImageBackground>
+                <Header
+                    iconLeft={BACK}
+                    // leftHeader={hanldeLogin}
+                    centerHeader={centerHeader()}
+                />
                 <FlatList
                     data={DATA}
                     renderItem={renderItem}
@@ -54,24 +62,16 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    headline: {
-        height: Dimensions.get('window').height * 0.13,
-        width: '100%',
+    header_1: {
+        marginTop: Dimensions.get('window').height * 0.04,
+        justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'row',
     },
-    iconBack: {
-        marginTop: Dimensions.get('window').height * 0.04,
-        marginLeft: Dimensions.get('window').width * 0.03,
-    },
-    rule: {
-        fontFamily: 'Montserrat',
-        fontSize: 18,
+    textHeader: {
         fontWeight: '600',
-        lineHeight: 27,
+        fontSize: 18,
         color: Colors.WHITE,
-        marginTop: Dimensions.get('window').height * 0.04,
-        marginLeft: Dimensions.get('window').width * 0.30,
+        textAlign: 'center',
     },
     item: {
         flexDirection: 'row',
@@ -90,22 +90,22 @@ const styles = StyleSheet.create({
         borderRadius: 9,
         borderColor: Colors.WHITE_BORDER,
     },
-    gr1:{
+    gr1: {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'flex-start',
-        marginLeft:Dimensions.get('window').width * 0.05
+        marginLeft: Dimensions.get('window').width * 0.05
     },
     title: {
-        marginBottom:Dimensions.get('window').height * 0.03,
-        fontFamily:'Montserrat',
+        marginBottom: Dimensions.get('window').height * 0.03,
+        fontFamily: 'Montserrat',
         fontSize: 12,
         fontWeight: '400',
         lineHeight: 18,
         color: Colors.WHITE,
     },
     titleTime: {
-        fontFamily:'Montserrat',
+        fontFamily: 'Montserrat',
         fontSize: 12,
         fontWeight: '300',
         lineHeight: 18,
