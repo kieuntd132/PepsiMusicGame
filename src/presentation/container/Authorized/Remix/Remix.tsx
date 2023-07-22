@@ -8,15 +8,6 @@ import Header from '../../../component/header/Header'
 
 
 const Remix = () => {
-    const centerHeader = () => {
-        return (
-            <View style={styles.header_1}>
-                <Text style={styles.textHeader}>Tiền nhiều để làm gì</Text>
-                <Text style={styles.rule2}>Gducky ft.Lưu Hiền Trinh</Text>
-            </View>
-        )
-    }
-
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
@@ -26,7 +17,8 @@ const Remix = () => {
             <Header
                 iconLeft={BACK}
                 // leftHeader={hanldeLogin}
-                centerHeader={centerHeader()}
+                centerHeader={"Tiền nhiều để làm gì"}
+                centerHeaderMini={"Gducky ft.Lưu Hiền Trinh"}
             />
 
             <View style={styles.group}>
@@ -92,28 +84,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-    },
-
-    header_1: {
-        marginTop: Dimensions.get('window').height * 0.04,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    textHeader: {
-        fontWeight: '600',
-        fontSize: 18,
-        color: Colors.WHITE,
-        textAlign: 'center',
-        marginLeft: Dimensions.get('window').width * 0.08,
-    },
-    rule2:{
-        marginLeft: Dimensions.get('window').width * 0.08,
-        textAlign: 'center',
-        fontFamily: 'Montserrat',
-        fontSize: 12,
-        fontWeight: '400',
-        lineHeight: 18,
-        color: Colors.BLUE_2_BLUE,
     },
     beat: {
 

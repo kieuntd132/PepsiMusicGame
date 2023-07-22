@@ -18,6 +18,7 @@ export const Colors = {
     BLUE_BG:'rgba(19, 66, 125, 0.70)',
     WHITE_BORDER:'rgba(255, 255, 255, 0.40)',
     WHITE_BORDER2:'rgba(255, 255, 255, 0.80)',
+    WHITE_BORDER3:'rgba(255, 255, 255, 0.20)',
     SHADOW:('rgba(0, 0, 0, 0.25)'),
     BLUE_BLUE:('#004A98'),
     BOTTOM_BAR: 'rgba(119, 174, 240, 1)',
@@ -27,5 +28,11 @@ export const Colors = {
     TYM_BACK:'rgba(16, 76, 231, 1)',
     SEARCH: '#0074A4',
     SEARCH1: '#99B7D6',
+    BANNER_1:'#205EFF',
+    BANNER_2:'#40AFFF',
+    SOLID:'#1D4FD6',
+    TEXT1:'#C2C9D1',
+    RED1:'#D30024',
+    BLUEW:'#1445C2',
   };
  

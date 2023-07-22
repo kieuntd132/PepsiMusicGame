@@ -1,5 +1,6 @@
-import { Image, ImageSourcePropType, Dimensions, StyleProp, StyleSheet, TextProps, TouchableOpacity, View, ViewStyle } from 'react-native'
+import { Image, ImageSourcePropType, Dimensions, StyleProp, StyleSheet, TextProps, TouchableOpacity, View, ViewStyle, Text } from 'react-native'
 import React from 'react'
+import { Colors } from '../../resource/value/Colors'
 
 export interface HeaderProps extends TextProps {
     //
@@ -7,6 +8,8 @@ export interface HeaderProps extends TextProps {
     leftHeader?: () => void,
     //
     centerHeader?: React.ReactNode,
+    centerHeaderMini?: React.ReactNode,
+    // centerHeader?: () => void,
     //
     iconRight?: ImageSourcePropType,
     rightHeader?: () => void,
@@ -16,7 +19,7 @@ export interface HeaderProps extends TextProps {
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
-    const { iconLeft, iconRight, leftHeader, rightHeader, centerHeader, containerStyle } = props;
+    const { iconLeft, iconRight, leftHeader, rightHeader, centerHeader, centerHeaderMini, containerStyle } = props;
 
     const EventLeft = () => {
         if (iconLeft) {
@@ -28,6 +31,14 @@ const Header: React.FC<HeaderProps> = (props) => {
         }
         return null;
     };
+    const TextcenterHeader = () => {
+        return (
+            <View style={styles.header_1}>
+                <Text style={styles.textHeader}>{centerHeader}</Text>
+                <Text style={styles.textHeader2}>{centerHeaderMini}</Text>
+            </View>
+        )
+    }
     const EventRight = () => {
         if (iconRight) {
             return (
@@ -45,7 +56,7 @@ const Header: React.FC<HeaderProps> = (props) => {
                 {EventLeft()}
             </View>
             <View style={styles.boxCenter}>
-                {centerHeader}
+                {TextcenterHeader()}
             </View>
             <View style={styles.boxRight}>
                 {EventRight()}
@@ -87,5 +98,24 @@ const styles = StyleSheet.create({
         width: '15%',
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    header_1: {
+        marginTop: Dimensions.get('window').height * 0.04,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    textHeader: {
+        fontFamily:'Montserrat',
+        fontWeight: '700',
+        fontSize: 18,
+        color: Colors.WHITE,
+        textAlign: 'center',
+    },
+    textHeader2: {
+        fontFamily:'Montserrat',
+        fontWeight: '400',
+        fontSize: 12,
+        color: Colors.BLUE_2_BLUE,
+        textAlign: 'center',
     },
 })

@@ -6,20 +6,13 @@ import { Colors } from '../../../resource/value/Colors'
 import Button from '../../../component/button/Button'
 import Header from '../../../component/header/Header'
 const AnimationEnd = () => {
-    const centerHeader = () => {
-        return (
-            <View style={styles.header_1}>
-                <Text style={styles.textHeader}>Tạo bài đăng</Text>
-            </View>
-        )
-    }
     return (
         <Background>
             <View style={styles.container}>
                 <Header
                     iconLeft={BACK}
                     // leftHeader={hanldeLogin}
-                    centerHeader={centerHeader()}
+                    centerHeader={"Tạo bài đăng"}
                 />
                 <View style={styles.gr}>
                     <Image source={IMG_COVER_2} style={styles.img} />

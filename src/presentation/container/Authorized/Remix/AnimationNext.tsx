@@ -6,21 +6,15 @@ import { BACKGROUND_TOOLBAR, BACK, IMG_COVER_1, OLD_SCHOOL, MODERN, PREESTYLE } 
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header'
 const AnimationNext = () => {
-    const centerHeader = () => {
-    return (
-        <View style={styles.header_1}>
-            <Text style={styles.textHeader}>Tiền nhiều để làm gì</Text>
-            <Text style={styles.rule2}>Gducky ft.Lưu Hiền Trinh</Text>
-        </View>
-    )
-}
+    
 return (
     <Background>
         <View style={styles.container}>
             <Header
                 iconLeft={BACK}
                 // leftHeader={hanldeLogin}
-                centerHeader={centerHeader()}
+                centerHeader={"Tiền nhiều để làm gì"}
+                centerHeaderMini={"Gducky ft.Lưu Hiền Trinh"}
             />
                 <View style={styles.banner}>
                     <Image source={IMG_COVER_1} style={styles.imgCover}/>
@@ -62,27 +56,6 @@ export default AnimationNext
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    },
-    header_1: {
-        marginTop: Dimensions.get('window').height * 0.04,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    textHeader: {
-        fontWeight: '600',
-        fontSize: 18,
-        color: Colors.WHITE,
-        textAlign: 'center',
-        marginLeft: Dimensions.get('window').width * 0.08,
-    },
-    rule2:{
-        marginLeft: Dimensions.get('window').width * 0.08,
-        textAlign: 'center',
-        fontFamily: 'Montserrat',
-        fontSize: 12,
-        fontWeight: '400',
-        lineHeight: 18,
-        color: Colors.BLUE_2_BLUE,
     },
     banner:{
         marginHorizontal:Dimensions.get("window").width * 0.055,

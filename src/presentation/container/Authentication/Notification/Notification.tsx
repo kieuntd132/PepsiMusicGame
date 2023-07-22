@@ -32,20 +32,13 @@ const renderItem = ({ item }: { item: Item }) => (
 );
 
 const Notification = () => {
-    const centerHeader = () => {
-        return (
-            <View style={styles.header_1}>
-                <Text style={styles.textHeader}>Thông báo</Text>
-            </View>
-        )
-    }
     return (
         <Background>
             <View style={styles.container}>
                 <Header
                     iconLeft={BACK}
                     // leftHeader={hanldeLogin}
-                    centerHeader={centerHeader()}
+                    centerHeader={"Thông báo"}
                 />
                 <FlatList
                     data={DATA}

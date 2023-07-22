@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Image, Dimensions } from 'react-native'
 import React from 'react'
 import Button from '../../../component/button/Button'
 import Background from '../../../component/background/Background'
-import { HEADLINE_2, TALENT } from '../../../../../assets'
+import { TALENT } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import { MainStackScreenProps } from '../../../navigation/StackNavigation'
 

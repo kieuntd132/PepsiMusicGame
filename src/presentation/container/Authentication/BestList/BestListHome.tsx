@@ -94,19 +94,12 @@ const Item = ({ item }: { item: ItemList }) => (
 
 
 const BestListHome = () => {
-    const centerHeader = () => {
-        return (
-            <View style={styles.header_1}>
-                <Text style={styles.textHeader}>Tiền nhiều để làm gì</Text>
-            </View>
-        )
-    }
     return (
         <Background>
             <Header
                 iconLeft={ICON_HOME}
                 // leftHeader={goBack}
-                centerHeader={centerHeader()}
+                centerHeader={"Beat list"}
                 iconRight={ICON_NOTIFICATION}
             // rightHeader={goNotification}
             />

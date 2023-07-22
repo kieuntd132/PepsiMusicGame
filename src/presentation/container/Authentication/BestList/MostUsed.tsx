@@ -46,20 +46,13 @@ const renderItem = ({ item }: { item: Item }) => (
 );
 
 const MostUsed = () => {
-  const centerHeader = () => {
-    return (
-      <View style={styles.header_1}>
-        <Text style={styles.textHeader}>Sử dụng nhiều</Text>
-      </View>
-    )
-  }
   return (
     <Background>
       <View style={styles.container}>
         <Header
           iconLeft={BACK}
           // leftHeader={hanldeLogin}
-          centerHeader={centerHeader()}
+          centerHeader={"Sử dụng nhiều"}
         />
         <FlatList
           data={DATA}

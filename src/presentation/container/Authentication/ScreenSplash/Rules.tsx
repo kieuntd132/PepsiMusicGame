@@ -7,13 +7,6 @@ import { MainStackScreenProps } from '../../../navigation/StackNavigation'
 import Header from '../../../component/header/Header'
 
 const Rules: React.FC<MainStackScreenProps<'Rules'>> = ({ navigation, route }) => {
-    const centerHeader = () => {
-        return (
-            <View style={styles.header_1}>
-                <Text style={styles.textHeader}>Thể lệ chương trình</Text>
-            </View>
-        )
-    }
     const hanldeLogin = () => {
         navigation.navigate("LogInSplash");
     }
@@ -205,7 +198,7 @@ const Rules: React.FC<MainStackScreenProps<'Rules'>> = ({ navigation, route }) =
                 <Header
                     iconLeft={BACK}
                     leftHeader={hanldeLogin}
-                    centerHeader={centerHeader()}
+                    centerHeader={"Thể lệ"}
                 />
                 <ScrollView style={{ flex: 1 }}>
                     <View style={styles.paragraph1}>

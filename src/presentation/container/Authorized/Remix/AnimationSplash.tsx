@@ -6,24 +6,17 @@ import { BACKGROUND_TOOLBAR, BACK, IMG_COVER_2 } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header'
 const AnimationSplash = () => {
-    const centerHeader = () => {
     return (
-        <View style={styles.header_1}>
-            <Text style={styles.textHeader}>Tiền nhiều để làm gì</Text>
-            <Text style={styles.rule2}>Gducky ft.Lưu Hiền Trinh</Text>
-        </View>
-    )
-}
-return (
-    <Background>
-        <View style={styles.container}>
-            <Header
-                iconLeft={BACK}
-                // leftHeader={hanldeLogin}
-                centerHeader={centerHeader()}
-            />
+        <Background>
+            <View style={styles.container}>
+                <Header
+                    iconLeft={BACK}
+                    // leftHeader={hanldeLogin}
+                    centerHeader={"Tiền nhiều để làm gì"}
+                    centerHeaderMini={"Gducky ft.Lưu Hiền Trinh"}
+                />
                 <View style={styles.banner}>
-                    <Image source={IMG_COVER_2} style={styles.imgCover}/>
+                    <Image source={IMG_COVER_2} style={styles.imgCover} />
                     <Text style={styles.textCover}>Bạn có muốn tạo video animation không?</Text>
                 </View>
                 <View style={styles.boxButton}>
@@ -49,47 +42,26 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    header_1: {
-        marginTop: Dimensions.get('window').height * 0.04,
-        justifyContent: 'center',
-        alignItems: 'center',
+    banner: {
+        marginHorizontal: Dimensions.get("window").width * 0.055,
+        marginTop: Dimensions.get('window').height * 0.03,
+        marginBottom: Dimensions.get('window').height * 0.05,
     },
-    textHeader: {
-        fontWeight: '600',
-        fontSize: 18,
-        color: Colors.WHITE,
-        textAlign: 'center',
-        marginLeft: Dimensions.get('window').width * 0.08,
-    },
-    rule2:{
-        marginLeft: Dimensions.get('window').width * 0.08,
-        textAlign: 'center',
-        fontFamily: 'Montserrat',
-        fontSize: 12,
-        fontWeight: '400',
-        lineHeight: 18,
-        color: Colors.BLUE_2_BLUE,
-    },
-    banner:{
-        marginHorizontal:Dimensions.get("window").width * 0.055,
-        marginTop:Dimensions.get('window').height *0.03,
-        marginBottom:Dimensions.get('window').height *0.05,
-    },
-    imgCover:{
-        marginBottom:Dimensions.get('window').height *0.015,
-        borderRadius:12,
-        borderWidth:2,
-        borderColor:Colors.WHITE_BORDER,
+    imgCover: {
+        marginBottom: Dimensions.get('window').height * 0.015,
+        borderRadius: 12,
+        borderWidth: 2,
+        borderColor: Colors.WHITE_BORDER,
         height: Dimensions.get('window').height * 0.6,
 
     },
-    textCover:{
+    textCover: {
         fontFamily: 'Montserrat',
         fontSize: 16,
         fontWeight: '500',
         lineHeight: 24,
         color: Colors.WHITE,
-        textAlign:'center',
+        textAlign: 'center',
     },
     boxButton: {
         flexDirection: 'row',
@@ -97,7 +69,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginTop: -Dimensions.get('window').height * 0.13,
         alignItems: 'center',
-        marginHorizontal:Dimensions.get("window").width * 0.055,
+        marginHorizontal: Dimensions.get("window").width * 0.055,
     },
     buttonTao: {
         width: Dimensions.get('window').width * 0.7,
@@ -113,5 +85,5 @@ const styles = StyleSheet.create({
     title: {
         color: Colors.WHITE,
     },
-   
+
 })

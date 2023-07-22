@@ -47,20 +47,13 @@ const renderItem = ({ item }: { item: Item }) => (
 );
 
 const Propose = () => {
-  const centerHeader = () => {
-    return (
-      <View style={styles.header_1}>
-        <Text style={styles.textHeader}>Đề xuất cho bạn</Text>
-      </View>
-    )
-  }
   return (
     <Background>
       <View style={styles.container}>
         <Header
           iconLeft={BACK}
           // leftHeader={hanldeLogin}
-          centerHeader={centerHeader()}
+          centerHeader={"Đề xuất cho bạn"}
         />
         <FlatList
           data={DATA}

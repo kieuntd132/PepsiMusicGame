@@ -47,20 +47,13 @@ const renderItem = ({ item }: { item: Item }) => (
 );
 
 const RecordedRecently = () => {
-  const centerHeader = () => {
-    return (
-      <View style={styles.header_1}>
-        <Text style={styles.textHeader}>Đã thu gần đây</Text>
-      </View>
-    )
-  }
   return (
     <Background>
       <View style={styles.container}>
         <Header
           iconLeft={BACK}
           // leftHeader={hanldeLogin}
-          centerHeader={centerHeader()}
+          centerHeader={"Đã thu gần đây"}
         />
         <FlatList
           data={DATA}

@@ -30,6 +30,7 @@ import Remix from './src/presentation/container/Authorized/Remix/Remix'
 import BestList from './src/presentation/container/Authorized/Home/BeatList'
 import BestListHome from './src/presentation/container/Authentication/BestList/BestListHome'
 import Search from './src/presentation/container/Authorized/Remix/Search'
+import TopLike from './src/presentation/container/Authorized/Leaderboard/TopLike'
 
 
 const Stack = createStackNavigator<MainStackParamList>();
@@ -41,9 +42,6 @@ const App = () => {
     // <LogIn/>
     // <LogInOTP/>
     // <LogInSplash/>
-    // <Rule/>
-    // <Instruct />
-    // <BeatOutstand/>
     // <MostUsed />
     // <RecordedRecently/>
     // <Propose />
@@ -53,7 +51,7 @@ const App = () => {
     // <Record/>
     // <AnimationSplash/>
     // <AnimationNext/>
-    // <AnimationEnd />
+    <AnimationEnd />
     // <RecordOne/>
     // <RecordTwo/>
     // <Remix/>
@@ -78,22 +76,7 @@ const App = () => {
     //   <AuthorizedNavigator />
     // </NavigationContainer>
 
-    // <Notification/>
-    // <MyGift />
-    // <BeatOutstand/>
-    // <MostUsed />
-    // <RecordedRecently/>
-    // <Propose />
-    // <BeatOutstand/>
-    // <RecordOne/>
-    // <RecordTwo/>
-    // <Remix/>
-    // <AnimationSplash/>
-    // <AnimationNext/>
-    // <AnimationEnd />
-    // <Search/>
-    // <AnimationEnd />
-    <Thanks/>
+    // <TopLike />
   )
 }
 

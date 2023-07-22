@@ -40,20 +40,13 @@ const getTextWithBoldAndUpper2 = (text2: string, boldAndUpperTexts2: any) => {
 
 
 const RecordOne = () => {
-    const centerHeader = () => {
-        return (
-            <View style={styles.header_1}>
-                <Text style={styles.textHeader}>Beat list</Text>
-            </View>
-        )
-    }
-
     return (
         <Background>
             <Header
                 iconLeft={BACK}
                 // leftHeader={goBack}
-                centerHeader={centerHeader()}
+                centerHeader={"Tiền nhiều để làm gì"}
+                centerHeaderMini={"Gducky ft.Lưu Hiền Trinh"}
                 iconRight={ICON_LYRIC}
             // rightHeader={goNotification}
             />
@@ -97,17 +90,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
     }, 
-    header_1: {
-        marginTop: Dimensions.get('window').height * 0.04,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    textHeader: {
-        fontWeight: '600',
-        fontSize: 18,
-        color: Colors.WHITE,
-        textAlign: 'center',
-    },
+    
     gr: {
         marginTop: Dimensions.get('window').height * 0.02,
         textAlign: 'center'
