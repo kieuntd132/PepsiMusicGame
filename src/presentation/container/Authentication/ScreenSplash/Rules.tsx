@@ -290,17 +290,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
     },
-    header_1: {
-        marginTop: Dimensions.get('window').height * 0.04,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    textHeader: {
-        fontWeight: '600',
-        fontSize: 18,
-        color: Colors.WHITE,
-        textAlign: 'center',
-    },
     paragraph1: {
         flexDirection: 'column',
         justifyContent: 'center',
