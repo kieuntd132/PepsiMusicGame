@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View, ImageBackground, Pressable, Image, Dimensions, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground, ScrollView, Image, Dimensions, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import Background from '../../../component/background/Background'
 import { BACK, CENTER_BUTTON, ICON_LYRIC, BAR_TIME } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header'
+import { BeatListStackScreenProps } from '../../../navigation/StackNavigationBeatList'
 
 
 
@@ -39,46 +40,51 @@ const getTextWithBoldAndUpper2 = (text2: string, boldAndUpperTexts2: any) => {
 };
 
 
-const RecordOne = () => {
+const RecordOne: React.FC<BeatListStackScreenProps<'RecordOne'>> = ({ navigation, route }) => {
+    const goBack = () => {
+        navigation.navigate('BeatList');
+    }
     return (
         <Background>
             <Header
                 iconLeft={BACK}
-                // leftHeader={goBack}
+                leftHeader={goBack}
                 centerHeader={"Tiền nhiều để làm gì"}
                 centerHeaderMini={"Gducky ft.Lưu Hiền Trinh"}
                 iconRight={ICON_LYRIC}
             // rightHeader={goNotification}
             />
-            <View style={styles.gr}>
-                <Text style={styles.loi}>Lại là Ducky và sau nhiều lần </Text>
-                <Text style={styles.loi}>đã bị trói buộc thì</Text>
-                <Text style={styles.loi}>Thử đoán xem hôm nay</Text>
-                <Text style={styles.loi}>thằng Ducky này có thể nói được gì</Text>
-                <Text style={styles.loi}>Three of them say to me</Text>
-                <Text style={styles.loi}>"Baby I choose this rhymes"</Text>
-                <Text style={styles.loi}>Để rồi thì chú vịt vàng</Text>
-                <Text style={styles.loi}>lại làm cho cả sở thú nhịp nhàng</Text>
-                <Text style={styles.loi}>{getTextWithBoldAndUpper1(text1, boldAndUpperTexts1)}</Text>
-                <Text style={styles.loi}>{getTextWithBoldAndUpper2(text2, boldAndUpperTexts2)}</Text>
-                <Text style={styles.loi}>Quên đi bao yêu thương xung quanh</Text>
-                <Text style={styles.loi}>chỉ để chạy theo đống money</Text>
-                <Text style={styles.loi}>Bao nhiêu suy tư, bây giờ, cần đi làm ăn gì</Text>
-                <Text style={styles.loi}>Ta bay theo hương, bay theo hoa</Text>
-                <Text style={styles.loi}>just like a bee for honey</Text>
-                <Text style={styles.loi}>And just like that</Text>
-                <Text style={styles.loi}>Vịt tự nhủ là bản thân không được nhu mì đi</Text>
-                <Text style={styles.loi}>Vịt đánh đổi anh em bè bạn lấy bộ đồ Louis V</Text>
-                <Text style={styles.loi}>Để trở thành người đàn ông tham vọng</Text>
-                <Text style={styles.loi}>Những thứ xung quanh thật ra</Text>
-                <Text style={styles.loi}>đều là không quan trọng</Text>
-            </View>
-            <View style={styles.group}>
-                <Text>00:00</Text>
-                <Image source={BAR_TIME} style={styles.time} />
-                <Text>05:00</Text>
-            </View>
-            <Image source={CENTER_BUTTON} style={styles.center} />
+            <ScrollView>
+                <View style={styles.gr}>
+                    <Text style={styles.loi}>Lại là Ducky và sau nhiều lần </Text>
+                    <Text style={styles.loi}>đã bị trói buộc thì</Text>
+                    <Text style={styles.loi}>Thử đoán xem hôm nay</Text>
+                    <Text style={styles.loi}>thằng Ducky này có thể nói được gì</Text>
+                    <Text style={styles.loi}>Three of them say to me</Text>
+                    <Text style={styles.loi}>"Baby I choose this rhymes"</Text>
+                    <Text style={styles.loi}>Để rồi thì chú vịt vàng</Text>
+                    <Text style={styles.loi}>lại làm cho cả sở thú nhịp nhàng</Text>
+                    <Text style={styles.loi}>{getTextWithBoldAndUpper1(text1, boldAndUpperTexts1)}</Text>
+                    <Text style={styles.loi}>{getTextWithBoldAndUpper2(text2, boldAndUpperTexts2)}</Text>
+                    <Text style={styles.loi}>Quên đi bao yêu thương xung quanh</Text>
+                    <Text style={styles.loi}>chỉ để chạy theo đống money</Text>
+                    <Text style={styles.loi}>Bao nhiêu suy tư, bây giờ, cần đi làm ăn gì</Text>
+                    <Text style={styles.loi}>Ta bay theo hương, bay theo hoa</Text>
+                    <Text style={styles.loi}>just like a bee for honey</Text>
+                    <Text style={styles.loi}>And just like that</Text>
+                    <Text style={styles.loi}>Vịt tự nhủ là bản thân không được nhu mì đi</Text>
+                    <Text style={styles.loi}>Vịt đánh đổi anh em bè bạn lấy bộ đồ Louis V</Text>
+                    <Text style={styles.loi}>Để trở thành người đàn ông tham vọng</Text>
+                    <Text style={styles.loi}>Những thứ xung quanh thật ra</Text>
+                    <Text style={styles.loi}>đều là không quan trọng</Text>
+                </View>
+                <View style={styles.group}>
+                    <Text>00:00</Text>
+                    <Image source={BAR_TIME} style={styles.time} />
+                    <Text>05:00</Text>
+                </View>
+                <Image source={CENTER_BUTTON} style={styles.center} />
+            </ScrollView>
         </Background>
     )
 }
@@ -89,8 +95,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-    }, 
-    
+    },
+
     gr: {
         marginTop: Dimensions.get('window').height * 0.02,
         textAlign: 'center'
@@ -119,7 +125,7 @@ const styles = StyleSheet.create({
     center: {
 
         resizeMode: 'contain',
-        height: Dimensions.get('screen').height * 0.15,
+        height: Dimensions.get('screen').height * 0.12,
         marginLeft: Dimensions.get('window').height * 0.08,
         marginTop: Dimensions.get('window').height * 0.01,
 

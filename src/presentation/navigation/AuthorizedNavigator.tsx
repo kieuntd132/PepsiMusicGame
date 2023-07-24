@@ -4,6 +4,8 @@ import { BACKGROUND_TOOLBAR, CENTER_BUTTON, ICON_BEATLIST, ICON_BEATLIST_FOCUS, 
 import { Colors } from "../resource/value/Colors";
 import VideoList from "../container/Authorized/Home/VideoList";
 import BeatList from "../container/Authorized/Home/BeatList";
+import StackScreen from "./StackScreen";
+import RankingScreen from "./RankingScreen"
 import Ranking from "../container/Authorized/Home/Ranking";
 import Profile from "../container/Authorized/Home/Profile";
 import Record from "../container/Authorized/Home/Record";
@@ -37,7 +39,7 @@ export const AuthorizedNavigator = () => {
                         ),
                         title: 'Video List',
                     }} />
-                <Tab.Screen name="BeatList" component={BeatList}
+                <Tab.Screen name="BeatList" component={StackScreen}
                     options={{
                         tabBarIcon: ({ focused }) => (
                             <View>
@@ -60,7 +62,7 @@ export const AuthorizedNavigator = () => {
                         ),
                         title: 'Thu âm',
                     }} />
-                <Tab.Screen name="Ranking" component={Ranking}
+                <Tab.Screen name="Ranking" component={RankingScreen}
                     options={{
                         tabBarIcon: ({ focused }) => (
                             <View>

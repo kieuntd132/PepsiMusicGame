@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     header_1: {
-        marginTop: Dimensions.get('window').height * 0.04,
+        marginTop: Dimensions.get('window').height * 0.05,
         justifyContent: 'center',
         alignItems: 'center',
     },

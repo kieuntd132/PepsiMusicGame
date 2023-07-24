@@ -132,9 +132,8 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     center: {
-
         resizeMode: 'contain',
-        height: Dimensions.get('screen').height * 0.15,
+        height: Dimensions.get('screen').height * 0.12,
         marginTop: Dimensions.get('window').height * 0.01,
 
     },

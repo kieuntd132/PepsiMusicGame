@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, ScrollView, Image, FlatList, Dimensions, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Background from '../../../component/background/Background'
-
+import { BeatListStackScreenProps } from '../../../navigation/StackNavigationBeatList'
 import { BANNER, ICON_HOME, ICON_MUSIC, ICON_VOLUMN_HIGH, ICON_NOTIFICATION } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Button from '../../../component/button/Button'
@@ -43,65 +43,90 @@ const DATA: Item[] = [
 
 const DATALIST: ItemList[] = [
     { id: 1, title: 'Tiền nhiều để làm gì', titleMini: 'GDucky ft.Lưu Hiền Trinh', titleWatch: ' 9.023 lượt cover', image: require("../../../../../assets/Icon_pepsi.png"), imageMic: require("../../../../../assets/Icon_Mic.png"), imageMiniMicro: require("../../../../../assets/Icon_litleMicro.png") },
-
-
+    { id: 2, title: 'Tiền nhiều để làm gì', titleMini: 'GDucky ft.Lưu Hiền Trinh', titleWatch: ' 9.023 lượt cover', image: require("../../../../../assets/Icon_pepsi.png"), imageMic: require("../../../../../assets/Icon_Mic.png"), imageMiniMicro: require("../../../../../assets/Icon_litleMicro.png") },
+    { id: 3, title: 'Tiền nhiều để làm gì', titleMini: 'GDucky ft.Lưu Hiền Trinh', titleWatch: ' 9.023 lượt cover', image: require("../../../../../assets/Icon_pepsi.png"), imageMic: require("../../../../../assets/Icon_Mic.png"), imageMiniMicro: require("../../../../../assets/Icon_litleMicro.png") },
+    { id: 4, title: 'Tiền nhiều để làm gì', titleMini: 'GDucky ft.Lưu Hiền Trinh', titleWatch: ' 9.023 lượt cover', image: require("../../../../../assets/Icon_pepsi.png"), imageMic: require("../../../../../assets/Icon_Mic.png"), imageMiniMicro: require("../../../../../assets/Icon_litleMicro.png") },
 ];
 
 
-const renderItem = ({ item }: { item: Item }) => (
-    <View style={styles.item}>
-        <View style={styles.card}>
-            <View>
-                <Image source={item.image} style={styles.image} />
 
-                <Text style={styles.text}>{item.title}</Text>
+
+
+const BeatList: React.FC<BeatListStackScreenProps<'BeatList'>> = ({ navigation, route }) => {
+    const goRecord = () => {
+        navigation.navigate('Record');
+    }
+    const goNotification = () => {
+        navigation.navigate('Notification');
+    }
+    const goBeatOutstand = () => {
+        navigation.navigate('BeatOutstand');
+    }
+    const goMostUser = () => {
+        navigation.navigate('MostUsed');
+    }
+    const goRecordedRecently = () => {
+        navigation.navigate('RecordedRecently');
+    }
+    const goRecordOne = () => {
+        navigation.navigate('RecordOne');
+      }
+      const goPropose = () => {
+        navigation.navigate('Propose');
+      }
+      const renderItem = ({ item }: { item: Item }) => (
+        <View style={styles.item}>
+            <View style={styles.card}>
+                <View>
+                    <Image source={item.image} style={styles.image} />
+                    <Text style={styles.text}>{item.title}</Text>
+                </View>
+    
             </View>
-
-        </View>
-        <View style={styles.gr}>
-            <View style={styles.group}>
-                <Image source={item.imageEye} style={styles.imageEye} />
-                <Text style={styles.view}>{item.view}</Text>
-            </View >
-            <View style={styles.group1}>
-                <Image source={item.imageHeart} style={styles.imageHeart} />
-                <Text style={styles.like}>{item.like}</Text>
+            <View style={styles.gr}>
+                <View style={styles.group}>
+                    <Image source={item.imageEye} style={styles.imageEye} />
+                    <Text style={styles.view}>{item.view}</Text>
+                </View >
+                <View style={styles.group1}>
+                    <Image source={item.imageHeart} style={styles.imageHeart} />
+                    <Text style={styles.like}>{item.like}</Text>
+                </View>
+                <TouchableOpacity onPress={goRecordOne}>
+                    <Image source={item.imageMic} style={styles.imageMic} />
+                </TouchableOpacity>
             </View>
-
-            <Image source={item.imageMic} style={styles.imageMic} />
         </View>
-    </View>
-);
-
-const Item = ({ item }: { item: ItemList }) => (
-    <View style={styles.item1}>
-        <View style={styles.card1}>
-            <Image source={item.image} style={styles.image1} />
-            <View style={styles.card2}>
-                <Text style={styles.title1}>{item.title}</Text>
-                <Text style={styles.titleMini}>{item.titleMini}</Text>
-                <View style={styles.card3}>
-                    <Image source={item.imageMiniMicro} />
-                    <Text style={styles.titleWatch}>{item.titleWatch}</Text>
+    );
+    
+    const Item = ({ item }: { item: ItemList }) => (
+        <View style={styles.item1}>
+            <View style={styles.card1}>
+                <Image source={item.image} style={styles.image1} />
+                <View style={styles.card2}>
+                    <Text style={styles.title1}>{item.title}</Text>
+                    <Text style={styles.titleMini}>{item.titleMini}</Text>
+                    <View style={styles.card3}>
+                        <Image source={item.imageMiniMicro} />
+                        <Text style={styles.titleWatch}>{item.titleWatch}</Text>
+                    </View>
                 </View>
             </View>
+            <TouchableOpacity onPress={goRecordOne}>
+                <Image source={item.imageMic} style={styles.imageMic1} />
+            </TouchableOpacity>
         </View>
-        <Image source={item.imageMic} style={styles.imageMic1} />
-    </View>
-);
-
-
-
-
-const BeatList = () => {
+    );
+    
+    
     return (
         <Background>
             <Header
                 iconLeft={ICON_HOME}
-                // leftHeader={goBack}
+                leftHeader={goRecord}
                 centerHeader={"BeatList"}
                 iconRight={ICON_NOTIFICATION}
-            // rightHeader={goNotification}
+                rightHeader={goNotification}
             />
             <ScrollView style={styles.container}>
                 <Image source={BANNER} style={styles.imageBanner} />
@@ -110,17 +135,19 @@ const BeatList = () => {
                         title='Beat mới nhất'
                         titleStyle={styles.titleStyle}
                         icon={ICON_MUSIC}
+                        onPress={goBeatOutstand}
                     />
                     <Button containerStyle={styles.btn}
                         title='Sử dụng nhiều'
                         titleStyle={styles.titleStyle}
                         icon={ICON_VOLUMN_HIGH}
+                        onPress={goMostUser}
                     />
                 </View>
                 <View style={styles.boxHistory}>
                     <View style={styles.boxTitle}>
                         <Text style={styles.title}>Đã thu gần đây</Text>
-                        <TouchableOpacity style={styles.btnSeeAll}>
+                        <TouchableOpacity style={styles.btnSeeAll} onPress={goRecordedRecently}>
                             <Text style={styles.seeAll}>Xem tất cả {'>'}</Text>
                         </TouchableOpacity>
                     </View>
@@ -135,7 +162,7 @@ const BeatList = () => {
                 <View style={styles.boxPropose}>
                     <View style={styles.boxTitle}>
                         <Text style={styles.title}>Đề xuất cho bạn</Text>
-                        <TouchableOpacity style={styles.btnSeeAll}>
+                        <TouchableOpacity style={styles.btnSeeAll} onPress={goPropose}>
                             <Text style={styles.seeAll}>Xem tất cả {'>'}</Text>
                         </TouchableOpacity>
                     </View>
@@ -218,10 +245,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     boxHistory: {},
-    boxPropose: {},
+    boxPropose: {
+        marginTop: -Dimensions.get('screen').height * 0.02,
+    },
     listPropose: {
         justifyContent: 'center',
         alignItems: 'center',
+        marginBottom: Dimensions.get('screen').height * 0.08,
+
     },
     item: {
         margin: Dimensions.get('screen').width * 0.03,
@@ -264,10 +295,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         flexDirection: 'row',
         alignItems: 'center',
-        marginTop: Dimensions.get('window').height * 0.001,
+        marginTop: - Dimensions.get('window').height * 0.1,
 
     },
     group: {
+        paddingVertical: Dimensions.get('window').height * 0.003,
         marginTop: Dimensions.get('window').height * 0.023,
         marginLeft: - Dimensions.get('window').height * 0.022,
         width: '30%',
@@ -286,6 +318,7 @@ const styles = StyleSheet.create({
         fontSize: 8,
     },
     group1: {
+        paddingVertical: Dimensions.get('window').height * 0.003,
         marginTop: Dimensions.get('window').height * 0.023,
         marginLeft: - Dimensions.get('window').height * 0.024,
         width: '30%',

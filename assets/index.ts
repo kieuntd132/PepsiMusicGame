@@ -60,3 +60,6 @@ export const IMG_ITEM1 = require('./Img_item1.png');
 export const IMG_ITEM2 = require('./Img_item2.png');
 export const ICON_CANCEL = require('./Icon_cancel.png');
 export const ICON_LIKE = require('./Icon_like.png');
+export const AVATAR = require('./avatar.png');
+export const ICON_LOGOUT = require('./Icon_Logout.png');
+export const QUE = require('./Img_que.png');

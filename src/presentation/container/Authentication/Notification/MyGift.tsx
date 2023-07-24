@@ -4,6 +4,7 @@ import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header';
+import { BeatListStackScreenProps } from '../../../navigation/StackNavigationBeatList';
 
 interface Item {
     id: number;
@@ -38,7 +39,10 @@ function ItemColor({ id, title, titlelitle, button, image }: Item) {
         </View>
     );
 }
-const MyGift = () => {
+const MyGift: React.FC<BeatListStackScreenProps<'MyGift'>> = ({ navigation, route }) => {
+    const goNotification = () => {
+        navigation.navigate('Notification');
+    }
     const DATA: Item[] = [
         { id: 1, title: "Iphone 13 Promax", titlelitle: "Top 1 tuần - 28/11/2021", button: "Chưa nhận", image: require("../../../../../assets/Iphone_13ProMax.png") },
         { id: 2, title: "Samsung Galaxy Tab S7+", titlelitle: "Top 2 tuần - 21/11/2021", button: "Đã nhận", image: require("../../../../../assets/Samsung_Galaxy_TabS7+.png") },
@@ -48,7 +52,7 @@ const MyGift = () => {
             <View style={styles.container}>
                 <Header
                     iconLeft={BACK}
-                    // leftHeader={hanldeLogin}
+                    leftHeader={goNotification}
                     centerHeader={"Quà của tôi"}
                 />
                 <FlatList

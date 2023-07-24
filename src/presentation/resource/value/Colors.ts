@@ -31,8 +31,10 @@ export const Colors = {
     BANNER_1:'#205EFF',
     BANNER_2:'#40AFFF',
     SOLID:'#1D4FD6',
+    SOLID2:'#40AFFF',
     TEXT1:'#C2C9D1',
     RED1:'#D30024',
     BLUEW:'#1445C2',
+    BLUE_LINEAR:'rgba(71, 90, 255, 0.20)'
   };
  

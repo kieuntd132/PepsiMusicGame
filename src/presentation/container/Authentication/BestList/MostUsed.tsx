@@ -4,6 +4,8 @@ import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header';
+import { BeatListStackScreenProps } from '../../../navigation/StackNavigationBeatList';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 interface Item {
   id: number;
   title: string;
@@ -28,30 +30,39 @@ const DATA: Item[] = [
 
 ];
 
-const renderItem = ({ item }: { item: Item }) => (
-  <View style={styles.item}>
-    <View style={styles.gr1}>
-      <Image source={item.image} style={styles.image} />
-      <View style={styles.gr2}>
-        <Text style={styles.title}>{item.title}</Text>
-        <Text style={styles.titleMini}>{item.titleMini}</Text>
-        <View style={styles.gr3}>
-          <Image source={item.imageMiniMicro} />
-          <Text style={styles.titleWatch}>{item.titleWatch}</Text>
+
+
+const MostUsed: React.FC<BeatListStackScreenProps<'MostUsed'>> = ({ navigation, route }) => {
+  const goBeatList = () => {
+    navigation.navigate('BeatList');
+  }
+  const goRecordOne = () => {
+    navigation.navigate('RecordOne');
+  }
+  const renderItem = ({ item }: { item: Item }) => (
+    <View style={styles.item}>
+      <View style={styles.gr1}>
+        <Image source={item.image} style={styles.image} />
+        <View style={styles.gr2}>
+          <Text style={styles.title}>{item.title}</Text>
+          <Text style={styles.titleMini}>{item.titleMini}</Text>
+          <View style={styles.gr3}>
+            <Image source={item.imageMiniMicro} />
+            <Text style={styles.titleWatch}>{item.titleWatch}</Text>
+          </View>
         </View>
       </View>
+      <TouchableOpacity onPress={goRecordOne}>
+        <Image source={item.imageMic} style={styles.imageMic} />
+      </TouchableOpacity>
     </View>
-    <Image source={item.imageMic} style={styles.imageMic} />
-  </View>
-);
-
-const MostUsed = () => {
+  );
   return (
     <Background>
       <View style={styles.container}>
         <Header
           iconLeft={BACK}
-          // leftHeader={hanldeLogin}
+          leftHeader={goBeatList}
           centerHeader={"Sử dụng nhiều"}
         />
         <FlatList
@@ -103,7 +114,7 @@ const styles = StyleSheet.create({
     padding: Dimensions.get('window').width * 0.01,
   },
   image: {
-    marginLeft: -Dimensions.get('window').width * 0.12,
+    marginLeft: -Dimensions.get('window').width * 0.09,
   },
   title: {
     fontFamily: 'Montserrat',
@@ -130,7 +141,7 @@ const styles = StyleSheet.create({
     lineHeight: 9.6,
   },
   imageMic: {
-    marginRight: -Dimensions.get('window').width * 0.08,
+  
 
   },
 });

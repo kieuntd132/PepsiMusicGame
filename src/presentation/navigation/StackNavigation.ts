@@ -29,9 +29,7 @@ type RulesProps = {
 type InstructProps = {
     id: number;
 };
-type BeatOutstandProps = {
-    id: number;
-};
+
 export type MainStackParamList = {
     LogInSplash: SplashProps | undefined;
     Instruct: InstructProps | undefined;
@@ -42,7 +40,6 @@ export type MainStackParamList = {
     LogInOTP: LoginOTPProps | undefined;
     SplashScreen: SplashScreenProps | undefined;
     Rules: RulesProps | undefined;
-    BeatOutstand : BeatOutstandProps | undefined;
 };
 
 export type MainStackNavigation = StackNavigationProp<MainStackParamList>;

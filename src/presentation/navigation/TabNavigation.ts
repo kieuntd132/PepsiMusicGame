@@ -4,7 +4,7 @@ type VideoListProps = {
 
 };
 
-type BestListProps = {
+type StackScreenProds = {
 
 };
 
@@ -22,7 +22,7 @@ type ProfileProps = {
 
 export type MainTabParamList = {
     VideoList: VideoListProps | undefined,
-    BestList: BestListProps | undefined,
+    BestList: StackScreenProds | undefined,
     Record: RecordProps | undefined,
     Ranking: RankingProps | undefined,
     Profile: ProfileProps | undefined

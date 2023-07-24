@@ -51,7 +51,7 @@ const App = () => {
     // <Record/>
     // <AnimationSplash/>
     // <AnimationNext/>
-    <AnimationEnd />
+    // <AnimationEnd />
     // <RecordOne/>
     // <RecordTwo/>
     // <Remix/>
@@ -72,9 +72,9 @@ const App = () => {
     //   </Stack.Navigator>
     //   {/* <AuthorizedNavigator/> */}
     // </NavigationContainer>
-    // <NavigationContainer>
-    //   <AuthorizedNavigator />
-    // </NavigationContainer>
+    <NavigationContainer>
+      <AuthorizedNavigator />
+    </NavigationContainer>
 
     // <TopLike />
   )
