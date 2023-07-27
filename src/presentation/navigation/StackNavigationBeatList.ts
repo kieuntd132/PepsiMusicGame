@@ -30,8 +30,34 @@ type MyGiftProps = {
 type RankingProps = {
     id: number;
 };
+
+type RemixProps = {
+    id: number;
+};
+
+type AnimationEndProps = {
+    id: number;
+};
+
+type AnimationNextProps = {
+    id: number;
+};
+
+type AnimationSplashProps = {
+    id: number;
+};
+
+type SearchProps = {
+    id: number;
+};
+
+type ThanksProps = {
+    id: number;
+};
+
 export type BeatListStackParamList = {
     Record: RecordProps | undefined;
+    BeatList: BeatListProps | undefined;
     Ranking: RankingProps | undefined;
     Notification: NotificationProps | undefined;
     MostUsed: MostUsedProps | undefined;
@@ -39,8 +65,14 @@ export type BeatListStackParamList = {
     RecordedRecently: RecordedRecentlyProps | undefined
     RecordOne: RecordOneProps | undefined;
     BeatOutstand: BeatOutstandProps | undefined;
-    BeatList: BeatListProps | undefined;
     MyGift: MyGiftProps | undefined;
+
+    Remix: RemixProps | undefined; 
+    AnimationEnd: AnimationEndProps | undefined;
+    AnimationNext: AnimationNextProps | undefined;
+    AnimationSplash: AnimationSplashProps | undefined;
+    Search: SearchProps | undefined;
+    Thanks: ThanksProps | undefined;
 };
 
 export type BeatListStackNavigation = StackNavigationProp<BeatListStackParamList>;

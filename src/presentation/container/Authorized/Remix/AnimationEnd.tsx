@@ -5,7 +5,8 @@ import { BACKGROUND_TOOLBAR, BACK, IMG_COVER_2, BAR_TIME_RED, PEN, IMG_SHARE } f
 import { Colors } from '../../../resource/value/Colors'
 import Button from '../../../component/button/Button'
 import Header from '../../../component/header/Header'
-const AnimationEnd = () => {
+import { BeatListStackScreenProps } from '../../../navigation/StackNavigationBeatList'
+const AnimationEnd: React.FC<BeatListStackScreenProps<'AnimationEnd'>> = ({ navigation, route }) => {
     return (
         <Background>
             <View style={styles.container}>

@@ -10,7 +10,7 @@ const Background: React.FC<BackgroundProps> = (props) => {
     const { children } = props;
     return (
         <ImageBackground source={BACKGROUND} style={styles.container}>
-            <StatusBar barStyle={'light-content'} translucent/>
+            <StatusBar barStyle={'light-content'} translucent hidden={true}/>
             {children}
         </ImageBackground>
     )

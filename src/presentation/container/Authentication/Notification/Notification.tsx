@@ -1,11 +1,10 @@
 import React from 'react';
-import { FlatList, Image, StyleSheet, Text, View, ImageBackground, Dimensions } from 'react-native';
+import { FlatList, Image, StyleSheet, Text, View, TouchableOpacity, Dimensions } from 'react-native';
 import Background from '../../../component/background/Background'
 import { BACK } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header';
 import { BeatListStackScreenProps } from '../../../navigation/StackNavigationBeatList'
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 interface Item {
     id: number;
@@ -24,21 +23,9 @@ const DATA: Item[] = [
     { id: 7, title: "Bạn đã đăng tải video mới", titleTime: "21/11/2021", image: require("../../../../../assets/Img_Notification.png") },
 ];
 
-// const renderItem = ({ item }: { item: Item }) => (
-//     <TouchableOpacity onPress={}>
-//         <View style={styles.item}>
-//             <Image source={item.image} style={styles.image} />
-//             <View style={styles.gr1}>
-//                 <Text style={styles.title}>{item.title}</Text>
-//                 <Text style={styles.titleTime}>{item.titleTime}</Text>
-//             </View>
-//         </View>
-//     </TouchableOpacity>
-// );
-
 const Notification: React.FC<BeatListStackScreenProps<'Notification'>> = ({ navigation, route }) => {
     const goBeatList = () => {
-        navigation.navigate('Record');
+        navigation.navigate('BeatList');
     }
     const goMyGift = () => {
         navigation.navigate('MyGift');

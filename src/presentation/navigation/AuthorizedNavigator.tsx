@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Dimensions, Image, ImageBackground, StyleSheet, View } from "react-native";
-import { BACKGROUND_TOOLBAR, CENTER_BUTTON, ICON_BEATLIST, ICON_BEATLIST_FOCUS, ICON_PROFILE, ICON_PROFILE_FOCUS, ICON_RANKING, ICON_RANKING_FOCUS, ICON_VIDEOLIST, ICON_VIDEOLIST_FOCUS } from "../../../assets";
+import { BACKGROUND, BACKGROUND_TOOLBAR, CENTER_BUTTON, ICON_BEATLIST, ICON_BEATLIST_FOCUS, ICON_PROFILE, ICON_PROFILE_FOCUS, ICON_RANKING, ICON_RANKING_FOCUS, ICON_VIDEOLIST, ICON_VIDEOLIST_FOCUS } from "../../../assets";
 import { Colors } from "../resource/value/Colors";
 import VideoList from "../container/Authorized/Home/VideoList";
 import BeatList from "../container/Authorized/Home/BeatList";
@@ -10,18 +10,24 @@ import Ranking from "../container/Authorized/Home/Ranking";
 import Profile from "../container/Authorized/Home/Profile";
 import Record from "../container/Authorized/Home/Record";
 import Background from "../component/background/Background";
+import TabBarTop from "@react-navigation/material-top-tabs/lib/typescript/src/views/MaterialTopTabBar";
 const Tab = createBottomTabNavigator();
 
 export const AuthorizedNavigator = () => {
 
     return (
+       
             <Tab.Navigator initialRouteName="Record"
+                
+              
+                
                 screenOptions={({ route }) => ({
                     tabBarHideOnKeyboard: true,
                     tabBarStyle: {
                         height: Dimensions.get('screen').height * 0.1,
                         justifyContent: "center",
                         backgroundColor: 'black',
+                        
                     },
                     tabBarItemStyle: {
                         marginBottom: Dimensions.get('screen').height * 0.03,
@@ -29,7 +35,8 @@ export const AuthorizedNavigator = () => {
                     headerShown: false,
                     tabBarActiveTintColor: Colors.WHITE,
                     tabBarInactiveTintColor: Colors.BOTTOM_BAR,
-                })}>
+                })}
+            >
                 <Tab.Screen name="VideoList" component={VideoList}
                     options={{
                         tabBarIcon: ({ focused }) => (
@@ -81,7 +88,7 @@ export const AuthorizedNavigator = () => {
                         title: 'Cá nhân',
                     }} />
             </Tab.Navigator>
-        // </ImageBackground>
+       
     )
 }
 

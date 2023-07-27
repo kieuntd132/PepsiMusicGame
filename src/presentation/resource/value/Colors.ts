@@ -19,6 +19,7 @@ export const Colors = {
     WHITE_BORDER:'rgba(255, 255, 255, 0.40)',
     WHITE_BORDER2:'rgba(255, 255, 255, 0.80)',
     WHITE_BORDER3:'rgba(255, 255, 255, 0.20)',
+    BACKGROUND_MIC:"rgba(255, 255, 255, 0.3)",
     SHADOW:('rgba(0, 0, 0, 0.25)'),
     BLUE_BLUE:('#004A98'),
     BOTTOM_BAR: 'rgba(119, 174, 240, 1)',
@@ -35,6 +36,7 @@ export const Colors = {
     TEXT1:'#C2C9D1',
     RED1:'#D30024',
     BLUEW:'#1445C2',
+    BLUE_CARD:"#005cb2",
     BLUE_LINEAR:'rgba(71, 90, 255, 0.20)'
   };
  

@@ -63,3 +63,5 @@ export const ICON_LIKE = require('./Icon_like.png');
 export const AVATAR = require('./avatar.png');
 export const ICON_LOGOUT = require('./Icon_Logout.png');
 export const QUE = require('./Img_que.png');
+export const ICON_NO_LYRIC = require('./Icon-NoLyric.png');
+export const ICON_EXIT= require('./Icon-Exit.png');

@@ -13,6 +13,12 @@ import RecordOne from '../container/Authorized/Remix/RecordOne';
 import RecordedRecently from '../container/Authentication/BestList/RecordedRecently';
 import Propose from '../container/Authentication/BestList/Propose';
 import Ranking from '../container/Authorized/Home/Ranking';
+import Remix from '../container/Authorized/Remix/Remix';
+import AnimationEnd from '../container/Authorized/Remix/AnimationEnd';
+import AnimationNext from '../container/Authorized/Remix/AnimationNext';
+import AnimationSplash from '../container/Authorized/Remix/AnimationSplash';
+import Search from '../container/Authorized/Remix/Search';
+import Thanks from '../container/Authorized/Remix/Thanks';
 const Stack = createStackNavigator<BeatListStackParamList>();
 
 const StackScreen = () => {
@@ -29,6 +35,13 @@ const StackScreen = () => {
         <Stack.Screen name="RecordOne" component={RecordOne} />
         <Stack.Screen name="RecordedRecently" component={RecordedRecently} />
         <Stack.Screen name="Propose" component={Propose} />
+
+        <Stack.Screen name="Remix" component={Remix} />
+        <Stack.Screen name="AnimationEnd" component={AnimationEnd} />
+        <Stack.Screen name="AnimationNext" component={AnimationNext} />
+        <Stack.Screen name="AnimationSplash" component={AnimationSplash} />
+        <Stack.Screen name="Search" component={Search} />
+        <Stack.Screen name="Thanks" component={Thanks} />
       </Stack.Navigator>
     </NavigationContainer>
   )
