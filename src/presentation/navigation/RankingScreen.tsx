@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
-import { BeatListStackParamList } from './StackNavigationBeatList';
+import { BeatListStackParamList } from './BeatListNavigation';
 import Notification from '../container/Authentication/Notification/Notification';
 import MyGift from '../container/Authentication/Notification/MyGift';
 import RecordOne from '../container/Authorized/Remix/RecordOne';

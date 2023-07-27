@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, FlatList, Dimensions, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import Background from '../../../component/background/Background'
-import { ICON_DOWNLOAD, ICON_HEART, ICON_HOME, ICON_NOTIFICATION, ICON_PLAY, ICON_REPORT, ICON_SHARE} from '../../../../../assets'
+import { BACK, ICON_DOWNLOAD, ICON_HEART, ICON_PLAY, ICON_REPORT, ICON_SHARE} from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import LinearGradient from 'react-native-linear-gradient'
 import Header from '../../../component/header/Header'
@@ -9,7 +9,7 @@ import Header from '../../../component/header/Header'
 
 
 
-const VideoList = () => {
+const VideoListProfile = () => {
 
 
   interface Item {
@@ -181,11 +181,11 @@ const VideoList = () => {
        
         
        <Header
-                iconLeft={ICON_HOME}
+                iconLeft={BACK}
                 leftHeader={goBack}
-                centerHeader={"Video List"}
-                iconRight={ICON_NOTIFICATION}
-                rightHeader={Notification}
+                centerHeader={"AiVan.01"}
+                // iconRight={ICON_NOTIFICATION}
+                // rightHeader={Notification}
             />
         <View style={styles.container}>
         <FlatList
@@ -198,7 +198,7 @@ const VideoList = () => {
     )
   }
 
-  export default VideoList
+  export default VideoListProfile
 
   const styles = StyleSheet.create({
     container: {

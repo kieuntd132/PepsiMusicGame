@@ -55,6 +55,13 @@ type ThanksProps = {
     id: number;
 };
 
+type ProfileRecordProps = {
+    id: number;
+};
+
+type VideoListProfileProps = {
+    id: number;
+};
 export type BeatListStackParamList = {
     Record: RecordProps | undefined;
     BeatList: BeatListProps | undefined;
@@ -66,13 +73,14 @@ export type BeatListStackParamList = {
     RecordOne: RecordOneProps | undefined;
     BeatOutstand: BeatOutstandProps | undefined;
     MyGift: MyGiftProps | undefined;
-
     Remix: RemixProps | undefined; 
     AnimationEnd: AnimationEndProps | undefined;
     AnimationNext: AnimationNextProps | undefined;
     AnimationSplash: AnimationSplashProps | undefined;
     Search: SearchProps | undefined;
     Thanks: ThanksProps | undefined;
+    ProfileRecord: ProfileRecordProps | undefined;
+    VideoListProfile: VideoListProfileProps | undefined;
 };
 
 export type BeatListStackNavigation = StackNavigationProp<BeatListStackParamList>;

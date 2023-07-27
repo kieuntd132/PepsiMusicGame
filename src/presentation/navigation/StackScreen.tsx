@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
-import { BeatListStackParamList } from './StackNavigationBeatList';
+import { BeatListStackParamList } from './BeatListNavigation';
 import BeatList from '../container/Authorized/Home/BeatList';
 import Notification from '../container/Authentication/Notification/Notification';
 import Record from '../container/Authorized/Home/Record';
@@ -19,6 +19,8 @@ import AnimationNext from '../container/Authorized/Remix/AnimationNext';
 import AnimationSplash from '../container/Authorized/Remix/AnimationSplash';
 import Search from '../container/Authorized/Remix/Search';
 import Thanks from '../container/Authorized/Remix/Thanks';
+import ProfileRecord from '../container/Authorized/Remix/ProfileRecord';
+import VideoListProfile from '../container/Authorized/Remix/VideoListProfile';
 const Stack = createStackNavigator<BeatListStackParamList>();
 
 const StackScreen = () => {
@@ -35,13 +37,14 @@ const StackScreen = () => {
         <Stack.Screen name="RecordOne" component={RecordOne} />
         <Stack.Screen name="RecordedRecently" component={RecordedRecently} />
         <Stack.Screen name="Propose" component={Propose} />
-
         <Stack.Screen name="Remix" component={Remix} />
         <Stack.Screen name="AnimationEnd" component={AnimationEnd} />
         <Stack.Screen name="AnimationNext" component={AnimationNext} />
         <Stack.Screen name="AnimationSplash" component={AnimationSplash} />
         <Stack.Screen name="Search" component={Search} />
         <Stack.Screen name="Thanks" component={Thanks} />
+        <Stack.Screen name="ProfileRecord" component={ProfileRecord} />
+        <Stack.Screen name="VideoListProfile" component={VideoListProfile} />
       </Stack.Navigator>
     </NavigationContainer>
   )

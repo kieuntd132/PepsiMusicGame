@@ -8,7 +8,7 @@ import Register from './src/presentation/container/Authentication/Register/Regis
 import RegisterOTP from './src/presentation/container/Authentication/Register/RegisterOTP'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack';
-import { MainStackParamList } from './src/presentation/navigation/StackNavigation'
+import { MainStackParamList } from './src/presentation/navigation/LoginNavigation'
 import SplashScreen from './src/presentation/container/Authentication/Splash/SplashScreen'
 import Instruct from './src/presentation/container/Authentication/ScreenSplash/Instruct'
 import Rules from './src/presentation/container/Authentication/ScreenSplash/Rules'
@@ -28,9 +28,10 @@ import RecordOne from './src/presentation/container/Authorized/Remix/RecordOne'
 import RecordTwo from './src/presentation/container/Authorized/Remix/RecordTwo'
 import Remix from './src/presentation/container/Authorized/Remix/Remix'
 import BestList from './src/presentation/container/Authorized/Home/BeatList'
-import BestListHome from './src/presentation/container/Authentication/BestList/BestListHome'
 import Search from './src/presentation/container/Authorized/Remix/Search'
-import TopLike from './src/presentation/container/Authorized/Leaderboard/TopLike'
+import ProfileRecord from './src/presentation/container/Authorized/Remix/ProfileRecord'
+import VideoListProfile from './src/presentation/container/Authorized/Remix/VideoListProfile'
+
 
 
 const Stack = createStackNavigator<MainStackParamList>();
@@ -68,13 +69,15 @@ const App = () => {
     //     <Stack.Screen name='RegisterOTP' component={RegisterOTP} />
     //     <Stack.Screen name='Register' component={Register} />
     //     <Stack.Screen name='LogInOTP' component={LogInOTP} />
-    //     <Stack.Screen name='BeatOutstand' component={BeatOutstand} />
+    //     {/* <Stack.Screen name='BeatOutstand' component={BeatOutstand} /> */}
     //   </Stack.Navigator>
     //   {/* <AuthorizedNavigator/> */}
     // </NavigationContainer>
-    <NavigationContainer>
-      <AuthorizedNavigator />
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <AuthorizedNavigator />
+    // </NavigationContainer>
+    // <ProfileRecord/>
+    <VideoListProfile/>
 
     // <TopLike />
   )

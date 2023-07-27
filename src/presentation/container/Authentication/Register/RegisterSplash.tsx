@@ -7,7 +7,7 @@ import Header from '../../../component/header/Header'
 import {LOGO_PEPSI } from '../../../../../assets'
 import { LogInField } from '../../../component/input/TextField'
 import Form from '../../../component/form/Form'
-import { MainStackScreenProps } from '../../../navigation/StackNavigation'
+import { MainStackScreenProps } from '../../../navigation/LoginNavigation'
 
 
 

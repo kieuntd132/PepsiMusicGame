@@ -6,7 +6,7 @@ import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header'
 import DialogNotification from '../../../component/dialog/DialogNotification'
 import Slider from '@react-native-community/slider'
-import { BeatListStackScreenProps } from '../../../navigation/StackNavigationBeatList'
+import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation'
 
 const RecordOne: React.FC<BeatListStackScreenProps<'RecordOne'>> = ({ navigation, route }) => {
 
@@ -44,7 +44,7 @@ const RecordOne: React.FC<BeatListStackScreenProps<'RecordOne'>> = ({ navigation
 
     const [onLyric, setonLyric] = useState(false);
     const [onStart, setonStart] = useState(false);
-    const [modalVisible, setModalVisible] = useState(false);
+    // const [modalVisible, setModalVisible] = useState(false);
     const [onRefresh, setonRefresh] = useState(false);
     const [onBack, setonBack] = useState(false);
     const [onSubmit, setonSubmit] = useState(false);
@@ -62,7 +62,9 @@ const RecordOne: React.FC<BeatListStackScreenProps<'RecordOne'>> = ({ navigation
             setBtnLeft("Hủy");
             setBtnRight("Xóa");
             setonRefresh(true);
-            setModalVisible(true);
+            // setModalVisible(true);
+            setIsVisible(!isVisibile)
+
 
         }
         if (type === "back") {
@@ -78,7 +80,9 @@ const RecordOne: React.FC<BeatListStackScreenProps<'RecordOne'>> = ({ navigation
             setBtnLeft("Quay lại");
             setBtnRight("Xác nhận");
             setonSubmit(true);
-            setModalVisible(true);
+            // setModalVisible(true);
+            setIsVisible(!isVisibile)
+
         }
     };
 
@@ -87,16 +91,19 @@ const RecordOne: React.FC<BeatListStackScreenProps<'RecordOne'>> = ({ navigation
         if (onRefresh) {
             setonStart(false);
             setonRefresh(false);
-            setModalVisible(false);
+            // setModalVisible(false);
+            setIsVisible(!isVisibile)
+
         }
         if (onBack) {
             setIsVisible(!isVisibile)
-            navigation.navigate("Remix")
+            navigation.navigate("BeatList")
         }
         if (onSubmit) {
             setonRemix(true);
             setonSubmit(false);
-            setModalVisible(false);
+            // setModalVisible(false);
+            setIsVisible(!isVisibile)
         }
 
     };

@@ -4,7 +4,7 @@ import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header';
-import { BeatListStackScreenProps } from '../../../navigation/StackNavigationBeatList';
+import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 interface Item {

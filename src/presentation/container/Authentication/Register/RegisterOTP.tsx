@@ -6,7 +6,7 @@ import Form from '../../../component/form/Form'
 import {OTPField} from '../../../component/input/TextField'
 import Button from '../../../component/button/Button'
 import { LOGO_PEPSI } from '../../../../../assets'
-import { MainStackScreenProps } from '../../../navigation/StackNavigation'
+import { MainStackScreenProps } from '../../../navigation/LoginNavigation'
 
 const RegisterOTP: React.FC<MainStackScreenProps<'RegisterOTP'>>= ({navigation,route}) => {
 

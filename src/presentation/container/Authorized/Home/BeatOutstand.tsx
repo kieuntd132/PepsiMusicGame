@@ -3,7 +3,7 @@ import { FlatList, Image, StyleSheet, Text, View, ImageBackground, Dimensions, T
 import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
-import { BeatListStackScreenProps } from '../../../navigation/StackNavigationBeatList';
+import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation';
 
 
 interface Item {

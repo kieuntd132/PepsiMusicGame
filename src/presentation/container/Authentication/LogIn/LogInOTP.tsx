@@ -6,7 +6,7 @@ import Form from '../../../component/form/Form'
 import { OTPFail, OTPField } from '../../../component/input/TextField'
 import Button from '../../../component/button/Button'
 import { LOGO_PEPSI } from '../../../../../assets'
-import { MainStackScreenProps } from '../../../navigation/StackNavigation'
+import { MainStackScreenProps } from '../../../navigation/LoginNavigation'
 import { AuthorizedNavigator } from '../../../navigation/AuthorizedNavigator'
 
 const LogInOTP : React.FC<MainStackScreenProps<'LogInOTP'>>= ({navigation,route}) => {

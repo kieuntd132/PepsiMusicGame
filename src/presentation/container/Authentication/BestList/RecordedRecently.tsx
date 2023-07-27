@@ -4,7 +4,7 @@ import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header';
-import { BeatListStackScreenProps } from '../../../navigation/StackNavigationBeatList';
+import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation';
 
 interface Item {
   id: number;

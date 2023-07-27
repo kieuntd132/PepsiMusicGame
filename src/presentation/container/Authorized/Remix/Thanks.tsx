@@ -4,7 +4,7 @@ import Button from '../../../component/button/Button'
 import Background from '../../../component/background/Background'
 import { TALENT } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
-import { MainStackScreenProps } from '../../../navigation/StackNavigation'
+import { MainStackScreenProps } from '../../../navigation/LoginNavigation'
 
 const Thanks = () => {
     return (

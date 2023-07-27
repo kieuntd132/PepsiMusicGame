@@ -1,4 +1,4 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { BottomTabNavigationOptions, createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Dimensions, Image, ImageBackground, StyleSheet, View } from "react-native";
 import { BACKGROUND, BACKGROUND_TOOLBAR, CENTER_BUTTON, ICON_BEATLIST, ICON_BEATLIST_FOCUS, ICON_PROFILE, ICON_PROFILE_FOCUS, ICON_RANKING, ICON_RANKING_FOCUS, ICON_VIDEOLIST, ICON_VIDEOLIST_FOCUS } from "../../../assets";
 import { Colors } from "../resource/value/Colors";
@@ -9,32 +9,35 @@ import RankingScreen from "./RankingScreen"
 import Ranking from "../container/Authorized/Home/Ranking";
 import Profile from "../container/Authorized/Home/Profile";
 import Record from "../container/Authorized/Home/Record";
-import Background from "../component/background/Background";
-import TabBarTop from "@react-navigation/material-top-tabs/lib/typescript/src/views/MaterialTopTabBar";
+
+
+import React from "react";
 const Tab = createBottomTabNavigator();
 
-export const AuthorizedNavigator = () => {
+type MyTabsProps= {};
 
+
+export const AuthorizedNavigator: React.FC<MyTabsProps> = () => {
+const tabBarBackground : BottomTabNavigationOptions['tabBarBackground']= ()=>(
+    <Image source={BACKGROUND_TOOLBAR} style={{flex: 1, resizeMode:'cover'}}/>
+);
     return (
        
-            <Tab.Navigator initialRouteName="Record"
-                
-              
-                
+            <Tab.Navigator initialRouteName="Record"  
                 screenOptions={({ route }) => ({
                     tabBarHideOnKeyboard: true,
                     tabBarStyle: {
                         height: Dimensions.get('screen').height * 0.1,
                         justifyContent: "center",
-                        backgroundColor: 'black',
-                        
+                        backgroundColor: 'transparent',
                     },
                     tabBarItemStyle: {
-                        marginBottom: Dimensions.get('screen').height * 0.03,
+                        marginBottom: Dimensions.get('screen').height * 0.02,
                     },
                     headerShown: false,
                     tabBarActiveTintColor: Colors.WHITE,
                     tabBarInactiveTintColor: Colors.BOTTOM_BAR,
+                    tabBarBackground
                 })}
             >
                 <Tab.Screen name="VideoList" component={VideoList}
@@ -103,6 +106,7 @@ const styles = StyleSheet.create({
     },
     image: {
         resizeMode: 'contain',
-        width: Dimensions.get('screen').width * 0.08
+        width: Dimensions.get('screen').width * 0.08,
+        marginTop: Dimensions.get('screen').height * 0.03,
     },
 });

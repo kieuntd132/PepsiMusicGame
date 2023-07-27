@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, ScrollView, Image, FlatList, Dimensions, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Background from '../../../component/background/Background'
-import { BeatListStackScreenProps } from '../../../navigation/StackNavigationBeatList'
+import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation'
 import { BANNER, ICON_HOME, ICON_MUSIC, ICON_VOLUMN_HIGH, ICON_NOTIFICATION } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Button from '../../../component/button/Button'

@@ -3,7 +3,7 @@ import React from 'react'
 import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR, LOA } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
-import { MainStackScreenProps } from '../../../navigation/StackNavigation'
+import { MainStackScreenProps } from '../../../navigation/LoginNavigation'
 import Header from '../../../component/header/Header'
 
 const Rules: React.FC<MainStackScreenProps<'Rules'>> = ({ navigation, route }) => {

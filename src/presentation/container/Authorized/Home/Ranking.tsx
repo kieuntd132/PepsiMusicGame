@@ -4,7 +4,7 @@ import Background from '../../../component/background/Background'
 import Header from '../../../component/header/Header'
 import { ICON_HOME, ICON_NOTIFICATION } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
-import { BeatListStackScreenProps } from '../../../navigation/StackNavigationBeatList'
+import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation'
 
 const Ranking: React.FC<BeatListStackScreenProps<'Ranking'>> = ({ navigation, route }) => {
     const goBack = () => {

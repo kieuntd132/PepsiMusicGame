@@ -5,7 +5,8 @@ import Background from '../../../component/background/Background'
 import { BACKGROUND_TOOLBAR, BACK, IMG_COVER_2 } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header'
-const AnimationSplash = () => {
+import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation'
+const AnimationSplash : React.FC<BeatListStackScreenProps<'AnimationSplash'>> = ({ navigation, route }) => {
     return (
         <Background>
             <View style={styles.container}>
