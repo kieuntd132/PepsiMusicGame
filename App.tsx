@@ -31,7 +31,8 @@ import BestList from './src/presentation/container/Authorized/Home/BeatList'
 import Search from './src/presentation/container/Authorized/Remix/Search'
 import ProfileRecord from './src/presentation/container/Authorized/Remix/ProfileRecord'
 import VideoListProfile from './src/presentation/container/Authorized/Remix/VideoListProfile'
-
+import Mostview from './src/presentation/container/Authorized/Remix/Mostview'
+import Test from './src/presentation/container/Authorized/Remix/Test'
 
 
 const Stack = createStackNavigator<MainStackParamList>();
@@ -77,8 +78,9 @@ const App = () => {
     //   <AuthorizedNavigator />
     // </NavigationContainer>
     // <ProfileRecord/>
-    <VideoListProfile/>
-
+    // <VideoListProfile/>
+    // <Mostview/>
+    <Test/>
     // <TopLike />
   )
 }
