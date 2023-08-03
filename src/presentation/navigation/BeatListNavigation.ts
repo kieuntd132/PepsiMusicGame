@@ -30,6 +30,9 @@ type MyGiftProps = {
 type RankingProps = {
     id: number;
 };
+type RatingProps = {
+    id: number;
+};
 
 type RemixProps = {
     id: number;
@@ -62,10 +65,14 @@ type ProfileRecordProps = {
 type VideoListProfileProps = {
     id: number;
 };
+type TopProps = {
+    id: number;
+};
 export type BeatListStackParamList = {
     Record: RecordProps | undefined;
     BeatList: BeatListProps | undefined;
     Ranking: RankingProps | undefined;
+    Rating: RatingProps | undefined;
     Notification: NotificationProps | undefined;
     MostUsed: MostUsedProps | undefined;
     Propose: ProposeProps | undefined
@@ -74,6 +81,7 @@ export type BeatListStackParamList = {
     BeatOutstand: BeatOutstandProps | undefined;
     MyGift: MyGiftProps | undefined;
     Remix: RemixProps | undefined; 
+    Top: TopProps | undefined; 
     AnimationEnd: AnimationEndProps | undefined;
     AnimationNext: AnimationNextProps | undefined;
     AnimationSplash: AnimationSplashProps | undefined;

@@ -12,6 +12,7 @@ import Record from "../container/Authorized/Home/Record";
 
 
 import React from "react";
+import VideoList2 from "../container/Authorized/Remix/VideoList2";
 const Tab = createBottomTabNavigator();
 
 type MyTabsProps= {};
@@ -40,7 +41,7 @@ const tabBarBackground : BottomTabNavigationOptions['tabBarBackground']= ()=>(
                     tabBarBackground
                 })}
             >
-                <Tab.Screen name="VideoList" component={VideoList}
+                <Tab.Screen name="VideoList" component={VideoList2}
                     options={{
                         tabBarIcon: ({ focused }) => (
                             <View>

@@ -15,7 +15,9 @@ type RecordProps = {
 type RankingProps = {
 
 };
+type RatingProps = {
 
+};
 type ProfileProps = {
 
 };
@@ -25,6 +27,7 @@ export type MainTabParamList = {
     BestList: StackScreenProds | undefined,
     Record: RecordProps | undefined,
     Ranking: RankingProps | undefined,
+    Rating: RatingProps | undefined,
     Profile: ProfileProps | undefined
 };
 

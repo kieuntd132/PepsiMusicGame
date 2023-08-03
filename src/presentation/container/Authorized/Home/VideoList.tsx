@@ -170,23 +170,15 @@ const VideoList = () => {
     const Notification = () => {
       // navigation.navigate('Record');
     }
-    // const centerHeader = () => {
-    //   return (
-    //     <Text style={styles.textHeader}>Video list</Text>
-    //   )
-    // };
-
     return (
       <Background>
-       
-        
-       <Header
+       {/* <Header
                 iconLeft={ICON_HOME}
                 leftHeader={goBack}
                 centerHeader={"Video List"}
                 iconRight={ICON_NOTIFICATION}
                 rightHeader={Notification}
-            />
+            /> */}
         <View style={styles.container}>
         <FlatList
               data={DATA}

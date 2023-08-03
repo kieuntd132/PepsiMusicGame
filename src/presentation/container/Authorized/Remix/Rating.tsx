@@ -1,13 +1,16 @@
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { MaterialTopTabBarProps, createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import React from 'react';
-import { Dimensions, StyleSheet, ImageBackground, ScrollView, Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
+import { Dimensions, StyleSheet, ImageBackground, ScrollView, Text, View, FlatList, Image, TouchableOpacity, StyleProp, ViewStyle } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import Background from '../../../component/background/Background';
 import Header from '../../../component/header/Header';
 import { BACKGROUND_RANK, ICON_HOME, ICON_NOTIFICATION, IMAGE_BUC, IMAGE_RANK_1, IMAGE_RANK_2, IMAGE_RANK_3, IMAGE_RANK_4 } from '../../../../../assets';
 import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation';
 import { Colors } from '../../../resource/value/Colors';
+import { CommonActions } from '@react-navigation/native';
+
 const Tab = createMaterialTopTabNavigator();
+
 
 const Ranking = () => {
     // const goBack = () => {
@@ -41,27 +44,29 @@ const Ranking = () => {
     ];
 
     const renderItem = ({ item }: { item: Item }) => (
-        <View style={[styles.gr, { borderColor: item.borderColor }]}>
-            <Image style={styles.img1} source={item.image} />
-            <Image source={item.imagegoc} style={styles.imgGoc} />
-            <Text style={styles.txtID}>{item.id}</Text>
-            <View style={styles.grbottom}>
-                <View style={styles.grleft}>
-                    <Text style={styles.text1}>{item.title}</Text>
-                    <Text style={styles.text2}>{item.titleTime}</Text>
-                </View>
-                <View style={styles.grright}>
-                    <View style={styles.grWatch}>
-                        <Image style={styles.eye} source={item.imageWatch} />
-                        <Text style={styles.txt1}>{item.textWatch}</Text>
+        <TouchableOpacity>
+            <View style={[styles.gr, { borderColor: item.borderColor }]}>
+                <Image style={styles.img1} source={item.image} />
+                <Image source={item.imagegoc} style={styles.imgGoc} />
+                <Text style={styles.txtID}>{item.id}</Text>
+                <View style={styles.grbottom}>
+                    <View style={styles.grleft}>
+                        <Text style={styles.text1}>{item.title}</Text>
+                        <Text style={styles.text2}>{item.titleTime}</Text>
                     </View>
-                    <View style={styles.grLike}>
-                        <Image style={styles.eye} source={item.imageLike} />
-                        <Text style={styles.txt1}>{item.textLike}</Text>
+                    <View style={styles.grright}>
+                        <View style={styles.grWatch}>
+                            <Image style={styles.eye} source={item.imageWatch} />
+                            <Text style={styles.txt1}>{item.textWatch}</Text>
+                        </View>
+                        <View style={styles.grLike}>
+                            <Image style={styles.eye} source={item.imageLike} />
+                            <Text style={styles.txt1}>{item.textLike}</Text>
+                        </View>
                     </View>
                 </View>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 
     return (
@@ -88,13 +93,13 @@ const Top = () => {
     }
 
     const DATA: Item[] = [
-        { id: 1, name: 'Janne', rank: 4, image: require("../../../../../assets/avatar.png"), view: 1000, imageEye: require("../../../../../assets/Icon_eye.png") },
-        { id: 2, name: 'Janne', rank: 5, image: require("../../../../../assets/avatar.png"), view: 1000, imageEye: require("../../../../../assets/Icon_eye.png") },
-        { id: 3, name: 'Janne', rank: 6, image: require("../../../../../assets/avatar.png"), view: 1000, imageEye: require("../../../../../assets/Icon_eye.png") },
-        { id: 4, name: 'Janne', rank: 7, image: require("../../../../../assets/avatar.png"), view: 1000, imageEye: require("../../../../../assets/Icon_eye.png") },
-        { id: 5, name: 'Janne', rank: 8, image: require("../../../../../assets/avatar.png"), view: 1000, imageEye: require("../../../../../assets/Icon_eye.png") },
-        { id: 6, name: 'Janne', rank: 9, image: require("../../../../../assets/avatar.png"), view: 1000, imageEye: require("../../../../../assets/Icon_eye.png") },
-        { id: 7, name: 'Janne', rank: 10, image: require("../../../../../assets/avatar.png"), view: 1000, imageEye: require("../../../../../assets/Icon_eye.png") },
+        { id: 1, name: 'Janne', rank: 4, image: require("../../../../../assets/avatar.png"), view: 9.023, imageEye: require("../../../../../assets/eye.png") },
+        { id: 2, name: 'Janne', rank: 5, image: require("../../../../../assets/avatar.png"), view: 9.023, imageEye: require("../../../../../assets/eye.png") },
+        { id: 3, name: 'Janne', rank: 6, image: require("../../../../../assets/avatar.png"), view: 9.023, imageEye: require("../../../../../assets/eye.png") },
+        { id: 4, name: 'Janne', rank: 7, image: require("../../../../../assets/avatar.png"), view: 9.023, imageEye: require("../../../../../assets/eye.png") },
+        { id: 5, name: 'Janne', rank: 8, image: require("../../../../../assets/avatar.png"), view: 9.023, imageEye: require("../../../../../assets/eye.png") },
+        { id: 6, name: 'Janne', rank: 9, image: require("../../../../../assets/avatar.png"), view: 9.023, imageEye: require("../../../../../assets/eye.png") },
+        { id: 7, name: 'Janne', rank: 10, image: require("../../../../../assets/avatar.png"), view: 9.023, imageEye: require("../../../../../assets/eye.png") },
 
 
     ];
@@ -228,7 +233,10 @@ const CustomTabBar = ({ state, descriptors, navigation }: CustomTabBarProps) => 
 
     );
 };
-const Test = () => {
+const Rating: React.FC<BeatListStackScreenProps<'Rating'>> = ({ navigation, route }) => {
+    const goBack = () => {
+        // navigation.dispatch(CommonActions.goBack());
+    }
     return (
         <Background>
             <Header
@@ -238,28 +246,69 @@ const Test = () => {
                 iconRight={ICON_NOTIFICATION}
             // rightHeader={goNotification}
             />
-            <NavigationContainer>
-                <Tab.Navigator tabBar={(props: any) => (
-                    <ScrollView
-                        contentContainerStyle={{
-                            paddingHorizontal: 2,
-                            height: Dimensions.get('window').height / 20,
-                        }}
-                        horizontal={true}
-                        style={{ backgroundColor: 'red' }}>
-                        <CustomTabBar {...props} />
-                    </ScrollView>
-                )}>
+            <NavigationContainer independent={true}>
+                <Tab.Navigator
+                    //      tabBar={(props: any) => (
+                    //         <CustomTabBar {...props} />
+                    // //         <ScrollView
+                    // //             style={{ backgroundColor: 'red' }}
+                    // //             horizontal={true}>
+                    // //             <CustomTabBar {...props} />
+                    // //         </ScrollView>
+                    //     )
+                    // }
+
+
+
+                    screenOptions={{
+                        tabBarScrollEnabled: true,
+                        tabBarStyle: {
+                            backgroundColor: 'transparent',
+                            marginHorizontal: -13,
+                            
+                        },
+
+                        
+                        tabBarLabelStyle: {
+                            fontSize: 12,
+                            textTransform: 'capitalize',
+                            borderRadius: 6,
+                            paddingVertical: 10,
+                            paddingHorizontal: 30,
+                            
+                        },
+
+                        
+                        tabBarActiveTintColor: Colors.BLACK,
+                        tabBarInactiveTintColor: Colors.WHITE,
+                        
+                        tabBarItemStyle: {
+                            width: 290,
+                            
+                        },
+                        tabBarIndicatorStyle:{
+                            backgroundColor: 'transparent'
+                        },
+                        
+                        
+
+
+
+                    }}
+
+                >
                     <Tab.Screen
                         name="Top"
                         component={Top}
-                        options={{ tabBarLabel: 'Người có lượt tương tác nhiều nhất' }}
+                        options={{ tabBarLabel: 'Người có lượt tương tác nhiều nhất', lazy: true,  }}
                     />
                     <Tab.Screen
                         name="Ranking"
                         component={Ranking}
-                        options={{ tabBarLabel: 'Video có lượt tương tác nhiều nhất' }}
+                        options={{ tabBarLabel: 'Video có lượt tương tác nhiều nhất', lazy: true }}
                     />
+
+
                 </Tab.Navigator>
             </NavigationContainer>
         </Background>
@@ -412,6 +461,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         // padding: 22,
+        // marginTop: Dimensions.get('window').height * 0.05,
     },
     boxTop: {
         borderWidth: 1,
@@ -550,4 +600,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Test;
+export default Rating;

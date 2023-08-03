@@ -32,7 +32,9 @@ import Search from './src/presentation/container/Authorized/Remix/Search'
 import ProfileRecord from './src/presentation/container/Authorized/Remix/ProfileRecord'
 import VideoListProfile from './src/presentation/container/Authorized/Remix/VideoListProfile'
 import Mostview from './src/presentation/container/Authorized/Remix/Mostview'
-import Test from './src/presentation/container/Authorized/Remix/Test'
+import Rating from './src/presentation/container/Authorized/Remix/Rating'
+import VideoList from './src/presentation/container/Authorized/Home/VideoList'
+import VideoList2 from './src/presentation/container/Authorized/Remix/VideoList2'
 
 
 const Stack = createStackNavigator<MainStackParamList>();
@@ -74,13 +76,14 @@ const App = () => {
     //   </Stack.Navigator>
     //   {/* <AuthorizedNavigator/> */}
     // </NavigationContainer>
-    // <NavigationContainer>
-    //   <AuthorizedNavigator />
-    // </NavigationContainer>
+    <NavigationContainer>
+      <AuthorizedNavigator />
+    </NavigationContainer>
+    // <VideoList2/>
     // <ProfileRecord/>
     // <VideoListProfile/>
     // <Mostview/>
-    <Test/>
+    // <Rating/>
     // <TopLike />
   )
 }
