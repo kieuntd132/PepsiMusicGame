@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'; 
 import { StyleSheet, Text, View, Image, Dimensions, ImageBackground } from 'react-native'
-import { MainStackScreenProps } from '../../../navigation/LoginNavigation'
+import { MainStackScreenProps } from '../../../navigation/Stack/LoginNavigation'
 import Background from '../../../component/background/Background'
 import { HEADLINE_2, TALENT } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors';

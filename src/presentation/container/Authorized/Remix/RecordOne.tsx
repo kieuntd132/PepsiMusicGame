@@ -6,7 +6,7 @@ import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header'
 import DialogNotification from '../../../component/dialog/DialogNotification'
 import Slider from '@react-native-community/slider'
-import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation'
+import { BeatListStackScreenProps } from '../../../navigation/Stack/BeatListNavigation'
 
 const RecordOne: React.FC<BeatListStackScreenProps<'RecordOne'>> = ({ navigation, route }) => {
 

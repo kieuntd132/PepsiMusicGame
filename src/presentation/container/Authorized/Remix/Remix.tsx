@@ -5,7 +5,7 @@ import Background from '../../../component/background/Background'
 import {BACK, ICON_PERFORM, ICON_PLAY, ICON_VOLUMN } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header'
-import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation'
+import { BeatListStackScreenProps } from '../../../navigation/Stack/BeatListNavigation'
 
 
 const Remix : React.FC<BeatListStackScreenProps<'Remix'>> = ({ navigation, route }) => {

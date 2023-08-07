@@ -1,29 +1,83 @@
-import { Dimensions, Image, ScrollView, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Dimensions, Image, ScrollView, StyleSheet, Text, View, Alert } from 'react-native'
+import React, { useEffect, useState } from 'react'
 import Button from '../../../component/button/Button'
 import Background from '../../../component/background/Background'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header'
-import {LOGO_PEPSI } from '../../../../../assets'
+import { LOGO_PEPSI } from '../../../../../assets'
 import { LogInField } from '../../../component/input/TextField'
 import Form from '../../../component/form/Form'
-import { MainStackScreenProps } from '../../../navigation/LoginNavigation'
+import { MainStackScreenProps } from '../../../navigation/Stack/LoginNavigation'
+import { rtdb } from '../../../../core/API/Url/RealTimeDB'
+import { User } from '../../../../core/model/User'
 
-const LogIn: React.FC<MainStackScreenProps<'LogIn'>>= ({navigation,route}) => {
+const LogIn: React.FC<MainStackScreenProps<'LogIn'>> = ({ navigation, route }) => {
 
   const [edt, setedt] = React.useState<string>('');
   console.log(edt)
 
-  const logIn = () => {
-    navigation.navigate('LogInOTP');
-  }
+  // const logIn = () => {
+  //   navigation.navigate('LogInOTP');
+  // }
   const RegisterSplash = () => {
     navigation.navigate('RegisterSplash');
   }
+
+
+  const [phone, setPhone] = useState('');
+  const [listUser, setlistUser] = useState<User[]>([]);
+
+  const [isHas, setIsHas] = useState(false);
+
+  useEffect(() => {
+
+    const getUser = async () => {
+      const getUser = rtdb.ref('/User').once('value');
+      let list: User[] = [];
+      await getUser.then((snapshot: any) => {
+        snapshot.forEach((item: any) => {
+          if (item != null) {
+            list.push(item.val());
+            console.log(item.val());
+          }
+        })
+        setlistUser(list);
+      });
+    }
+
+    getUser();
+
+    return () => { }
+  }, [])
+
+  const logIn = () => {
+    console.log(listUser)
+    if (phone) {
+      for (let i = 0; i < listUser.length; i++) {
+        if (listUser.at(i)?.phone === phone) {
+          console.log("111")
+          setIsHas(true);
+          console.log("ok")
+          navigation.navigate('LogInOTP', {
+            phone,
+            type: true
+          });
+          break;
+        }
+      }
+
+    }
+    else {
+      Alert.alert('Please enter your phone number');
+    }
+
+  }
+
+
   const headerCenter = () => {
     return (
       <View >
-        <Image source={LOGO_PEPSI} style = {styles.image}/>
+        <Image source={LOGO_PEPSI} style={styles.image} />
       </View>
     );
   }
@@ -33,25 +87,30 @@ const LogIn: React.FC<MainStackScreenProps<'LogIn'>>= ({navigation,route}) => {
       <Background>
         <View style={styles.container} >
           <Header
-            centerHeader={headerCenter()} 
-            containerStyle = {styles.header}/>
+            centerHeader={headerCenter()}
+            containerStyle={styles.header} />
           <Form>
-            <LogInField />
+            <LogInField
+              inputProps={{
+                onChangeText(text) {
+                  setPhone(text);
+                },
+              }} />
           </Form>
-          <Button 
-            containerStyle = {styles.buttonLogIn}
+          <Button
+            containerStyle={styles.buttonLogIn}
             title='Đăng nhập'
-            onPress={logIn}/>
-          <View style = {styles.viewOr}>
-            <View style = {styles.line}/>
-            <Text style = {styles.textOr}>hoặc</Text>
-            <View style = {styles.line}/>
+            onPress={logIn} />
+          <View style={styles.viewOr}>
+            <View style={styles.line} />
+            <Text style={styles.textOr}>hoặc</Text>
+            <View style={styles.line} />
           </View>
-          <Button 
-            containerStyle = {styles.buttonRegister}
+          <Button
+            containerStyle={styles.buttonRegister}
             title='Đăng ký'
             onPress={RegisterSplash}
-            titleStyle = {styles.title}/>
+            titleStyle={styles.title} />
         </View>
       </Background>
     </ScrollView>
@@ -90,11 +149,11 @@ const styles = StyleSheet.create({
   viewOr: {
     width: '90%',
     flexDirection: 'row',
-    justifyContent:'space-between',
+    justifyContent: 'space-between',
     alignItems: 'center',
     marginVertical: '3%',
   },
-  line : {
+  line: {
     width: '45%',
     borderTopWidth: 0.5,
     borderColor: Colors.WHITE

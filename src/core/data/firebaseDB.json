@@ -1,0 +1,216 @@
+
+{
+    "User": {
+      "1": {
+        "name": "Diem Kieu",
+        "phone": "123",
+        "react": 0,
+        "video": 0,
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-2_1x.png?alt=media&token=12705612-5d6d-499c-ba03-79c85cc8f22c"
+      }
+      
+    },
+      "Video": {
+      "video1": {
+        "userKey": "1",
+        "title": "Tiền nhiều để làm gì",
+        "view": 11000,
+        "like": 10000,
+        "createAt": "19.02.2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_1.png?alt=media&token=faf6872d-db13-4f46-b443-f5daa6434186"
+      },
+      "video2": {
+        "userKey": "1",
+        "title": "Tiền nhiều để làm gì",
+        "view": 11000,
+        "like": 10000,
+        "createAt": "19.02.2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_2.png?alt=media&token=0c4a561c-da40-4332-91a2-7e4b848dcccc"
+      },
+      "video3": {
+        "userKey": "1",
+        "title": "Tiền nhiều để làm gì",
+        "view": 11000,
+        "like": 10000,
+        "createAt": "19.02.2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_3.png?alt=media&token=563ce2f0-e7d8-42ca-bc62-7c07893e882d"
+      },
+      "video4": {
+        "userKey": "1",
+        "title": "Tiền nhiều để làm gì",
+        "view": 11000,
+        "like": 10000,
+        "createAt": "19.02.2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_4.png?alt=media&token=09d47bb3-ac4f-4c53-96f3-4cb088422473"
+      },
+      "video5": {
+        "userKey": "1",
+        "title": "Tiền nhiều để làm gì",
+        "view": 11000,
+        "like": 10000,
+        "createAt": "19.02.2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_5.png?alt=media&token=4ffced5b-1e49-4324-90a0-076f1956439a"
+      },
+      "video6": {
+        "userKey": "1",
+        "title": "Tiền nhiều để làm gì",
+        "view": 11000,
+        "like": 10000,
+        "createAt": "19.02.2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_1.png?alt=media&token=faf6872d-db13-4f46-b443-f5daa6434186"
+      }
+    },
+    "Music": {
+      "Music1": {
+        "name": "Tiền nhiều để làm gì",
+        "author": "GDucky ft.Lưu Hiền Trinh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_1.png?alt=media&token=faf6872d-db13-4f46-b443-f5daa6434186"
+      },
+      "Music2": {
+        "name": "Tiền nhiều để làm gì",
+        "author": "GDucky ft.Lưu Hiền Trinh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_2.png?alt=media&token=0c4a561c-da40-4332-91a2-7e4b848dcccc"
+      },
+      "Music3": {
+        "name": "Tiền nhiều để làm gì",
+        "author": "GDucky ft.Lưu Hiền Trinh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_3.png?alt=media&token=563ce2f0-e7d8-42ca-bc62-7c07893e882d"
+      },
+      "Music4": {
+        "name": "Tiền nhiều để làm gì",
+        "author": "GDucky ft.Lưu Hiền Trinh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_4.png?alt=media&token=09d47bb3-ac4f-4c53-96f3-4cb088422473"
+      },
+      "Music5": {
+        "name": "Tiền nhiều để làm gì",
+        "author": "GDucky ft.Lưu Hiền Trinh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_5.png?alt=media&token=4ffced5b-1e49-4324-90a0-076f1956439a"
+      },
+      "Music6": {
+        "name": "Tiền nhiều để làm gì",
+        "author": "GDucky ft.Lưu Hiền Trinh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_1.png?alt=media&token=faf6872d-db13-4f46-b443-f5daa6434186"
+      },
+      "Music7": {
+        "name": "Tiền nhiều để làm gì",
+        "author": "GDucky ft.Lưu Hiền Trinh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_2.png?alt=media&token=0c4a561c-da40-4332-91a2-7e4b848dcccc"
+      },
+      "Music8": {
+        "name": "Tiền nhiều để làm gì",
+        "author": "GDucky ft.Lưu Hiền Trinh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_3.png?alt=media&token=563ce2f0-e7d8-42ca-bc62-7c07893e882d"
+      },
+      "Music9": {
+        "name": "Tiền nhiều để làm gì",
+        "author": "GDucky ft.Lưu Hiền Trinh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_4.png?alt=media&token=09d47bb3-ac4f-4c53-96f3-4cb088422473"
+      },
+      "Music10": {
+        "name": "Tiền nhiều để làm gì",
+        "author": "GDucky ft.Lưu Hiền Trinh",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Card_5.png?alt=media&token=4ffced5b-1e49-4324-90a0-076f1956439a"
+      }
+  },
+    "Rank": {
+      "Rank4": {
+        "name": "Janne",
+        "rank": 4,
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-Rank-4.png?alt=media&token=c41fd591-9efe-4b3b-9f9c-c3162e485663",
+        "view": 1000
+      },
+         "Rank5": {
+        "name": "Janne",
+        "rank": 5,
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-Rank-4.png?alt=media&token=c41fd591-9efe-4b3b-9f9c-c3162e485663",
+        "view": 1000
+      },
+         "Rank6": {
+        "name": "Janne",
+        "rank": 6,
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-Rank-4.png?alt=media&token=c41fd591-9efe-4b3b-9f9c-c3162e485663",
+        "view": 1000
+      },
+         "Rank7": {
+        "name": "Janne",
+        "rank": 7,
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-Rank-4.png?alt=media&token=c41fd591-9efe-4b3b-9f9c-c3162e485663",
+        "view": 1000
+      },
+         "Rank8": {
+        "name": "Janne",
+        "rank": 8,
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-Rank-4.png?alt=media&token=c41fd591-9efe-4b3b-9f9c-c3162e485663",
+        "view": 1000
+      },
+         "Rank9": {
+        "name": "Janne",
+        "rank": 9,
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-Rank-4.png?alt=media&token=c41fd591-9efe-4b3b-9f9c-c3162e485663",
+        "view": 1000
+      },
+     
+         "Rank10": {
+        "name": "Janne",
+        "rank": 10,
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-Rank-4.png?alt=media&token=c41fd591-9efe-4b3b-9f9c-c3162e485663",
+        "view": 1000
+      }
+    },
+    "Notification": {
+      "Notification1": {
+        "title": "Bạn đã đăng tải video mới",
+        "time": "21 giờ trước",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-1.png?alt=media&token=afa6bb88-2336-4d78-abe9-0745a0df8027",
+        "role": 0
+      },
+      "Notification2": {
+        "title": "Bạn đã nhận được IPHONE 13 ProMax\nGiải thưởng cho quán quân tuần",
+        "time": "28/11/2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-1.png?alt=media&token=afa6bb88-2336-4d78-abe9-0745a0df8027",
+        "role": 1
+      },
+      "Notification3": {
+        "title": "Bạn đã đạt TOP 1 người có lượt\nyêu thích cao nhất tuần",
+        "time": "26/11/2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-1.png?alt=media&token=afa6bb88-2336-4d78-abe9-0745a0df8027",
+        "role": 0
+      },
+      "Notification4": {
+        "title": "Bạn đã đăng tải video mới",
+        "time": "26/11/2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-1.png?alt=media&token=afa6bb88-2336-4d78-abe9-0745a0df8027",
+        "role": 0
+      },
+      "Notification5": {
+        "title": "Bạn đã nhận được Samsung Tab S7+\nGiải thưởng cho á quân tuần",
+        "time": "26/11/2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-1.png?alt=media&token=afa6bb88-2336-4d78-abe9-0745a0df8027",
+        "role": 1
+      },
+      "Notification6": {
+        "title": "Bạn đã đạt TOP 2 người có lượt\nyêu thích cao nhất tuần",
+        "time": "21/11/2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-1.png?alt=media&token=afa6bb88-2336-4d78-abe9-0745a0df8027",
+        "role": 0
+      },
+      "Notification7": {
+        "title": "Bạn đã đăng tải video mới",
+        "time": "21/11/2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Image-Avatar-1.png?alt=media&token=afa6bb88-2336-4d78-abe9-0745a0df8027",
+        "role": 0
+      }
+    },
+    "Gift": {
+      "Gift1": {
+        "title": "Iphone 13 Promax",
+        "des": "Top 1 tuần - 28/11/2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Iphone_13ProMax.png?alt=media&token=501274f6-00ba-4387-a87b-2430e5ce01f5"
+      },
+      "Gift2": {
+        "title": "Samsung Galaxy Tab S7+",
+        "des": "Top 2 tuần - 21/11/2021",
+        "image": "https://firebasestorage.googleapis.com/v0/b/pepsimusicgame-bb3c3.appspot.com/o/Samsung_Galaxy_TabS7%2B.png?alt=media&token=6899a9e8-3cee-48e5-be92-260bb91d00a3"
+      }
+    }
+  }

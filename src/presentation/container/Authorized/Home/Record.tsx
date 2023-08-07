@@ -3,7 +3,7 @@ import React from 'react'
 import Background from '../../../component/background/Background'
 import { HEADLINE_2, LEFT_BUTTON_HOME, RIGHT_BUTTON_HOME, TALENT } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
-import { MainStackScreenProps } from '../../../navigation/LoginNavigation'
+import { MainStackScreenProps } from '../../../navigation/Stack/LoginNavigation'
 import { JumpingTransition } from 'react-native-reanimated'
 
 const Record = () => {

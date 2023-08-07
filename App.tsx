@@ -1,93 +1,101 @@
-import React from 'react'
-import LogIn from './src/presentation/container/Authentication/LogIn/LogIn'
-import { StyleSheet } from 'react-native'
-import LogInOTP from './src/presentation/container/Authentication/LogIn/LogInOTP'
-import RegisterSplash from './src/presentation/container/Authentication/Register/RegisterSplash'
-import LogInSplash from './src/presentation/container/Authentication/LogIn/LogInSplash'
-import Register from './src/presentation/container/Authentication/Register/Register'
-import RegisterOTP from './src/presentation/container/Authentication/Register/RegisterOTP'
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack';
-import { MainStackParamList } from './src/presentation/navigation/LoginNavigation'
-import SplashScreen from './src/presentation/container/Authentication/Splash/SplashScreen'
-import Instruct from './src/presentation/container/Authentication/ScreenSplash/Instruct'
-import Rules from './src/presentation/container/Authentication/ScreenSplash/Rules'
-import BeatOutstand from './src/presentation/container/Authorized/Home/BeatOutstand'
-import MostUsed from './src/presentation/container/Authentication/BestList/MostUsed'
-import RecordedRecently from './src/presentation/container/Authentication/BestList/RecordedRecently'
-import Propose from './src/presentation/container/Authentication/BestList/Propose'
-import Notification from './src/presentation/container/Authentication/Notification/Notification'
-import MyGift from './src/presentation/container/Authentication/Notification/MyGift'
-import Thanks from './src/presentation/container/Authorized/Remix/Thanks'
-import Record from './src/presentation/container/Authorized/Home/Record'
-import { AuthorizedNavigator } from './src/presentation/navigation/AuthorizedNavigator'
-import AnimationSplash from './src/presentation/container/Authorized/Remix/AnimationSplash'
-import AnimationNext from './src/presentation/container/Authorized/Remix/AnimationNext'
-import AnimationEnd from './src/presentation/container/Authorized/Remix/AnimationEnd'
-import RecordOne from './src/presentation/container/Authorized/Remix/RecordOne'
-import RecordTwo from './src/presentation/container/Authorized/Remix/RecordTwo'
-import Remix from './src/presentation/container/Authorized/Remix/Remix'
-import BestList from './src/presentation/container/Authorized/Home/BeatList'
-import Search from './src/presentation/container/Authorized/Remix/Search'
-import ProfileRecord from './src/presentation/container/Authorized/Remix/ProfileRecord'
-import VideoListProfile from './src/presentation/container/Authorized/Remix/VideoListProfile'
-import Mostview from './src/presentation/container/Authorized/Remix/Mostview'
-import Rating from './src/presentation/container/Authorized/Remix/Rating'
-import VideoList from './src/presentation/container/Authorized/Home/VideoList'
-import VideoList2 from './src/presentation/container/Authorized/Remix/VideoList2'
-
-
+import React from 'react';
+import { Provider, useDispatch, useSelector } from 'react-redux'
+import store from './src/presentation/share-state/redux/store'
 const Stack = createStackNavigator<MainStackParamList>();
 
 
-const App = () => {
+import type { PropsWithChildren } from 'react';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+} from 'react-native';
+
+import {
+  Colors,
+  DebugInstructions,
+  Header,
+  LearnMoreLinks,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
+import { MainStackParamList } from './src/presentation/navigation/Stack/LoginNavigation';
+import { AppNavigation } from './src/presentation/navigation/AppNavigation';
+import { createStackNavigator } from '@react-navigation/stack';
+
+
+
+type SectionProps = PropsWithChildren<{
+  title: string;
+}>;
+
+function Section({ children, title }: SectionProps): JSX.Element {
+  const isDarkMode = useColorScheme() === 'dark';
   return (
-    // <SplashScreen/>
-    // <LogIn/>
-    // <LogInOTP/>
-    // <LogInSplash/>
-    // <MostUsed />
-    // <RecordedRecently/>
-    // <Propose />
-    // <Notification/>
-    // <Thanks/>
-    // <MyGift />
-    // <Record/>
-    // <AnimationSplash/>
-    // <AnimationNext/>
-    // <AnimationEnd />
-    // <RecordOne/>
-    // <RecordTwo/>
-    // <Remix/>
-    // <BestListHome/>
-    // <Search/>
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="SplashScreen">
-        <Stack.Screen name='SplashScreen'component={SplashScreen}/>
-        <Stack.Screen name='Instruct'component={Instruct}/>
-        <Stack.Screen name='Rules'component={Rules}/>
-        <Stack.Screen name='LogInSplash' component={LogInSplash} />
-        <Stack.Screen name='LogIn' component={LogIn} />
-        <Stack.Screen name='RegisterSplash' component={RegisterSplash} />
-        <Stack.Screen name='RegisterOTP' component={RegisterOTP} />
-        <Stack.Screen name='Register' component={Register} />
-        <Stack.Screen name='LogInOTP' component={LogInOTP} />
-        {/* <Stack.Screen name='BeatOutstand' component={BeatOutstand} /> */}
-      </Stack.Navigator>
-      {/* <AuthorizedNavigator/> */}
-    </NavigationContainer>
-    // <NavigationContainer>
-    //   <AuthorizedNavigator />
-    // </NavigationContainer>
-    // <VideoList2/>
-    // <ProfileRecord/>
-    // <VideoListProfile/>
-    // <Mostview/>
-    // <Rating/>
-    // <TopLike />
-  )
+    <View style={styles.sectionContainer}>
+      <Text
+        style={[
+          styles.sectionTitle,
+          {
+            color: isDarkMode ? Colors.white : Colors.black,
+          },
+        ]}>
+        {title}
+      </Text>
+      <Text
+        style={[
+          styles.sectionDescription,
+          {
+            color: isDarkMode ? Colors.light : Colors.dark,
+          },
+        ]}>
+        {children}
+      </Text>
+    </View>
+  );
 }
 
-export default App
 
-const styles = StyleSheet.create({})
+
+
+
+
+function App(): JSX.Element {
+  const isDarkMode = useColorScheme() === 'dark';
+
+  const backgroundStyle = {
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  };
+
+  return (
+
+    <Provider store={store}>
+      <AppNavigation />
+    </Provider>
+  );
+}
+// npx react-native run-android
+
+const styles = StyleSheet.create({
+  sectionContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
+  },
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: '600',
+  },
+  sectionDescription: {
+    marginTop: 8,
+    fontSize: 18,
+    fontWeight: '400',
+  },
+  highlight: {
+    fontWeight: '700',
+  },
+});
+
+export default App;

@@ -3,7 +3,7 @@ import React from 'react'
 import Background from '../../../component/background/Background'
 import { CENTER_BUTTON, HEADLINE_2, LEFT_BUTTON, RIGHT_BUTTON, TALENT } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
-import { MainStackScreenProps } from '../../../navigation/LoginNavigation'
+import { MainStackScreenProps } from '../../../navigation/Stack/LoginNavigation'
 
 const LogInSplash: React.FC<MainStackScreenProps<'LogInSplash'>> = ({ navigation, route }) => {
 
