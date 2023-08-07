@@ -80,8 +80,8 @@ export type BeatListStackParamList = {
     RecordOne: RecordOneProps | undefined;
     BeatOutstand: BeatOutstandProps | undefined;
     MyGift: MyGiftProps | undefined;
-    Remix: RemixProps | undefined; 
-    Top: TopProps | undefined; 
+    Remix: RemixProps | undefined;
+    Top: TopProps | undefined;
     AnimationEnd: AnimationEndProps | undefined;
     AnimationNext: AnimationNextProps | undefined;
     AnimationSplash: AnimationSplashProps | undefined;

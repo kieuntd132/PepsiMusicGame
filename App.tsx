@@ -61,24 +61,24 @@ const App = () => {
     // <Remix/>
     // <BestListHome/>
     // <Search/>
-    // <NavigationContainer>
-    //   <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="SplashScreen">
-    //     <Stack.Screen name='SplashScreen'component={SplashScreen}/>
-    //     <Stack.Screen name='Instruct'component={Instruct}/>
-    //     <Stack.Screen name='Rules'component={Rules}/>
-    //     <Stack.Screen name='LogInSplash' component={LogInSplash} />
-    //     <Stack.Screen name='LogIn' component={LogIn} />
-    //     <Stack.Screen name='RegisterSplash' component={RegisterSplash} />
-    //     <Stack.Screen name='RegisterOTP' component={RegisterOTP} />
-    //     <Stack.Screen name='Register' component={Register} />
-    //     <Stack.Screen name='LogInOTP' component={LogInOTP} />
-    //     {/* <Stack.Screen name='BeatOutstand' component={BeatOutstand} /> */}
-    //   </Stack.Navigator>
-    //   {/* <AuthorizedNavigator/> */}
-    // </NavigationContainer>
     <NavigationContainer>
-      <AuthorizedNavigator />
+      <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="SplashScreen">
+        <Stack.Screen name='SplashScreen'component={SplashScreen}/>
+        <Stack.Screen name='Instruct'component={Instruct}/>
+        <Stack.Screen name='Rules'component={Rules}/>
+        <Stack.Screen name='LogInSplash' component={LogInSplash} />
+        <Stack.Screen name='LogIn' component={LogIn} />
+        <Stack.Screen name='RegisterSplash' component={RegisterSplash} />
+        <Stack.Screen name='RegisterOTP' component={RegisterOTP} />
+        <Stack.Screen name='Register' component={Register} />
+        <Stack.Screen name='LogInOTP' component={LogInOTP} />
+        {/* <Stack.Screen name='BeatOutstand' component={BeatOutstand} /> */}
+      </Stack.Navigator>
+      {/* <AuthorizedNavigator/> */}
     </NavigationContainer>
+    // <NavigationContainer>
+    //   <AuthorizedNavigator />
+    // </NavigationContainer>
     // <VideoList2/>
     // <ProfileRecord/>
     // <VideoListProfile/>

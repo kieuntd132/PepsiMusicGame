@@ -5,11 +5,12 @@ import { BACK, ICON_DOWNLOAD, ICON_HEART, ICON_PLAY, ICON_REPORT, ICON_SHARE} fr
 import { Colors } from '../../../resource/value/Colors'
 import LinearGradient from 'react-native-linear-gradient'
 import Header from '../../../component/header/Header'
+import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation'
 
 
 
 
-const VideoListProfile = () => {
+const VideoListProfile: React.FC<BeatListStackScreenProps<'VideoListProfile'>> = ({ navigation, route }) => {
 
 
   interface Item {

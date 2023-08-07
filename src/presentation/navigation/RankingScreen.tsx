@@ -10,6 +10,8 @@ import Ranking from '../container/Authorized/Home/Ranking';
 import Record from '../container/Authorized/Home/Record';
 import BeatList from '../container/Authorized/Home/BeatList';
 import Rating from '../container/Authorized/Remix/Rating';
+import ProfileRecord from '../container/Authorized/Remix/ProfileRecord';
+import VideoListProfile from '../container/Authorized/Remix/VideoListProfile';
 const Stack = createStackNavigator<BeatListStackParamList>();
 
 const RankingScreen = () => {
@@ -23,6 +25,8 @@ const RankingScreen = () => {
         <Stack.Screen name="BeatList" component={BeatList} />
         <Stack.Screen name="MyGift" component={MyGift} />
         <Stack.Screen name="RecordOne" component={RecordOne} />
+        <Stack.Screen name="ProfileRecord" component={ProfileRecord} />
+        <Stack.Screen name="VideoListProfile" component={VideoListProfile} />
       </Stack.Navigator>
     </NavigationContainer>
   )

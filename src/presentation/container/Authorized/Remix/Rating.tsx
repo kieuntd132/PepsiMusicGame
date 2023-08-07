@@ -5,83 +5,82 @@ import { NavigationContainer } from '@react-navigation/native';
 import Background from '../../../component/background/Background';
 import Header from '../../../component/header/Header';
 import { BACKGROUND_RANK, ICON_HOME, ICON_NOTIFICATION, IMAGE_BUC, IMAGE_RANK_1, IMAGE_RANK_2, IMAGE_RANK_3, IMAGE_RANK_4 } from '../../../../../assets';
-import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation';
+import { StackNavigationProp, StackScreenProps } from "@react-navigation/stack";
 import { Colors } from '../../../resource/value/Colors';
 import { CommonActions } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import ProfileRecord from './ProfileRecord';
+import VideoListProfile from './VideoListProfile';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation'
+import Ranking from './Ranking';
 
-const Tab = createMaterialTopTabNavigator();
-
-
-const Ranking = () => {
-    // const goBack = () => {
-    //     navigation.navigate('Record');
-    // }
-    // const goNotification = () => {
-    //     navigation.navigate('Notification');
-    // }
-    interface Item {
-        id: number;
-        title: string;
-        titleTime: string;
-        image: any;
-        imagegoc: any;
-        imageWatch: any;
-        imageLike: any;
-        textWatch: string;
-        textLike: string;
-        borderColor: string;
-    }
-
-    const DATA: Item[] = [
-        { id: 1, title: "Đom Đóm", titleTime: "Jack", image: require("../../../../../assets/Banner_like_1.png"), imagegoc: require("../../../../../assets/Icon_1.png"), imageWatch: require("../../../../../assets/Icon_eye.png"), imageLike: require("../../../../../assets/Icon_like.png"), textWatch: "11.8K", textLike: "10.203", borderColor: '#1D4FD6' },
-        { id: 2, title: "Đom Đóm", titleTime: "Jack", image: require("../../../../../assets/Banner_like_2.png"), imagegoc: require("../../../../../assets/Icon_2.png"), imageWatch: require("../../../../../assets/Icon_eye.png"), imageLike: require("../../../../../assets/Icon_like.png"), textWatch: "11.8K", textLike: "10.203", borderColor: '#40AFFF' },
-        { id: 3, title: "Đom Đóm", titleTime: "Jack", image: require("../../../../../assets/Banner_like_3.png"), imagegoc: require("../../../../../assets/Icon_3.png"), imageWatch: require("../../../../../assets/Icon_eye.png"), imageLike: require("../../../../../assets/Icon_like.png"), textWatch: "11.8K", textLike: "10.203", borderColor: '#40AFFF' },
-        { id: 4, title: "Đom Đóm", titleTime: "Jack", image: require("../../../../../assets/Banner_like_1.png"), imagegoc: require("../../../../../assets/Icon_4.png"), imageWatch: require("../../../../../assets/Icon_eye.png"), imageLike: require("../../../../../assets/Icon_like.png"), textWatch: "11.8K", textLike: "10.203", borderColor: '#215EAC' },
-        { id: 5, title: "Đom Đóm", titleTime: "Jack", image: require("../../../../../assets/Banner_like_2.png"), imagegoc: require("../../../../../assets/Icon_4.png"), imageWatch: require("../../../../../assets/Icon_eye.png"), imageLike: require("../../../../../assets/Icon_like.png"), textWatch: "11.8K", textLike: "10.203", borderColor: '#40AFFF' },
-        { id: 6, title: "Đom Đóm", titleTime: "Jack", image: require("../../../../../assets/Banner_like_3.png"), imagegoc: require("../../../../../assets/Icon_4.png"), imageWatch: require("../../../../../assets/Icon_eye.png"), imageLike: require("../../../../../assets/Icon_like.png"), textWatch: "11.8K", textLike: "10.203", borderColor: '#40AFFF' },
-        { id: 7, title: "Đom Đóm", titleTime: "Jack", image: require("../../../../../assets/Banner_like_1.png"), imagegoc: require("../../../../../assets/Icon_4.png"), imageWatch: require("../../../../../assets/Icon_eye.png"), imageLike: require("../../../../../assets/Icon_like.png"), textWatch: "11.8K", textLike: "10.203", borderColor: '#1D4FD6' },
-        { id: 8, title: "Đom Đóm", titleTime: "Jack", image: require("../../../../../assets/Banner_like_2.png"), imagegoc: require("../../../../../assets/Icon_4.png"), imageWatch: require("../../../../../assets/Icon_eye.png"), imageLike: require("../../../../../assets/Icon_like.png"), textWatch: "11.8K", textLike: "10.203", borderColor: '#40AFFF' },
-    ];
-
-    const renderItem = ({ item }: { item: Item }) => (
-        <TouchableOpacity>
-            <View style={[styles.gr, { borderColor: item.borderColor }]}>
-                <Image style={styles.img1} source={item.image} />
-                <Image source={item.imagegoc} style={styles.imgGoc} />
-                <Text style={styles.txtID}>{item.id}</Text>
-                <View style={styles.grbottom}>
-                    <View style={styles.grleft}>
-                        <Text style={styles.text1}>{item.title}</Text>
-                        <Text style={styles.text2}>{item.titleTime}</Text>
-                    </View>
-                    <View style={styles.grright}>
-                        <View style={styles.grWatch}>
-                            <Image style={styles.eye} source={item.imageWatch} />
-                            <Text style={styles.txt1}>{item.textWatch}</Text>
-                        </View>
-                        <View style={styles.grLike}>
-                            <Image style={styles.eye} source={item.imageLike} />
-                            <Text style={styles.txt1}>{item.textLike}</Text>
-                        </View>
-                    </View>
-                </View>
-            </View>
-        </TouchableOpacity>
-    );
-
-    return (
-        <Background>
-            <View style={styles.toptab}>
-                <Text style={styles.texttab}>Video có lượt tương tác nhiều nhất</Text>
-            </View>
-            <FlatList
-                data={DATA}
-                renderItem={renderItem}
-                keyExtractor={(item) => item.id.toString()}
-            />
-        </Background>
-    )
+type ProfileRecordProps = {
+    id: number;
 };
+
+type VideoListProfileProps = {
+    id: number;
+}
+
+type Ranking = {
+    id: number;
+}
+
+type TopProps = {
+    id: number;
+};
+
+type TopViewProps = {
+
+};
+type RakingViewProps = {
+
+};
+export type MaterialTopTab = {
+    TopView: TopViewProps | undefined;
+    RankingView: RakingViewProps | undefined;
+}
+
+export type StackTopView = {
+    Top: TopProps | undefined;
+    ProfileRecord: ProfileRecordProps | undefined;
+    VideoListProfile: VideoListProfileProps | undefined;
+}
+
+export type StackRankingView = {
+    Ranking:  Ranking| undefined;
+    ProfileRecord: ProfileRecordProps | undefined;
+    VideoListProfile: VideoListProfileProps | undefined;
+}
+
+
+
+const Tab = createMaterialTopTabNavigator<MaterialTopTab>();
+const StackTopView = createStackNavigator<StackTopView>();
+const StackRankingView = createStackNavigator<StackRankingView>();
+
+
+const TopView = () => {
+    return (
+        <StackTopView.Navigator screenOptions={{ headerShown: false }} initialRouteName='Top'>
+            <StackTopView.Screen name="Top" component={Top} />
+            <StackTopView.Screen name="ProfileRecord" component={ProfileRecord} />
+            <StackTopView.Screen name="VideoListProfile" component={VideoListProfile} />
+        </StackTopView.Navigator>
+    )
+}
+const RankingView = () => {
+    return (
+        <StackRankingView.Navigator screenOptions={{ headerShown: false }} initialRouteName='Ranking'>
+            <StackRankingView.Screen name="Ranking" component={Ranking} />
+            <StackRankingView.Screen name="ProfileRecord" component={ProfileRecord} />
+            <StackRankingView.Screen name="VideoListProfile" component={VideoListProfile} />
+        </StackRankingView.Navigator>
+    )
+}
+
+
 const Top = () => {
     interface Item {
         id: number,
@@ -103,10 +102,15 @@ const Top = () => {
 
 
     ];
-
+    const goProfile = () => {
+        // navigation.navigate('ProfileRecord');
+    }
+    const Notification = () => {
+        // navigation.navigate('Record');
+    }
     const renderItem = ({ item }: { item: Item }) => (
-        <View style={{}}>
-            <TouchableOpacity style={styles.item}>
+        <View>
+            <TouchableOpacity style={styles.item} onPress={goProfile}>
                 <View style={styles.borderRank} >
                     <Text style={styles.txt} >{item.rank}</Text>
                     <Image source={IMAGE_RANK_4} style={styles.imgBorderRank} />
@@ -125,12 +129,7 @@ const Top = () => {
         </View>
     );
 
-    const goBack = () => {
-        // navigation.navigate('Record');
-    }
-    const Notification = () => {
-        // navigation.navigate('Record');
-    }
+
     return (
         <Background>
             <View style={styles.container1}>
@@ -164,6 +163,7 @@ const Top = () => {
                     data={DATA}
                     renderItem={renderItem}
                     keyExtractor={(item) => item.id.toString()}
+                    
                 />
 
             </View>
@@ -233,10 +233,22 @@ const CustomTabBar = ({ state, descriptors, navigation }: CustomTabBarProps) => 
 
     );
 };
-const Rating: React.FC<BeatListStackScreenProps<'Rating'>> = ({ navigation, route }) => {
+
+const Rating = () => {
+   
+  
     const goBack = () => {
         // navigation.dispatch(CommonActions.goBack());
     }
+
+    // return(
+    //     <NavigationContainer independent={true}>
+    //         <Tab.Navigator>
+    //            <Tab.Screen name="TopView" component={TopView}/> 
+    //            <Tab.Screen name="RankingView" component={RankingView}/> 
+    //         </Tab.Navigator>
+    //     </NavigationContainer>
+    // )
     return (
         <Background>
             <Header
@@ -259,56 +271,41 @@ const Rating: React.FC<BeatListStackScreenProps<'Rating'>> = ({ navigation, rout
                     // }
 
 
-
                     screenOptions={{
                         tabBarScrollEnabled: true,
                         tabBarStyle: {
                             backgroundColor: 'transparent',
                             marginHorizontal: -13,
-                            
                         },
 
-                        
                         tabBarLabelStyle: {
                             fontSize: 12,
                             textTransform: 'capitalize',
                             borderRadius: 6,
                             paddingVertical: 10,
                             paddingHorizontal: 30,
-                            
                         },
 
-                        
                         tabBarActiveTintColor: Colors.BLACK,
                         tabBarInactiveTintColor: Colors.WHITE,
-                        
                         tabBarItemStyle: {
                             width: 290,
-                            
                         },
-                        tabBarIndicatorStyle:{
+                        tabBarIndicatorStyle: {
                             backgroundColor: 'transparent'
                         },
-                        
-                        
-
-
-
                     }}
-
                 >
                     <Tab.Screen
-                        name="Top"
-                        component={Top}
-                        options={{ tabBarLabel: 'Người có lượt tương tác nhiều nhất', lazy: true,  }}
+                        name="TopView"
+                        component={TopView}
+                        options={{ tabBarLabel: 'Người có lượt tương tác nhiều nhất', lazy: true, }}
                     />
                     <Tab.Screen
-                        name="Ranking"
-                        component={Ranking}
+                        name="RankingView"
+                        component={RankingView}
                         options={{ tabBarLabel: 'Video có lượt tương tác nhiều nhất', lazy: true }}
                     />
-
-
                 </Tab.Navigator>
             </NavigationContainer>
         </Background>

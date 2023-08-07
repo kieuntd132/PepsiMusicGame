@@ -4,6 +4,7 @@ import Background from '../../../component/background/Background'
 import Header from '../../../component/header/Header'
 import { AVATAR, BACK, ICON_LOGOUT, QUE } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
+import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation'
 
 interface Item {
   id: number;
@@ -56,16 +57,16 @@ const renderItem = ({ item }: { item: Item }) => (
   </View>
 );
 
-const ProfileRecord = () => {
+const ProfileRecord: React.FC<BeatListStackScreenProps<'ProfileRecord'>> = ({ navigation, route }) => {
   return (
     <Background>
-      <Header
+      {/* <Header
         iconLeft={BACK}
         // leftHeader={goBack}
         centerHeader={"Thông tin cá nhân"}
         iconRight={ICON_LOGOUT}
       // rightHeader={goNotification}
-      />
+      /> */}
       <View style={styles.grava}>
         <Image source={AVATAR} />
         <View style={styles.grcenter}>
@@ -237,7 +238,7 @@ const styles = StyleSheet.create({
     marginRight: Dimensions.get('window').width * 0.01,
   },
   textWatch: {
-    ontFamily: 'Montserrat',
+    fontFamily: 'Montserrat',
     fontSize: 8,
     fontStyle: 'normal',
     fontWeight: '500',

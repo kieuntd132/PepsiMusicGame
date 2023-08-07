@@ -13,6 +13,7 @@ import Record from "../container/Authorized/Home/Record";
 
 import React from "react";
 import VideoList2 from "../container/Authorized/Remix/VideoList2";
+import Rating from "../container/Authorized/Remix/Rating";
 const Tab = createBottomTabNavigator();
 
 type MyTabsProps= {};
@@ -73,7 +74,7 @@ const tabBarBackground : BottomTabNavigationOptions['tabBarBackground']= ()=>(
                         ),
                         title: 'Thu âm',
                     }} />
-                <Tab.Screen name="Ranking" component={RankingScreen}
+                <Tab.Screen name="Ranking" component={Rating}
                     options={{
                         tabBarIcon: ({ focused }) => (
                             <View>
