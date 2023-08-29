@@ -4,7 +4,7 @@ import { BACKGROUND_RANK, EYE, HEART, ICON_HOME, ICON_NOTIFICATION, IMAGE_BUC, I
 import Background from '../../../component/background/Background';
 import Header from '../../../component/header/Header'
 import { Colors } from '../../../resource/value/Colors';
-import {  ChartStackScreenProps} from '../../../navigation/stack/ChartNavigation'
+import { ChartStackScreenProps } from '../../../navigation/Stack/RankingNavigation';
 import { Rank } from '../../../../core/model/Rank';
 import { Video } from '../../../../core/model/Video';
 import { rtdb } from '../../../../core/API/Url/RealTimeDB';

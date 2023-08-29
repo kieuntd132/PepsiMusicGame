@@ -4,7 +4,7 @@ import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header';
-import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation';
+import { BeatListStackScreenProps } from '../../../navigation/Stack/BeatListNavigation';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 interface Item {
@@ -37,7 +37,7 @@ const Propose: React.FC<BeatListStackScreenProps<'Propose'>> = ({ navigation, ro
     navigation.navigate('BeatList');
   }
   const goRecordOne = () => {
-    navigation.navigate('RecordOne');
+    navigation.navigate('Record');
   }
   const renderItem = ({ item }: { item: Item }) => (
     <View style={styles.item}>
@@ -53,11 +53,11 @@ const Propose: React.FC<BeatListStackScreenProps<'Propose'>> = ({ navigation, ro
         </View>
       </View>
       <TouchableOpacity onPress={goRecordOne}>
-      <Image source={item.imageMic} style={styles.imageMic} />
+        <Image source={item.imageMic} style={styles.imageMic} />
       </TouchableOpacity>
     </View>
   );
-  
+
   return (
     <Background>
       <View style={styles.container}>

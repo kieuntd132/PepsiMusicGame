@@ -3,7 +3,7 @@ import { FlatList, Image, StyleSheet, Text, View, Dimensions, TouchableOpacity }
 import Background from '../../../component/background/Background'
 import { BACK, ICON_MIC, MIC } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
-import { BeatListStackScreenProps } from '../../../navigation/stack/BeatNavigation'
+import { BeatListStackScreenProps } from '../../../navigation/Stack/BeatListNavigation';
 import Header from '../../../component/header/Header';
 import { Music } from '../../../../core/model/Music'
 import { rtdb } from '../../../../core/API/Url/RealTimeDB'
@@ -16,7 +16,7 @@ const Propose: React.FC<BeatListStackScreenProps<'Propose'>> = ({ navigation, ro
 
 
     const RecordOne = () => {
-        navigation.navigate('RecordOne');
+        navigation.navigate('Record');
     }
     const goBack = () => {
         navigation.navigate('BeatList');

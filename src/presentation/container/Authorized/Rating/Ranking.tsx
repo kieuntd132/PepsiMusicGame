@@ -9,8 +9,8 @@ import { StackNavigationProp, StackScreenProps } from "@react-navigation/stack";
 import { Colors } from '../../../resource/value/Colors';
 import { CommonActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import ProfileRecord from '../Ranting/ProfileRecord';
-import VideoListProfile from '../Ranting/VideoListProfile';
+import ProfileRecord from '../Remix/ProfileRecord';
+import VideoListProfile from '../Remix/VideoListProfile';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { BeatListStackScreenProps } from '../../../navigation/Stack/BeatListNavigation'
 

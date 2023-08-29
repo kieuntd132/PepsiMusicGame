@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { addStatus } from '../../../share-state/redux/reducers/statusReducer';
 import Header from '../../../component/header/Header'
 import { Video } from '../../../../core/model/Video';
-import { rtdb } from '../../../../core/api/url/RealTime';
+import { rtdb } from '../../../../core/API/Url/RealTimeDB';
 
 const Profile: React.FC<ProfileScreenProps<'Profile'>> = ({ navigation, route }) => {
 

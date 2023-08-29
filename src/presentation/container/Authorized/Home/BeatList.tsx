@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, ScrollView, Image, FlatList, Dimensions, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import Background from '../../../component/background/Background'
 import { BeatListStackScreenProps } from '../../../navigation/Stack/BeatListNavigation'
 import { BANNER, ICON_HOME, ICON_MUSIC, ICON_VOLUMN_HIGH, ICON_NOTIFICATION } from '../../../../../assets'

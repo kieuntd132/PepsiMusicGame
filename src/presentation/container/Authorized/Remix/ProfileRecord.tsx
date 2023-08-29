@@ -4,7 +4,7 @@ import Background from '../../../component/background/Background'
 import Header from '../../../component/header/Header'
 import { AVATAR, BACK, ICON_LOGOUT, QUE } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
-import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation'
+import { BeatListStackScreenProps } from '../../../navigation/Stack/BeatListNavigation'
 
 interface Item {
   id: number;

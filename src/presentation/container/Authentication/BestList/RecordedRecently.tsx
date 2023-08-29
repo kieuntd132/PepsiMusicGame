@@ -4,7 +4,8 @@ import Background from '../../../component/background/Background'
 import { BACK, BACKGROUND_TOOLBAR } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header';
-import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation';
+import { BeatListStackScreenProps } from '../../../navigation/Stack/BeatListNavigation';
+
 
 interface Item {
   id: number;
@@ -33,11 +34,11 @@ const DATA: Item[] = [
 
 const RecordedRecently: React.FC<BeatListStackScreenProps<'RecordedRecently'>> = ({ navigation, route }) => {
   const goRecordOne = () => {
-    navigation.navigate('RecordOne');
+    navigation.navigate('Record');
   }
   const goBeatList = () => {
     navigation.navigate('BeatList');
-}
+  }
   const renderItem = ({ item }: { item: Item }) => (
     <View style={styles.item}>
       <View style={styles.gr1}>
@@ -52,11 +53,11 @@ const RecordedRecently: React.FC<BeatListStackScreenProps<'RecordedRecently'>> =
         </View>
       </View>
       <TouchableOpacity onPress={goRecordOne}>
-          <Image source={item.imageMic} style={styles.imageMic} />
-        </TouchableOpacity>
+        <Image source={item.imageMic} style={styles.imageMic} />
+      </TouchableOpacity>
     </View>
   );
-  
+
   return (
     <Background>
       <View style={styles.container}>

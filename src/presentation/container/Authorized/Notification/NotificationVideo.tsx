@@ -4,7 +4,6 @@ import Background from '../../../component/background/Background'
 import { BACK } from '../../../../../assets'
 import { Colors } from '../../../resource/value/Colors'
 import Header from '../../../component/header/Header';
-import { BeatListStackScreenProps } from '../../../navigation/Stack/BeatListNavigation'
 import { VideoListStackScreenProps } from '../../../navigation/stack/VideoListNavigation';
 
 interface Item {

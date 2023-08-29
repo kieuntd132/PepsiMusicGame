@@ -9,7 +9,7 @@ import DialogReport from '../../../component/dialog/DialogReport'
 import DialogThanks from '../../../component/dialog/DialogThanks'
 import { VideoListStackScreenProps } from '../../../navigation/stack/VideoListNavigation';
 import { Video } from '../../../../core/model/Video'
-import { rtdb } from '../../../../core/api/url/RealTime'
+import { rtdb } from '../../../../core/API/Url/RealTimeDB'
 
 
 

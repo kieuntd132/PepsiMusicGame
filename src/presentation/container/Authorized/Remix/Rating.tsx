@@ -12,7 +12,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import ProfileRecord from './ProfileRecord';
 import VideoListProfile from './VideoListProfile';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { BeatListStackScreenProps } from '../../../navigation/BeatListNavigation'
+import { BeatListStackScreenProps } from '../../../navigation/Stack/BeatListNavigation'
 import Ranking from './Ranking';
 
 type ProfileRecordProps = {
